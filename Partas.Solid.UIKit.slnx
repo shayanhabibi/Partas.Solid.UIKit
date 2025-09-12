@@ -1,0 +1,6 @@
+﻿<Solution>
+  <Folder Name="/build/" />
+  <Folder Name="/src/">
+    <Project Path="Partas.Solid.UI\Partas.Solid.UI.fsproj" Type="Classic F#" />
+  </Folder>
+</Solution>

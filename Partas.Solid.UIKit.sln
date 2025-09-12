@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Partas.Solid.UI", "Partas.Solid.UI\Partas.Solid.UI.fsproj", "{EF9494F8-0CC7-42D1-9DD0-75764A535F5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{06616E24-0F26-4021-8A49-9DDBCCF97050}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D8F31600-FB68-41EF-9FD5-42732D7C7164}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF9494F8-0CC7-42D1-9DD0-75764A535F5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9494F8-0CC7-42D1-9DD0-75764A535F5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9494F8-0CC7-42D1-9DD0-75764A535F5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9494F8-0CC7-42D1-9DD0-75764A535F5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EF9494F8-0CC7-42D1-9DD0-75764A535F5D} = {06616E24-0F26-4021-8A49-9DDBCCF97050}
+	EndGlobalSection
+EndGlobal

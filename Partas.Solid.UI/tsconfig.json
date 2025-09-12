@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "rootDir": ".",
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowJs": true,
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "types": ["vite/client"],
+        "composite": true,
+        "allowImportingTsExtensions": true
+    },
+    "include": [
+        ".storybook/**/*.ts",
+        ".storybook/**/*.tsx",
+        "stories/**/*.ts",
+        "stories/**/*.tsx",
+        "stories/types/*.d.ts"
+    ]
+}

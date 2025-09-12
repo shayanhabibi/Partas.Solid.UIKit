@@ -1,0 +1,67 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+<Meta title="Colors" />
+
+# Colors
+
+<ColorPalette>
+    <ColorItem 
+        title="theme"
+        subtitle="Signature Gradient"
+        colors={{
+            Signature: 'var(--partas-signature-gradient)'
+        }}
+    />
+    <ColorItem
+        title="theme.color.primary"
+        subtitle="Primary color"
+        colors={{ 
+            Primary: 'var(--partas-primary)',
+            Success: 'var(--partas-success)',
+            Attention: 'var(--partas-attention)',
+            Secondary: 'var(--partas-secondary)'
+        }}
+    />
+    <ColorItem 
+        title="accented backgrounds"
+        subtitle="Partas"
+        colors={{
+            Attention: 'var(--partas-background-attention)',
+            Primary: 'var(--partas-background-primary)',
+            Info: 'var(--partas-background-info)'
+        }}
+    />
+            
+    <ColorItem
+        title="theme.vars"
+        subtitle="Partas"
+        colors={{
+            Foreground: 'var(--partas-foreground)',
+            Background: 'var(--partas-background)',
+            SurfaceBackground: 'var(--partas-surface-background)',
+            BackgroundAccent: 'var(--partas-background-accent)',
+        }}
+    />
+</ColorPalette>
+
+## Charts
+
+Colors for charts
+
+<ColorPalette>
+    <ColorItem 
+        title="charts"
+        subtitle="light"
+        colors={{
+            Blue: "var(--color-blue-500)",
+            Emerald: "var(--color-emerald-500)",
+            Violet: "var(--color-violet-500)",
+            Amber: "var(--color-amber-500)",
+            Gray: "var(--color-gray-500)",
+            Cyan: "var(--color-cyan-500)",
+            Pink: "var(--color-pink-500)",
+            Lime: "var(--color-lime-500)",
+            Fuchsia: "var(--color-fuchsia-500)",
+        }}
+    />
+</ColorPalette>

@@ -1,0 +1,145 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <DefineConstants>STORYBOOK</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Utils.fs" />
+        <Compile Include="Program.fs" />
+        <Compile Include="Components\Button.fs" />
+        <Compile Include="Components\Accordion.fs" />
+        <Compile Include="Components\Alert.fs" />
+        <Compile Include="Components\AlertDialog.fs" />
+        <Compile Include="Components\Avatar.fs" />
+        <Compile Include="Components\Badge.fs" />
+        <Compile Include="Components\Breadcrumb.fs" />
+        <Compile Include="Components\Callout.fs" />
+        <Compile Include="Components\Checkbox.fs" />
+        <Compile Include="Components\Collapsible.fs" />
+        <Compile Include="Components\Combobox.fs" />
+        <Compile Include="Components\Dialog.fs" />
+        <Compile Include="Components\Command.fs" />
+        <Compile Include="Components\ContextMenu.fs" />
+        <Compile Include="Components\Drawer.fs" />
+        <Compile Include="Components\DropdownMenu.fs" />
+        <Compile Include="Components\HoverCard.fs" />
+        <Compile Include="Components\Label.fs" />
+        <Compile Include="Components\Menubar.fs" />
+        <Compile Include="Components\NavigationMenu.fs" />
+        <Compile Include="Components\NumberField.fs" />
+        <Compile Include="Components\OtpField.fs" />
+        <Compile Include="Components\Pagination.fs" />
+        <Compile Include="Components\Popover.fs" />
+        <Compile Include="Components\RadioGroup.fs" />
+        <Compile Include="Components\Resizeable.fs" />
+        <Compile Include="Components\Select.fs" />
+        <Compile Include="Components\Separator.fs" />
+        <Compile Include="Components\Sheet.fs" />
+        <Compile Include="Components\Skeleton.fs" />
+        <Compile Include="Components\Slider.fs" />
+        <Compile Include="Components\Sonner.fs" />
+        <Compile Include="Components\Switch.fs" />
+        <Compile Include="Components\Table.fs" />
+        <Compile Include="Components\Tabs.fs" />
+        <Compile Include="Components\Text.fs" />
+        <Compile Include="Components\Timeline.fs" />
+        <Compile Include="Components\Toggle.fs" />
+        <Compile Include="Components\ToggleGroup.fs" />
+        <Compile Include="Components\Tooltip.fs" />
+        <Compile Include="Components\DatePicker.fs" />
+        <Compile Include="Components\AspectRatio.fs" />
+        <Compile Include="Components\Sidebar.fs" />
+        <Compile Include="Components\BarList.fs" />
+        <Compile Include="Components\DeltaBar.fs" />
+        <Compile Include="Components\Progress.fs" />
+        <Compile Include="Components\CategoryBar.fs" />
+        <Compile Include="Components\CardHoverEffect.fs" />
+        <Compile Include="Components\BorderBeam.fs" />
+        <Compile Include="Components\SegmentedControl.fs" />
+        <Compile Include="Components\Flex.fs" />
+        <Compile Include="Components\Grid.fs" />
+        <Compile Include="Components\Marquee.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <TypeScriptCompile Include=".storybook\vitest.setup.ts" />
+      <Content Include=".storybook\tailwind.css" />
+      <TypeScriptCompile Include=".storybook\preview.ts" />
+      <TypeScriptCompile Include=".storybook\main.ts" />
+      <Content Include=".storybook\PartasTheme.js" />
+      <Content Include=".storybook\manager.js" />
+      <Content Include="stories\Configure.mdx" />
+      <Compile Include="stories\Components\Button.stories.fs" />
+      <Compile Include="stories\Components\Accordion.stories.fs" />
+      <Compile Include="stories\Components\Alert.stories.fs" />
+      <Compile Include="stories\Components\AlertDialog.stories.fs" />
+      <Compile Include="stories\Components\Avatar.stories.fs" />
+      <Compile Include="stories\Components\Badge.stories.fs" />
+      <Compile Include="stories\Components\DeltaBadge.stories.fs" />
+      <Compile Include="stories\Components\Breadcrumb.stories.fs" />
+      <Compile Include="stories\Components\Callout.stories.fs" />
+      <Compile Include="stories\Components\Checkbox.stories.fs" />
+      <Compile Include="stories\Components\Collapsible.stories.fs" />
+      <Compile Include="stories\Components\Combobox.stories.fs" />
+      <Compile Include="stories\Components\Dialog.stories.fs" />
+      <Compile Include="stories\Components\Command.stories.fs" />
+      <Compile Include="stories\Components\ContextMenu.stories.fs" />
+      <Compile Include="stories\Components\Drawer.stories.fs" />
+      <Compile Include="stories\Components\DropdownMenu.stories.fs" />
+      <Compile Include="stories\Components\HoverCard.stories.fs" />
+      <Compile Include="stories\Components\Label.stories.fs" />
+      <Compile Include="stories\Components\Menubar.stories.fs" />
+      <Compile Include="stories\Components\NavigationMenu.stories.fs" />
+      <Compile Include="stories\Components\NumberField.stories.fs" />
+      <Compile Include="stories\Components\OtpField.stories.fs" />
+      <Compile Include="stories\Components\Pagination.stories.fs" />
+      <Compile Include="stories\Components\Popover.stories.fs" />
+      <Compile Include="stories\Components\RadioGroup.stories.fs" />
+      <Compile Include="stories\Components\Resizeable.stories.fs" />
+      <Compile Include="stories\Components\Select.stories.fs" />
+      <Compile Include="stories\Components\Separator.stories.fs" />
+      <Compile Include="stories\Components\Sheet.stories.fs" />
+      <Compile Include="stories\Components\Skeleton.stories.fs" />
+      <Compile Include="stories\Components\Slider.stories.fs" />
+      <Compile Include="stories\Components\Sonner.stories.fs" />
+      <Compile Include="stories\Components\Switch.stories.fs" />
+      <Compile Include="stories\Components\Table.stories.fs" />
+      <Compile Include="stories\Components\Tabs.stories.fs" />
+      <Compile Include="stories\Components\Text.stories.fs" />
+      <Compile Include="stories\Components\Timeline.stories.fs" />
+      <Compile Include="stories\Components\Toggle.stories.fs" />
+      <Compile Include="stories\Components\ToggleGroup.stories.fs" />
+      <Compile Include="stories\Components\Tooltip.stories.fs" />
+      <Compile Include="stories\Components\DatePicker.stories.fs" />
+      <Compile Include="stories\Components\Progress.stories.fs" />
+      <Compile Include="stories\Components\ProgressRing.stories.fs" />
+      <Compile Include="stories\Components\CardHover.stories.fs" />
+      <Compile Include="stories\Components\BarList.stories.fs" />
+      <Compile Include="stories\Components\DeltaBar.stories.fs" />
+      <Compile Include="stories\Components\CategoryBar.stories.fs" />
+      <Compile Include="stories\Components\Segmented.stories.fs" />
+      <Compile Include="stories\Components\Marquee.stories.fs" />
+      <Compile Include="stories\Panel.stories.fs" />
+      <Content Include="stories\ColorPalette.mdx" />
+      <Content Include="tsconfig.json" />
+      <TypeScriptCompile Include="vitest.config.ts" />
+      <Content Include="package.json" />
+      <Content Include="package-lock.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Partas.AnimeJs" Version="0.0.5" />
+      <PackageReference Include="Partas.Solid" Version="2.1.0" />
+      <PackageReference Include="Partas.Solid.ArkUI" Version="0.2.3" />
+      <PackageReference Include="Partas.Solid.Cmdk" Version="0.2.3" />
+      <PackageReference Include="Partas.Solid.Corvu" Version="0.2.3" />
+      <PackageReference Include="Partas.Solid.Kobalte" Version="0.4.0" />
+      <PackageReference Include="Partas.Solid.Lucide" Version="0.513.1" />
+      <PackageReference Include="Partas.Solid.Primitives" Version="0.3.2" />
+      <PackageReference Include="Partas.Solid.Sonner" Version="0.2.2" />
+    </ItemGroup>
+
+</Project>
