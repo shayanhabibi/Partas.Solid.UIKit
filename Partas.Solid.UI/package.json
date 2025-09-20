@@ -6,7 +6,7 @@
     "storybook": "storybook dev -p 6006",
     "storybook-docs": "storybook dev -p 6006 --docs",
     "build-storybook": "storybook build",
-    "build-storybook-docs": "storybook build --docs"
+    "build-storybook-docs": "storybook build --docs -o ../docs"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.1",
