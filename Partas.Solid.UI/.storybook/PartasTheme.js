@@ -2,7 +2,7 @@
 
 export default create({
     base: 'dark',
-    brandTitle: '<img alt="logo" src="https://github.com/shayanhabibi/Partas.Solid/raw/master/Public/Partas_d00b_00a%20icon.png" width="24px" height="24px" /> Partas.Solid.UIx',
+    brandTitle: '<img alt="logo" src="https://github.com/shayanhabibi/Partas.Solid/raw/master/Public/Partas_d00b_00a%20icon.png" width="24px" height="24px" /> Partas.Solid.UI',
     brandUrl: 'https://github.com/partasau/',
     brandTarget: '_self',
     brandImage: '',

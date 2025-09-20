@@ -1,0 +1,43 @@
+﻿import { Meta, Controls, Story, Stories, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as AccordionStories from './Accordion.stories';
+import * as AccordionItemStories from './Accordion/AccordionItem.stories';
+
+<Meta of={AccordionStories}/>
+
+# Accordion
+
+<Canvas of={AccordionStories.Default} sourceState={"none"} withToolbar={true}/>
+
+<Controls />
+
+The accordion is composed of multiple subcomponents:
+
+## Accordion
+
+<ArgTypes of={AccordionStories} />
+
+### AccordionItem
+
+<ArgTypes of={AccordionItemStories} exclude={/[A-Za-z0-9'_]+_1$/}/>
+
+#### AccordionTrigger
+
+> No relevant props
+
+#### AccordionContent
+
+> No relevant props
+
+## Composition
+
+You typically compose an accordion in the following manner:
+
+```fsharp
+Accordion() {
+    AccordionItem(value = "item1") {
+        AccordionTrigger() { "Item 1" }
+        AccordionContent() { "Content for Accordion Item 1" }
+    }
+}
+```
+

@@ -19,4 +19,11 @@ let private meta = storybook<Avatar> {
     args "Default" (fun avatar ->
         avatar.onLoadingStatusChange <- unbox(Storybook.fn())
         )
+    render "Image" (fun avatar ->
+        Avatar().spread avatar {
+            AvatarImage(src="https://github.com/shayanhabibi.png")
+            AvatarFallback() {
+                "SH"
+            }
+        })
 }

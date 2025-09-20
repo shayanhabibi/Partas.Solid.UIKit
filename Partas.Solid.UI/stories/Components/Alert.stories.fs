@@ -6,7 +6,7 @@ open Partas.Solid.Storybook
 open Partas.Solid.UI
 open Partas.Solid.UI.Alert
 
-
+let inline setVariant value = fun (alert: Alert) -> alert.variant <- value
 [<PartasStorybook>]
 let private meta = storybook<Alert> {
     cases (fun alert ->
@@ -26,5 +26,9 @@ let private meta = storybook<Alert> {
             }
         }
         )
-    args "Default" (fun alert -> ())
+    args "Primary" (setVariant Variant.Default)
+    args "Default" (setVariant Variant.Default)
+    args "Destructive" (setVariant Variant.Destructive)
+    args "Success" (setVariant Variant.Success)
+    
 }

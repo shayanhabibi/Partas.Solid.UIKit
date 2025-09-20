@@ -84,9 +84,16 @@
       <Compile Include="stories\Components\Button.stories.fs" />
       <Content Include="stories\Components\Button.mdx" />
       <Compile Include="stories\Components\Accordion.stories.fs" />
+      <Content Include="stories\Components\Accordion.mdx" />
       <Compile Include="stories\Components\Alert.stories.fs" />
+      <Content Include="stories\Components\Alert.mdx" />
       <Compile Include="stories\Components\AlertDialog.stories.fs" />
+      <Content Include="stories\Components\AlertDialog.mdx" />
+      <Compile Include="stories\Components\AlertDialog\AlertDialogContent.stories.fs" />
       <Compile Include="stories\Components\Avatar.stories.fs" />
+      <Content Include="stories\Components\Avatar.mdx" />
+      <Compile Include="stories\Components\Avatar\AvatarImage.stories.fs" />
+      <Compile Include="stories\Components\Avatar\AvatarFallback.stories.fs" />
       <Compile Include="stories\Components\Badge.stories.fs" />
       <Compile Include="stories\Components\DeltaBadge.stories.fs" />
       <Compile Include="stories\Components\Breadcrumb.stories.fs" />
@@ -139,8 +146,11 @@
       <Compile Include="stories\Components\Status.stories.fs" />
       <Compile Include="stories\Components\AuroraBanner.stories.fs" />
       <Compile Include="stories\Components\BorderBeam.stories.fs" />
+      <Compile Include="stories\Components\Accordion\AccordionTrigger.stories.fs" />
+      <Compile Include="stories\Components\Accordion\AccordionItem.stories.fs" />
+      <Compile Include="stories\Components\Accordion\AccordionContent.stories.fs" />
       <Content Include="stories\ColorPalette.mdx" />
-      <Content Include="stories\Tasks.mdx" />
+      <Content Include="stories\Dev\Tasks.mdx" />
       <Content Include="stories\Utils.mdx" />
       <Compile Include="stories\Kit\AvatarStack.stories.fs" />
       <Content Include="tsconfig.json" />
@@ -151,7 +161,7 @@
 
     <ItemGroup>
       <PackageReference Include="Partas.AnimeJs" Version="0.0.5" />
-      <PackageReference Include="Partas.Solid" Version="2.1.1" />
+      <PackageReference Include="Partas.Solid" Version="2.1.2" />
       <PackageReference Include="Partas.Solid.ArkUI" Version="0.2.3" />
       <PackageReference Include="Partas.Solid.Cmdk" Version="0.2.3" />
       <PackageReference Include="Partas.Solid.Corvu" Version="0.2.3" />
@@ -160,5 +170,5 @@
       <PackageReference Include="Partas.Solid.Primitives" Version="0.3.2" />
       <PackageReference Include="Partas.Solid.Sonner" Version="0.2.2" />
     </ItemGroup>
-
+    
 </Project>

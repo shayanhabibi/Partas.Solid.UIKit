@@ -1,0 +1,24 @@
+﻿import { Meta, Canvas, Title, ArgTypes, Controls, Stories } from '@storybook/addon-docs/blocks';
+import * as AlertStories from './Alert.stories';
+
+<Meta of={AlertStories} />
+<Title/>
+
+```fsharp
+Alert() {
+    AlertTitle() {
+        "Title"
+    }
+    AlertDescription() {
+        "Alert description"
+    }
+}
+```
+
+<Canvas withToolbar={true} sourceState={"none"} />
+
+### Alert props
+
+<Controls />
+
+<Stories includePrimary={false}/>

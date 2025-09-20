@@ -5,5 +5,6 @@ open Partas.Solid.Storybook
 [<PartasStorybook>]
 let private meta = storybook<AuroraBanner> {
     args "Default" (fun props -> ())
+    tags [| "!autodocs" |]
 }
 

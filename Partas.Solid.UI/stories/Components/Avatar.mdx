@@ -1,0 +1,34 @@
+﻿import { Meta, Title, Canvas, ArgTypes, Controls } from '@storybook/addon-docs/blocks';
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories}/>
+
+<Title/>
+
+```fsharp
+Avatar() {
+    AvatarImage()
+    AvatarFallback() {
+        "SH"
+    }
+}
+```
+
+<Canvas of={AvatarStories.Default} withToolbar="true" />
+
+<Controls />
+
+### With Image Source
+
+```fsharp
+Avatar() {
+    AvatarImage(src="https://github.com/shayanhabibi.png")
+    AvatarFallback() {
+        "SH"
+    }
+}
+```
+
+<Canvas of={AvatarStories.Image} withToolbar="true" />
+
+<Controls of={AvatarStories.Image} />

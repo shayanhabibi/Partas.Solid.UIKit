@@ -1,3 +1,6 @@
+import 'prismjs';
+import 'prismjs/components/prism-fsharp';
+import 'prismjs/themes/prism-tomorrow.css';
 import './tailwind.css'
 import type { Preview, SolidRenderer } from 'storybook-solidjs-vite';
 import { withThemeByClassName } from '@storybook/addon-themes';

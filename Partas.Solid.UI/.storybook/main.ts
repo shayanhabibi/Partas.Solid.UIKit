@@ -6,7 +6,6 @@ export default {
     framework: 'storybook-solidjs-vite',
     addons: [
         '@storybook/addon-onboarding',
-        '@storybook/addon-docs',
         '@storybook/addon-a11y',
         '@storybook/addon-links',
         '@storybook/addon-themes',
@@ -15,6 +14,16 @@ export default {
             options: {
                 cli: false,
             },
+        },
+        {
+            name: '@storybook/addon-docs',
+            options: {
+                mdxPluginOptions: {
+                    mdxCompileOptions: {
+                        // rehypePlugins: [rehypeFixPrism],
+                    }
+                }
+            }
         },
     ],
     stories: [
