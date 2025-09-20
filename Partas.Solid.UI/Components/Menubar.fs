@@ -71,6 +71,7 @@ type MenubarContent() =
 [<Erase>]
 type MenubarSubTrigger() =
     inherit Menubar.SubTrigger()
+    [<Erase>]
     member val inset: bool = jsNative with get,set
     [<SolidTypeComponent>]
     member props.constructor =
@@ -100,6 +101,7 @@ type MenubarSubContent() =
 [<Erase>]
 type MenubarItem() =
     inherit Menubar.Item()
+    [<Erase>]
     member val inset: bool = jsNative with get,set
     [<SolidTypeComponent>]
     member props.constructor =
@@ -151,6 +153,7 @@ type MenubarRadioItem() =
 [<Erase>]
 type MenubarItemLabel() =
     inherit Menubar.ItemLabel()
+    [<Erase>]
     member val inset: bool = jsNative with get,set
     [<SolidTypeComponent>]
     member props.constructor =
@@ -162,6 +165,7 @@ type MenubarItemLabel() =
 [<Erase>]
 type MenubarGroupLabel() =
     inherit Menubar.GroupLabel()
+    [<Erase>]
     member val inset: bool = jsNative with get,set
     [<SolidTypeComponent>]
     member props.constructor =

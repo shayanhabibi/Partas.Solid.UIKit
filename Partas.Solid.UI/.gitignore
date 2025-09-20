@@ -1,5 +1,5 @@
 node_modules
 dist
-storybook-static
+#storybook-static
 bun.lock
 package-lock.json

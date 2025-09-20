@@ -91,12 +91,17 @@ type ZHoverCardBody() =
 [<Erase>]
 type ZHoverCardItem() =
     interface RegularNode
-    // interface Polymorph
+    /// <defaultValue>0</defaultValue>
     [<DV>] val mutable translateX: float
+    /// <defaultValue>0</defaultValue>
     [<DV>] val mutable translateY: float
+    /// <defaultValue>0</defaultValue>
     [<DV>] val mutable translateZ: float
+    /// <defaultValue>0</defaultValue>
     [<DV>] val mutable rotateX: float
+    /// <defaultValue>0</defaultValue>
     [<DV>] val mutable rotateY: float
+    /// <defaultValue>0</defaultValue>
     [<DV>] val mutable rotateZ: float
     [<SolidTypeComponent>]
     member props.__ =

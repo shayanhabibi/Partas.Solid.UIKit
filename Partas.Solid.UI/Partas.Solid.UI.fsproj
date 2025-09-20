@@ -80,7 +80,9 @@
       <TypeScriptCompile Include=".storybook\main.ts" />
       <Content Include=".storybook\PartasTheme.js" />
       <Content Include=".storybook\manager.js" />
+      <Content Include="stories\Introduction.mdx" />
       <Compile Include="stories\Components\Button.stories.fs" />
+      <Content Include="stories\Components\Button.mdx" />
       <Compile Include="stories\Components\Accordion.stories.fs" />
       <Compile Include="stories\Components\Alert.stories.fs" />
       <Compile Include="stories\Components\AlertDialog.stories.fs" />
@@ -136,8 +138,10 @@
       <Compile Include="stories\Components\Spinner.stories.fs" />
       <Compile Include="stories\Components\Status.stories.fs" />
       <Compile Include="stories\Components\AuroraBanner.stories.fs" />
+      <Compile Include="stories\Components\BorderBeam.stories.fs" />
       <Content Include="stories\ColorPalette.mdx" />
       <Content Include="stories\Tasks.mdx" />
+      <Content Include="stories\Utils.mdx" />
       <Compile Include="stories\Kit\AvatarStack.stories.fs" />
       <Content Include="tsconfig.json" />
       <TypeScriptCompile Include="vitest.config.ts" />

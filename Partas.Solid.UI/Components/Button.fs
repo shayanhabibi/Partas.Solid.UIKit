@@ -57,6 +57,7 @@ type Button() =
     /// Sets the style of the button.
     /// </summary>
     /// <defaultValue>default</defaultValue>
+    /// <storybook controlType="radio"/>
     [<Erase>]
     member val variant: Button.Variant = Variant.Default with get,set
     [<SolidTypeComponent>]

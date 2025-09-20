@@ -23,6 +23,10 @@ type Callout() =
         | Callout.Variant.Success -> "border-success-foreground bg-success text-success-foreground"
         | Callout.Variant.Warning -> "border-warning-foreground bg-warning text-warning-foreground"
         | Callout.Variant.Error -> "border-error-foreground bg-error text-error-foreground"
+    /// <summary>
+    /// Component style
+    /// </summary>
+    /// <defaultValue>Callout.Variant.Default</defaultValue>
     [<Erase>]
     member val variant: Callout.Variant = unbox null with get,set
     

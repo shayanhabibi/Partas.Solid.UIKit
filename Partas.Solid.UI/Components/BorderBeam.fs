@@ -6,13 +6,24 @@ open Fable.Core
 [<Erase>]
 type BorderBeam() =
     interface VoidNode
-    [<DefaultValue>] val mutable anchor: int
-    [<DefaultValue>] val mutable borderWidth: float
-    [<DefaultValue>] val mutable colorFrom: string
-    [<DefaultValue>] val mutable colorTo: string
-    [<DefaultValue>] val mutable delay: int
-    [<DefaultValue>] val mutable duration: int
-    [<DefaultValue>] val mutable size: int
+    /// <defaultValue>90</defaultValue>
+    [<Erase>]
+    member val anchor: int = JS.undefined with get,set
+    /// <defaultValue>1.5</defaultValue>
+    [<Erase>]
+    member val borderWidth: float = JS.undefined with get,set
+    /// <defaultValue>#ffaa40</defaultValue>
+    /// <storybook controlType="color"/>
+    [<Erase>] member val colorFrom: string = JS.undefined with get,set
+    /// <defaultValue>#9c40ff</defaultValue>
+    /// <storybook controlType="color"/>
+    [<Erase>] member val colorTo: string = JS.undefined with get,set
+    /// <defaultValue>0</defaultValue>
+    [<Erase>] member val delay: int = JS.undefined with get,set
+    /// <defaultValue>15</defaultValue>
+    [<Erase>] member val duration: int = JS.undefined with get,set
+    /// <defaultValue>200</defaultValue>
+    [<Erase>] member val size: int = JS.undefined with get,set
     [<SolidTypeComponentAttribute>]
     member props.constructor =
         props.anchor <- 90
@@ -23,7 +34,7 @@ type BorderBeam() =
         props.duration <- 15
         props.size <- 200
         
-        let style = JsInterop.createObj [
+        let inline style () = JsInterop.createObj [
                 "--size", $"{props.size}px"
                 "--duration", $"{props.duration}s"
                 "--anchor", $"{props.anchor}%%"
@@ -41,4 +52,4 @@ type BorderBeam() =
                 "after:absolute after:aspect-square after:w-[var(--size)] after:animate-border-beam after:[animation-delay:var(--delay)] after:[background:linear-gradient(to_left,var(--color-from),var(--color-to),transparent)] after:[offset-anchor:var(--anchor)_50%] after:[offset-path:rect(0_auto_auto_0_round_var(--size))]"
                 props.class'
             |]
-        )   .style'(style)
+        )   .style'(style())

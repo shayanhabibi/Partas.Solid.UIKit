@@ -1,0 +1,116 @@
+﻿# Utils
+
+The utilities are available in the root namespace automatically.
+
+## `cn`
+
+```fsharp
+type Lib =
+    static member cn(classes: string array): string
+```
+
+Uses `clsx` and `tailwind-merge` to resolve classes
+
+## `createChildrenResolver`
+
+```fsharp
+type Lib =
+    static member createChildrenResolver(
+        descendants: #HtmlELement
+    ): Accessor<#HtmlElement> * Accessor<bool>
+```
+
+A convenience function that combines the `children()` function with a
+length check. Essentially, the returned tuples second value will inform you whether
+you have any elements, so you do not re-evaluate the children resolver unnecessarily.
+
+
+## `System.Char.empty`
+
+This is a convenience extension for inserting empty spaces that won't be trimmed
+by JSX compilation
+
+
+## `&&=`
+
+This is a convenience fable emit macro to compile `$0 && $1`. Similar to the
+Fable included `??=`.
+
+## `>=>`
+
+This is a convenience operator to apply a void function to a piped input, and returning the input.
+Useful for printing to console etc.
+
+```fsharp
+// example
+let x = 5
+x
+|> (+) 3
+>=> (printfn "%i") // 8
+|> (+) 2
+>=> (printfn "%i") // 10
+```
+
+## `toHtmlElement` and `toElement`
+
+Convenience wrappers for embedding JSX directly in elements.
+
+The signature between the two differs, as some IDEs will offer completions on only the latter.
+
+```fsharp
+div() {
+    toHtmlElement JSX.jsx "<span>embedded</span>"
+}
+```
+
+```fsharp
+div() {
+    JSX.jsx "<span>embedded</span>" |> toElement
+}
+```
+
+> Unfortunately, adding an overload for `JSX.Element` to the Partas.Solid computations causes
+> compilation errors.
+
+## `SrSpan`
+
+Convenience component that is essentially:
+
+```fsharp
+span(class' = Lib.cn [| "sr-only"; props.class' |]).spread props
+```
+
+## `DV`
+
+Convenience type abbreviation for `DefaultValueAttribute`
+
+```fsharp
+type O() =
+    [<DefaultValue>]
+    val mutable someProp: int
+    [<DV>] val mutable prop: int
+```
+
+## `Charts`
+
+Used to standardise color stepping in charts such as with the category bars, such that
+consecutive data points are colored differently ubiquitously.
+
+### `ChartColor`
+
+The type of the objects in the `color` array.
+
+```fsharp
+type ChartColor = {
+    bg: string
+    stroke: string
+    fill: string
+    text: string
+}
+```
+
+Contains the different color utilities for tailwind.
+
+### `colors`
+
+The array of chart colors. See the `ColorPalette`.

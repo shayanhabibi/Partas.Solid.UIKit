@@ -1,0 +1,29 @@
+﻿import { Canvas, Meta, Controls, ArgTypes, Stories } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+`shadcn-ui` styled button.
+
+`Variant` and `Size` are accessible via the `Button` module.
+
+```fsharp
+Button.Variants.Default
+```
+
+<ArgTypes/>
+
+---
+
+### Primary
+<Canvas of={ButtonStories.Default} sourceState={"none"} layout={"centered"}/>
+<Controls />
+
+> Note:
+>
+> Actions such as `onClick` are provided by the
+> base attributes, and are therefore hidden automatically
+> by our storybook integration.
+<Stories includePrimary={false} />

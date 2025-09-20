@@ -1,5 +1,8 @@
 ﻿<Solution>
   <Folder Name="/build/" />
+  <Folder Name="/misc/">
+    <File Path="README.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="Partas.Solid.UI\Partas.Solid.UI.fsproj" Type="Classic F#" />
   </Folder>

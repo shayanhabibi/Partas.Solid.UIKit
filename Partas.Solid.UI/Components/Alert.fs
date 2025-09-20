@@ -28,6 +28,10 @@ type Alert() =
         | Alert.Variant.Default -> "bg-background text-foreground"
         | Alert.Variant.Destructive -> "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"
         | Alert.Variant.Success -> (*TW*) "border-success-foreground/50 text-success-foreground dark:border-success-foreground [&>svg]:text-success-foreground bg-success/30"
+    /// <summary>
+    /// Style variant of the alert.
+    /// </summary>
+    /// <defaultValue>Alert.Variant.Default</defaultValue>
     [<Erase>]
     member val variant: Alert.Variant = jsNative with get,set
     [<SolidTypeComponent>]
