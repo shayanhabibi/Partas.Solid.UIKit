@@ -9,6 +9,7 @@ export default {
         '@storybook/addon-docs',
         '@storybook/addon-a11y',
         '@storybook/addon-links',
+        '@storybook/addon-themes',
         {
             name: '@storybook/addon-vitest',
             options: {

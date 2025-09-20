@@ -1,5 +1,6 @@
 import './tailwind.css'
-import type { Preview } from 'storybook-solidjs-vite';
+import type { Preview, SolidRenderer } from 'storybook-solidjs-vite';
+import { withThemeByClassName } from '@storybook/addon-themes';
 
 const preview: Preview = {
     tags: ['autodocs'],
@@ -16,6 +17,15 @@ const preview: Preview = {
             codePanel: false,
         },
     },
+    decorators: [
+        withThemeByClassName<SolidRenderer>({
+            themes: {
+                light: '',
+                dark: 'dark',
+            },
+            defaultTheme: 'light'
+        })
+    ],
 };
 
 export default preview;

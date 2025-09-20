@@ -14,8 +14,6 @@ module Alert =
         | Destructive
         | Success
 
-
-
 [<Erase>]
 type Alert() =
     inherit Kobalte.Alert()
@@ -32,7 +30,6 @@ type Alert() =
         | Alert.Variant.Success -> (*TW*) "border-success-foreground/50 text-success-foreground dark:border-success-foreground [&>svg]:text-success-foreground bg-success/30"
     [<Erase>]
     member val variant: Alert.Variant = jsNative with get,set
-    /// Alert documentation
     [<SolidTypeComponent>]
     member props.constructor =
         Kobalte.Alert(class' = Lib.cn [|

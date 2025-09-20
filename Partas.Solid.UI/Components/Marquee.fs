@@ -16,8 +16,6 @@ type Marquee() =
     [<DefaultValue>]
     val mutable reverse: bool
     [<DefaultValue>]
-    val mutable vertical: bool
-    [<DefaultValue>]
     val mutable orientation: Enums.Orientation
     [<Erase>]
     member val duration = 40 with get,set
@@ -50,12 +48,13 @@ type Marquee() =
                 yield fun _ _ ->
                     div(class' = Lib.cn [|
                         "flex shrink-0 justify-around [gap:var(--gap)]"
-                        if props.orientation = Horizontal then
+                        match props.orientation with
+                        | Horizontal -> 
                             "animate-marquee flex-row"
-                        elif props.orientation = Vertical then
+                        | Vertical -> 
                             "animate-marquee-vertical flex-col"
-                        if props.pauseOnHover then "group-hover:[animation-play-state:paused]"
-                        if props.reverse then "[animation-direction:reverse]"
+                        if props.pauseOnHover then "group-hover:paused"
+                        if props.reverse then "direction-reverse"
                     |]) { props.children }
             }
         }

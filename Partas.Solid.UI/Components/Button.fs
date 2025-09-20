@@ -1,12 +1,9 @@
 ﻿namespace Partas.Solid.UI
 
-
-
 open Fable.Core.JsInterop
 open System
 open Partas.Solid
 open Fable.Core
-open Storybook.ComputationExpression
 
 module Button =
     [<RequireQualifiedAccess; StringEnum>]
@@ -62,9 +59,6 @@ type Button() =
     /// <defaultValue>default</defaultValue>
     [<Erase>]
     member val variant: Button.Variant = Variant.Default with get,set
-    /// <summary>
-    /// Testing the documentation
-    /// </summary>
     [<SolidTypeComponent>]
     member props.__ =
         Kobalte.Button(

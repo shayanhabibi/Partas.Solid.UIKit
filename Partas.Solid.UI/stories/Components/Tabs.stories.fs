@@ -25,6 +25,17 @@ let private meta = storybook<Tabs> {
             TabsContent(value = "password") { "Password tab" }
         }
         )
+    render "Indicator" ( fun props ->
+        Tabs().spread props {
+            TabsList(class' = "grid w-full grid-cols-2") {
+                Tabs.Trigger(value = "account") { "Account" }
+                Tabs.Trigger(value = "password") { "Password" }
+                TabsIndicator(class' = "bg-primary")
+            }
+            TabsContent(value="account") { "Account Tab" }
+            TabsContent(value = "password") { "Password tab" }
+        }
+        )
     args "Default" (fun props -> ())
 }
 

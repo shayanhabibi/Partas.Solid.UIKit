@@ -1,4 +1,5 @@
-﻿namespace Partas.Solid.UI
+﻿[<AutoOpen>]
+module Partas.Solid.UI.Utils
 
 open Partas.Solid
 open Fable.Core
@@ -9,7 +10,6 @@ type [<Erase>] Lib =
     static member twMerge(classes: string): string = jsNative
     [<ImportMember("clsx")>]
     static member clsx(classes: obj): string = jsNative
-    [<CompiledName("cn")>]
     static member cn(classes: string array): string = classes |> Lib.clsx |> Lib.twMerge
     static member inline createChildrenResolver(descendants: #HtmlElement): Accessor<#HtmlElement> * Accessor<bool> =
         let resolvedChildren = children(fun () -> descendants)
@@ -30,6 +30,9 @@ module Extensions =
     [<Emit("$0 && $1")>]
     let (&&=) (conditional: 'T) (output: 'M): 'M = jsNative
     let inline (>=>) (target: 'a) (application: 'a -> unit): 'a = (target |> application); target
+    let inline toHtmlElement (func: string -> JSX.Element) (value: string): HtmlElement =
+        unbox(func value)
+    let inline toElement (element: JSX.Element): HtmlElement = unbox element
 [<Erase>]
 type SrSpan() =
     inherit span()
