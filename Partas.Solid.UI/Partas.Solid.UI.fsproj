@@ -75,6 +75,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <TypeScriptCompile Include=".storybook\CodeBlock.tsx" />
       <TypeScriptCompile Include=".storybook\vitest.setup.ts" />
       <TypeScriptCompile Include=".storybook\preview.ts" />
       <TypeScriptCompile Include=".storybook\main.ts" />

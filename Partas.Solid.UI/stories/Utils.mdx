@@ -2,16 +2,16 @@
 
 The utilities are available in the root namespace automatically.
 
-## `cn`
+## cn
 
 ```fsharp
 type Lib =
     static member cn(classes: string array): string
 ```
 
-Uses `clsx` and `tailwind-merge` to resolve classes
+Uses clsx and tailwind-merge to resolve classes
 
-## `createChildrenResolver`
+## createChildrenResolver
 
 ```fsharp
 type Lib =
@@ -20,23 +20,23 @@ type Lib =
     ): Accessor<#HtmlElement> * Accessor<bool>
 ```
 
-A convenience function that combines the `children()` function with a
+A convenience function that combines the children() function with a
 length check. Essentially, the returned tuples second value will inform you whether
 you have any elements, so you do not re-evaluate the children resolver unnecessarily.
 
 
-## `System.Char.empty`
+## System.Char.empty
 
 This is a convenience extension for inserting empty spaces that won't be trimmed
 by JSX compilation
 
 
-## `&&=`
+## &&=
 
-This is a convenience fable emit macro to compile `$0 && $1`. Similar to the
-Fable included `??=`.
+This is a convenience fable emit macro to compile '$0 && $1'. Similar to the
+Fable included '??='.
 
-## `>=>`
+## >=>
 
 This is a convenience operator to apply a void function to a piped input, and returning the input.
 Useful for printing to console etc.
@@ -51,7 +51,7 @@ x
 >=> (printfn "%i") // 10
 ```
 
-## `toHtmlElement` and `toElement`
+## toHtmlElement and toElement
 
 Convenience wrappers for embedding JSX directly in elements.
 
@@ -69,10 +69,10 @@ div() {
 }
 ```
 
-> Unfortunately, adding an overload for `JSX.Element` to the Partas.Solid computations causes
+> Unfortunately, adding an overload for 'JSX.Element' to the Partas.Solid computations causes
 > compilation errors.
 
-## `SrSpan`
+## SrSpan
 
 Convenience component that is essentially:
 
@@ -80,9 +80,9 @@ Convenience component that is essentially:
 span(class' = Lib.cn [| "sr-only"; props.class' |]).spread props
 ```
 
-## `DV`
+## DV
 
-Convenience type abbreviation for `DefaultValueAttribute`
+Convenience type abbreviation for 'DefaultValueAttribute'
 
 ```fsharp
 type O() =
@@ -91,14 +91,14 @@ type O() =
     [<DV>] val mutable prop: int
 ```
 
-## `Charts`
+## Charts
 
 Used to standardise color stepping in charts such as with the category bars, such that
 consecutive data points are colored differently ubiquitously.
 
-### `ChartColor`
+### ChartColor
 
-The type of the objects in the `color` array.
+The type of the objects in the 'color' array.
 
 ```fsharp
 type ChartColor = {
@@ -111,6 +111,6 @@ type ChartColor = {
 
 Contains the different color utilities for tailwind.
 
-### `colors`
+### colors
 
-The array of chart colors. See the `ColorPalette`.
+The array of chart colors. See the 'ColorPalette'.

@@ -1,9 +1,7 @@
-import 'prismjs';
-import 'prismjs/components/prism-fsharp';
-import 'prismjs/themes/prism-tomorrow.css';
 import './tailwind.css'
 import type { Preview, SolidRenderer } from 'storybook-solidjs-vite';
 import { withThemeByClassName } from '@storybook/addon-themes';
+import CodeBlock from './CodeBlock.tsx';
 
 const preview: Preview = {
     tags: ['autodocs'],
@@ -18,6 +16,9 @@ const preview: Preview = {
         },
         docs: {
             codePanel: false,
+            components: {
+                code: CodeBlock
+            }
         },
     },
     decorators: [

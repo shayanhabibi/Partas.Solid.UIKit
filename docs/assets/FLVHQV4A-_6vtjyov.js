@@ -1,0 +1,1 @@
+import{s as e,c as t,m as a,D as n}from"./iframe-BM9GGKTp.js";function p(r){const[o,s]=e(r,["as"]);if(!o.as)throw new Error("[kobalte]: Polymorphic is missing the required `as` prop.");return t(n,a(s,{get component(){return o.as}}))}export{p as P};
