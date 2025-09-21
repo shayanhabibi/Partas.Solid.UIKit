@@ -1,0 +1,76 @@
+﻿import { Meta, Stories, Canvas, Title, Controls, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as DialogStories from './Dialog.stories';
+import * as TriggerStories from './Dialog/DialogTrigger.stories';
+import * as ContentStories from './Dialog/DialogContent.stories';
+import * as HeaderStories from './Dialog/DialogHeader.stories';
+import * as TitleStories from './Dialog/DialogTitle.stories';
+import * as DescriptionStories from './Dialog/DialogDescription.stories';
+import * as FooterStories from './Dialog/DialogFooter.stories';
+
+<Meta of={DialogStories} />
+<Title />
+
+A simple dialog contains two key components, the trigger and the content.
+
+The content is further divided into 3 'rows'. The top - header; middle; bottom - footer.
+
+For the header and content, we have styled text components ready.
+
+> Unlike components such as the 'Card' components, the root dialog component
+> houses both the trigger and the flyout.
+>
+> For this reason, you see the 'DialogContent' referring to the whole flyout,
+> and it also wraps the header and title etc.
+> In the 'Card' components, the 'Card' component wraps the contents, and the
+> Content component refers to the body content area.
+
+```fsharp
+Dialog() {
+    DialogTrigger() {
+        "Click me!"
+    }
+    DialogContent() {
+        DialogHeader() {
+            DialogTitle() {
+                "Title"
+            }
+            "Other header content"
+        }
+        DialogDescription() {
+            "Description"
+        }
+        DialogFooter() {
+            "Dialog footer"
+        }
+    }
+}
+```
+
+Typically, the footer would be used for buttons and actions.
+
+<Canvas of={DialogStories.Default} sourceState={"none"} layout={"centered"} withToolbar={true} />
+<Controls />
+
+### DialogTrigger
+
+<ArgTypes of={TriggerStories} />
+
+### DialogContent
+
+<ArgTypes of={ContentStories} />
+
+### DialogHeader
+
+<ArgTypes of={HeaderStories} />
+
+### DialogTitle
+
+<ArgTypes of={TitleStories} />
+
+### DialogDescription
+
+<ArgTypes of={DescriptionStories} />
+
+### DialogFooter
+
+<ArgTypes of={FooterStories} />

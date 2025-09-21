@@ -1,1 +1,0 @@
-import{i}from"./index-DQYZI0kA.js";import{d as o,e as s}from"./iframe-CxGoIJAb.js";function g(e,t){const[a,n]=o(r(t?.()));return s(()=>{n(e()?.tagName.toLowerCase()||r(t?.()))}),a}function r(e){return i(e)?e:void 0}export{g as c};

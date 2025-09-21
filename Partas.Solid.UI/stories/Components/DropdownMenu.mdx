@@ -1,0 +1,95 @@
+﻿import { Meta, Controls, Canvas, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as DropdownMenuStories from './DropdownMenu.stories';
+import * as DropdownMenuTriggerStories from './DropdownMenu/DropdownMenuTrigger.stories';
+import * as DropdownMenuPortalStories from './DropdownMenu/DropdownMenuPortal.stories';
+import * as DropdownMenuSubStories from './DropdownMenu/DropdownMenuSub.stories';
+import * as DropdownMenuSubContentStories from './DropdownMenu/DropdownMenuSubContent.stories';
+import * as DropdownMenuGroupStories from './DropdownMenu/DropdownMenuGroup.stories';
+import * as DropdownMenuRadioGroupStories from './DropdownMenu/DropdownMenuRadioGroup.stories';
+import * as DropdownMenuContentStories from './DropdownMenu/DropdownMenuContent.stories';
+import * as DropdownMenuItemStories from './DropdownMenu/DropdownMenuItem.stories';
+import * as DropdownMenuShortcutStories from './DropdownMenu/DropdownMenuShortcut.stories';
+import * as DropdownMenuLabelStories from './DropdownMenu/DropdownMenuLabel.stories';
+import * as DropdownMenuSeparatorStories from './DropdownMenu/DropdownMenuSeparator.stories';
+import * as DropdownMenuSubTriggerStories from './DropdownMenu/DropdownMenuSubTrigger.stories';
+import * as DropdownMenuCheckboxItemStories from './DropdownMenu/DropdownMenuCheckboxItem.stories';
+import * as DropdownMenuGroupLabelStories from './DropdownMenu/DropdownMenuGroupLabel.stories';
+import * as DropdownMenuRadioItemStories from './DropdownMenu/DropdownMenuRadioItem.stories';
+
+<Meta of={DropdownMenuStories} />
+<Title/>
+
+## Simple Example
+
+```fsharp
+DropdownMenu().spread props {
+    DropdownMenuTrigger() {
+        "Open"
+    }
+    DropdownMenuContent() {
+        DropdownMenuLabel() {
+            "My Account"
+        }
+        DropdownMenuSeparator()
+        DropdownMenuItem() { "Profile" }
+        DropdownMenuItem() { "Billing" }
+        DropdownMenuItem() { "Team" }
+        DropdownMenuItem() { "Subscription" }
+    }
+}
+```
+
+<Canvas of={DropdownMenuStories.Default} sourceState="none" layout={"centered"} withToolbar={true}/>
+<Controls/>
+
+> A more comprehensive example would look identical to the 'ContextMenu' examples.
+
+
+## Components
+### DropdownMenu
+<ArgTypes of={DropdownMenuStories} />
+
+### DropdownMenuTrigger
+<ArgTypes of={DropdownMenuTriggerStories} />
+
+### DropdownMenuPortal
+<ArgTypes of={DropdownMenuPortalStories} />
+
+### DropdownMenuSub
+<ArgTypes of={DropdownMenuSubStories} />
+
+### DropdownMenuSubContent
+<ArgTypes of={DropdownMenuSubContentStories} />
+
+### DropdownMenuGroup
+<ArgTypes of={DropdownMenuGroupStories} />
+
+### DropdownMenuRadioGroup
+<ArgTypes of={DropdownMenuRadioGroupStories} />
+
+### DropdownMenuContent
+<ArgTypes of={DropdownMenuContentStories} />
+
+### DropdownMenuItem
+<ArgTypes of={DropdownMenuItemStories} />
+
+### DropdownMenuShortcut
+<ArgTypes of={DropdownMenuShortcutStories} />
+
+### DropdownMenuLabel
+<ArgTypes of={DropdownMenuLabelStories} />
+
+### DropdownMenuSeparator
+<ArgTypes of={DropdownMenuSeparatorStories} />
+
+### DropdownMenuSubTrigger
+<ArgTypes of={DropdownMenuSubTriggerStories} />
+
+### DropdownMenuCheckboxItem
+<ArgTypes of={DropdownMenuCheckboxItemStories} />
+
+### DropdownMenuGroupLabel
+<ArgTypes of={DropdownMenuGroupLabelStories} />
+
+### DropdownMenuRadioItem
+<ArgTypes of={DropdownMenuRadioItemStories} />
