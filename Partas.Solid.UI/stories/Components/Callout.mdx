@@ -1,0 +1,21 @@
+import { Meta, Canvas, Stories, Title, Controls } from '@storybook/addon-docs/blocks';
+import * as CalloutStories from './Callout.stories';
+
+<Meta of={CalloutStories} />
+<Title />
+
+```fsharp
+Callout() {
+    CalloutTitle() {
+        "Callout title"
+    }
+    CalloutContent() {
+        "Callout description"
+    }
+}
+```
+
+<Canvas of={CalloutStories.Default} sourceState={"none"} withToolbar={true}/>
+<Controls />
+
+<Stories includePrimary={false}/>

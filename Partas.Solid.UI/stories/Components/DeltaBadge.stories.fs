@@ -39,5 +39,6 @@ let private meta = storybook<BadgeDelta> {
         badge.variant <- Variant.Default
         badge.deltaType <- Type.Unchanged
         badge.round <- false)
+    tags [| "!autodocs" |]
 }
 

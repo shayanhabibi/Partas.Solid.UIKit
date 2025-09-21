@@ -1,0 +1,28 @@
+import { Meta, Canvas, Stories, Title, ArgTypes, Controls } from '@storybook/addon-docs/blocks';
+import * as BadgeStories from './Badge.stories';
+import * as DeltaStories from './DeltaBadge.stories';
+
+<Meta of={BadgeStories}/>
+<Title/>
+
+```fsharp
+Badge() {
+    "Badge"
+}
+```
+
+<Canvas of={BadgeStories.Default} sourceState={"none"} layout={"centered"} withToolbar={true}/>
+<Controls />
+
+### Delta Badge
+
+```fsharp
+DeltaBadge() {
+    "Delta"
+}
+```
+
+<Canvas of={DeltaStories.Default} meta={DeltaStories} sourceState={"none"} layout={"centered"} withToolbar={true}/>
+<Controls of={DeltaStories.Default} />
+
+<Stories of={BadgeStories} includePrimary={false}/>

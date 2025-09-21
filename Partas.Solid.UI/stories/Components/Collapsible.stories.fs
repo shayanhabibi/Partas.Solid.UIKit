@@ -13,6 +13,10 @@ let private meta = storybook<Collapsible> {
                 "Content"
             }
         })
+    args (fun props ->
+        props.defaultOpen <- false
+        props.disabled <- false
+        )
     args "Default" (fun props -> ())
 }
 

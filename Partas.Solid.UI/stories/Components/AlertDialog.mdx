@@ -31,3 +31,24 @@ AlertDialog() {
 
 <ArgTypes of={AlertDialogContentStories} />
 
+### Polymorphism
+
+Like all components, you can use inherent kobalte polymorphism to change the rendered element for a component.
+
+```fsharp
+AlertDialog() {
+    AlertDialogTrigger().as'(Button(variant = Button.Variant.Secondary)) {
+        "Click me"
+    }
+    AlertDialogContent() {
+        AlertDialogTitle() {
+            "Alert dialog title"
+        }
+        AlertDialogDescription() {
+            "Alert dialog description"
+        }
+    }
+}
+```
+
+<Canvas of={AlertDialogStories.AsButton} layout={"centered"} withToolbar={true} sourceStatus={"none"} />

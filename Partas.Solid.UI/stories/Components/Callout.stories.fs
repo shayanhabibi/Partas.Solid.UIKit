@@ -16,13 +16,33 @@ let private meta = storybook<Callout> {
         )
     render (fun callout ->
         Callout().spread callout {
+            CalloutTitle() {
+                "Callout title"
+            }
             CalloutContent() {
-                CalloutTitle() {
-                    "Callout title"
-                }
-                "Callout description?"
+                "Callout description"
             }
         })
+    render "Variants" (fun props ->
+        div(class' = "max-w-md flex flex-col gap-4") { 
+            For(each = [|
+                Variant.Default
+                Variant.Success
+                Variant.Warning
+                Variant.Error
+            |]) {
+                yield fun variant _ ->
+                    Callout(variant = variant) {
+                        CalloutTitle() {
+                            "Callout title"
+                        }
+                        CalloutContent() {
+                            unbox variant
+                        }
+                    }
+            }
+        }
+        )
     args "Default" (fun callout ->
         callout.variant <- Variant.Default)
 }

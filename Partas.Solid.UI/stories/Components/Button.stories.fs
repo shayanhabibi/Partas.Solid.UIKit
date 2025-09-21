@@ -7,6 +7,7 @@ open Fable.Core.JsInterop
 open Partas.Solid.UI
 open Partas.Solid.Storybook
 open Partas.Solid.UI.Button
+open Partas.Solid.Lucide
 
 [<PartasStorybook>]
 let private meta = storybook<Button> {
@@ -30,16 +31,46 @@ let private meta = storybook<Button> {
         )
     args (fun btn ->
         btn.disabled <- false
+        btn.onClick <- !!Storybook.fn()
         )
     args "Default" (fun btn ->
         btn.variant <- Variant.Default
         btn.size <- Size.Default
         )
-    args "Destructive" (fun btn ->
-        btn.variant <- Variant.Destructive)
     render (fun btn ->
         Button().spread btn {
             "Button"
+        }
+        )
+    render "Variants" (fun btn ->
+        div(class' = "flex justify-between gap-4") {
+            For(each = [|
+                Size.Icon
+                Size.Small
+                Size.Default
+                Size.Large
+            |]) {yield fun size _ ->
+                div(class' = "flex flex-col gap-2 items-center") {
+                    Label() { !!size }
+                    Separator()
+                    For(each = [|
+                        Variant.Default
+                        Variant.Secondary
+                        Variant.Outline
+                        Variant.Destructive
+                        Variant.Ghost
+                        Variant.Link
+                    |]) {
+                        yield fun variant _ ->
+                            Button(size = size, variant = variant) {
+                                if size = Size.Icon then
+                                    Lucide.Aperture()
+                                else
+                                    !!variant
+                            }
+                    }
+                }
+            }
         }
         )
 }
