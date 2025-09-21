@@ -1,0 +1,1 @@
+import{I as r}from"./Icon-CqHicZQ1.js";import{c as o,m as a}from"./iframe-CxGoIJAb.js";var t=[["path",{d:"m9 18 6-6-6-6",key:"mthhwq"}]],n=e=>o(r,a(e,{iconNode:t,name:"chevron-right"})),f=n,h=[["path",{d:"m15 18-6-6 6-6",key:"1wnfg3"}]],m=e=>o(r,a(e,{iconNode:h,name:"chevron-left"})),d=m;export{f as a,d as c};
