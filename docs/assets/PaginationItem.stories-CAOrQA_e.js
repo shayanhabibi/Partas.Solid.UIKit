@@ -1,3 +1,0 @@
-import{t}from"./iframe-Clet01EE.js";import{e as a}from"./Pagination-COjd2_a-.js";var o=t("<div>");const r={args:{},argTypes:{page:{control:{type:"number",max:2147483647,min:-2147483648,step:1},table:{type:{summary:"int32"}}},disabled:{control:{type:"boolean"},table:{type:{summary:"bool"}}}},render:n=>o(),tags:["!autodocs"],component:a},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],l=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:r},Symbol.toStringTag,{value:"Module"}));export{l as P};

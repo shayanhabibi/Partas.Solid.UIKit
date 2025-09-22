@@ -1,0 +1,11 @@
+import{d as i}from"./Option-BhX2R0kg.js";import{s,c as n,m as o}from"./iframe-rVoFtZu9.js";import{T as d,a as c,b as u}from"./MKJEDDFV-Bn-fTio2.js";import{d as f,e as b,f as g}from"./ZZYKR3VO-NDDEU6Nn.js";import{L as l}from"./Utils-DvLkKxqJ.js";function a(e){const r=i(e,"label");return"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 group-disabled:opacity-70 group-disabled:cursor-not-allowed "+(r==="description"?"font-normal text-muted-foreground":r==="error"?"text-xs text-destructive":"data-[invalid]:text-destructive")}function R(e){const[r,t]=s(e,["class"]);return n(u,o({get class(){return l(["group flex flex-col gap-1",r.class])}},t,{"bool:n$":!1}))}function S(e){e=o({type:"text"},e);const[r,t]=s(e,["class","type"]);return n(c,o({get class(){return l([`flex h-10 w-full rounded-md border border-input\r
+            bg-transparent px-3 py-2 text-sm ring-offset-background\r
+            file:border-0 file:bg-transparent file:text-sm file:font-medium\r
+            placeholder:text-muted-foreground focus-visible:outline-none\r
+            focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\r
+            disabled:cursor-not-allowed disabled:opacity-50\r
+            data-[invalid]:border-error-foreground data-[invalid]:text-error-foreground`,r.class])},get type(){return r.type}},t,{"bool:n$":!1}))}function _(e){const[r,t]=s(e,["class"]);return n(d,o({get class(){return l([`flex min-h-[80px] w-full rounded-md border border-input\r
+            bg-background px-3 py-2 text-sm ring-offset-background\r
+            placeholder:text-muted-foreground focus-visible:outline-none\r
+            focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2\r
+            disabled:cursor-not-allowed disabled:opacity-50`,r.class])}},t,{"bool:n$":!1}))}function L(e){const[r,t]=s(e,["class"]);return n(f,o({get class(){return l([a("label"),r.class])}},t,{"bool:n$":!1}))}function v(e){const[r,t]=s(e,["class"]);return n(g,o({get class(){return l([a("description"),r.class])}},t,{"bool:n$":!1}))}function F(e){const[r,t]=s(e,["class"]);return n(b,o({get class(){return l([a("error"),r.class])}},t,{"bool:n$":!1}))}export{R as T,S as a,L as b,F as c,_ as d,v as e};

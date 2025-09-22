@@ -1,0 +1,1 @@
+import{I as e}from"./Icon-b_5I2J3_.js";import{c,m as a}from"./iframe-rVoFtZu9.js";var o=[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}]],m=r=>c(e,a(r,{iconNode:o,name:"circle"})),t=m;export{t as c};

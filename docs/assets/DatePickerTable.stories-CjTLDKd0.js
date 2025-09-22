@@ -1,3 +1,0 @@
-import{t}from"./iframe-Clet01EE.js";import{u as r}from"./DatePicker-D-mywrgq.js";var a=t("<div>");const o={args:{},argTypes:{asChild:{control:{type:!1},table:{type:{summary:"function"}}},columns:{control:{type:"number",max:2147483647,min:-2147483648,step:1},table:{type:{summary:"int32"}}}},render:m=>a(),tags:["!autodocs"],component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],l=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:o},Symbol.toStringTag,{value:"Module"}));export{l as D};
