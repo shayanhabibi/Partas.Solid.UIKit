@@ -72,6 +72,7 @@
         <Compile Include="Components\Status.fs" />
         <Compile Include="Components\AuroraBanner.fs" />
         <Compile Include="Kit\AvatarStack.fs" />
+        <Compile Include="Kit\SignatureField.fs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -217,7 +218,7 @@
       <Compile Include="stories\Components\NavigationMenu\NavigationMenuContent.stories.fs" />
       <Compile Include="stories\Components\NavigationMenu\NavigationMenuLink.stories.fs" />
       <Compile Include="stories\Components\NavigationMenu\NavigationMenuLabel.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuDescription.Stories.fs" />
+      <Compile Include="stories\Components\NavigationMenu\NavigationMenuDescription.stories.fs" />
       <Content Include="stories\Components\NavigationMenu\NavigationMenu.mdx" />
       <Compile Include="stories\Components\NumberField\NumberField.stories.fs" />
       <Compile Include="stories\Components\NumberField\NumberFieldGroup.stories.fs" />
@@ -387,6 +388,8 @@
       <Content Include="stories\Components\Flairs\BorderBeam.mdx" />
       <Content Include="stories\Dev\Tasks.mdx" />
       <Compile Include="stories\Kit\AvatarStack.stories.fs" />
+      <Compile Include="stories\Kit\SignatureField\SignatureField.stories.fs" />
+      <Content Include="stories\Kit\SignatureField\SignatureField.mdx" />
       <Content Include="tsconfig.json" />
       <TypeScriptCompile Include="vitest.config.ts" />
       <Content Include="package.json" />
@@ -396,10 +399,10 @@
     <ItemGroup>
       <PackageReference Include="Partas.AnimeJs" Version="0.0.5" />
       <PackageReference Include="Partas.Solid" Version="2.1.2" />
-      <PackageReference Include="Partas.Solid.ArkUI" Version="0.2.3" />
+      <PackageReference Include="Partas.Solid.ArkUI" Version="0.3.0" />
       <PackageReference Include="Partas.Solid.Cmdk" Version="0.2.3" />
       <PackageReference Include="Partas.Solid.Corvu" Version="0.2.3" />
-      <PackageReference Include="Partas.Solid.Kobalte" Version="0.4.1" />
+      <PackageReference Include="Partas.Solid.Kobalte" Version="0.4.2" />
       <PackageReference Include="Partas.Solid.Lucide" Version="0.513.1" />
       <PackageReference Include="Partas.Solid.Primitives" Version="0.3.2" />
       <PackageReference Include="Partas.Solid.Sonner" Version="0.2.2" />

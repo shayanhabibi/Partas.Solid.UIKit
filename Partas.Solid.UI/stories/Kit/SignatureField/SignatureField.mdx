@@ -1,0 +1,17 @@
+﻿import { Meta, Title, ArgTypes, Controls, Canvas } from '@storybook/addon-docs/blocks';
+import * as SignatureFieldStories from './SignatureField.stories';
+
+<Meta of={SignatureFieldStories}/>
+<Title/>
+
+A signature field with a clear button that lays above the signature to prevent
+it becoming obscured, and responsive light/dark color scheme.
+
+It can be styled using the 'slots' property object.
+
+<Canvas of={SignatureFieldStories.Default} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### SignatureField
+<ArgTypes of={SignatureFieldStories}/>

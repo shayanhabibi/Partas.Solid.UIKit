@@ -1,10 +1,38 @@
-﻿import { Meta, Controls, Story, Stories, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+﻿import { Meta, Title, Controls, Story, Stories, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
 import * as AccordionStories from './Accordion.stories';
 import * as AccordionItemStories from './AccordionItem.stories';
 
 <Meta of={AccordionStories}/>
+<Title/>
 
-# Accordion
+You typically compose an accordion in the following manner:
+
+```fsharp
+Accordion() {
+    AccordionItem(value = "item1") {
+        AccordionTrigger() { "Item 1" }
+        AccordionContent() { "Content for Accordion Item 1" }
+    }
+}
+```
+
+The Items can be dynamically created:
+
+```fsharp
+Accordion().spread acc {
+    For(each = [| 1;2;3;4;5;6 |]) {
+        yield fun idx _ ->
+            AccordionItem(value = $"Accordion{idx}") {
+                AccordionTrigger() {
+                    $"Title {idx}"
+                }
+                AccordionContent() {
+                    $"Content {idx}"
+                }
+            }
+    }
+}
+```
 
 <Canvas of={AccordionStories.Default} sourceState={"none"} withToolbar={true}/>
 
@@ -18,7 +46,7 @@ The accordion is composed of multiple subcomponents:
 
 ### AccordionItem
 
-<ArgTypes of={AccordionItemStories} exclude={/[A-Za-z0-9'_]+_1$/}/>
+<ArgTypes of={AccordionItemStories} exclude={/[A-Za-z0-9'_]+@_1$/}/>
 
 #### AccordionTrigger
 
@@ -27,17 +55,4 @@ The accordion is composed of multiple subcomponents:
 #### AccordionContent
 
 > No relevant props
-
-## Composition
-
-You typically compose an accordion in the following manner:
-
-```fsharp
-Accordion() {
-    AccordionItem(value = "item1") {
-        AccordionTrigger() { "Item 1" }
-        AccordionContent() { "Content for Accordion Item 1" }
-    }
-}
-```
 
