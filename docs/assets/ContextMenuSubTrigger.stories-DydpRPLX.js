@@ -1,0 +1,3 @@
+import{g as r,f as a,C as n}from"./ContextMenu-BpIrV_8s.js";import{c as t}from"./iframe-Clet01EE.js";const s={args:{},argTypes:{textValue:{control:{type:"text"},table:{type:{summary:"string"}}},disabled_1:{control:{type:"boolean"},table:{type:{summary:"bool"}}},disabled:{control:{type:"boolean"},table:{type:{summary:"bool"}}}},decorators:[o=>t(n,{get children(){return t(a,{get children(){return o()}})}})],tags:["!autodocs"],component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const l=["Default"],m=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:l,default:s},Symbol.toStringTag,{value:"Module"}));export{m as C};

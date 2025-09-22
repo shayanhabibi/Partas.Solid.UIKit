@@ -1,0 +1,122 @@
+﻿import { Meta, Stories, Controls, ArgTypes, Title, Canvas, Story } from '@storybook/addon-docs/blocks';
+import * as ContextMenuStories from './ContextMenu.stories';
+import * as ContextMenuTriggerStories from './ContextMenuTrigger.stories';
+import * as ContextMenuPortalStories from './ContextMenuPortal.stories';
+import * as ContextMenuSubStories from './ContextMenuSub.stories';
+import * as ContextMenuGroupStories from './ContextMenuGroup.stories';
+import * as ContextMenuRadioGroupStories from './ContextMenuRadioGroup.stories';
+import * as ContextMenuContentStories from './ContextMenuContent.stories';
+import * as ContextMenuItemStories from './ContextMenuItem.stories';
+import * as ContextMenuShortcutStories from './ContextMenuShortcut.stories';
+import * as ContextMenuSeparatorStories from './ContextMenuSeparator.stories';
+import * as ContextMenuSubTriggerStories from './ContextMenuSubTrigger.stories';
+import * as ContextMenuSubContentStories from './ContextMenuSubContent.stories';
+import * as ContextMenuCheckboxItemStories from './ContextMenuCheckboxItem.stories';
+import * as ContextMenuGroupLabelStories from './ContextMenuGroupLabel.stories';
+import * as ContextMenuRadioItemStories from './ContextMenuRadioItem.stories';
+
+<Meta of={ContextMenuStories} />
+<Title />
+
+<Canvas of={ContextMenuStories.Example} sourceState={"none"} layout={"centered"}/>
+
+<Controls of={ContextMenuStories.Example}/>
+
+```fsharp
+let showGitLog,setShowGitLog = createSignal true
+let showHistory,setShowHistory = createSignal false
+let branch,setBranch = createSignal "main"
+ContextMenu() {
+    ContextMenuTrigger(class' = "flex h-[150px] w-[300px] items-center justify-center \
+                       rounded-md border border-dashed text-sm")
+        { "Right click here." }
+    ContextMenuPortal() {
+        ContextMenuContent(class' = "w-48") {
+            let inline makeContextItem (value: string) (shortcut: string) disabled =
+                ContextMenuItem(disabled = disabled) {
+                    span() { value }
+                    ContextMenuShortcut() { shortcut }
+                }
+            makeContextItem "Commit" "Ctrl+K" false
+            makeContextItem "Push" "Shift+Ctrl+K" false
+            makeContextItem "Update Project" "Ctrl+T" true
+            ContextMenuSub(overlap=true) {
+                ContextMenuSubTrigger() { "GitHub" }
+                ContextMenuPortal() {
+                    ContextMenuSubContent() {
+                        let inline makeContextItem (value: string) =
+                            ContextMenuItem() { value }
+                        makeContextItem "Create Pull Request..."
+                        makeContextItem "View Pull Requests"
+                        makeContextItem "Sync Fork"
+                        ContextMenuSeparator()
+                        makeContextItem "Open on GitHub"
+                    }
+                }
+            }
+            ContextMenuSeparator()
+            let inline makeCheckbox
+                (value: string)
+                (accessor: Accessor<bool>)
+                (setter: Setter<bool>) =
+                ContextMenuCheckboxItem(checked'=accessor(), onChange=unbox setter) { value }
+            makeCheckbox "Show Git Log" showGitLog setShowGitLog
+            makeCheckbox "Show History" showHistory setShowHistory
+            ContextMenuSeparator()
+            ContextMenuGroup() {
+                ContextMenuGroupLabel() { "Branches" }
+                ContextMenuRadioGroup(value = branch(), onChange = unbox setBranch) {
+                    ContextMenuRadioItem(value = "main") { "main" }
+                    ContextMenuRadioItem(value = "develop") { "develop" }
+                }
+            }
+        }
+    }
+}
+```
+
+## Components
+### ContextMenu
+<ArgTypes of={ContextMenuStories} />
+
+### ContextMenuTrigger
+<ArgTypes of={ContextMenuTriggerStories} />
+
+### ContextMenuPortal
+<ArgTypes of={ContextMenuPortalStories} />
+
+### ContextMenuSub
+<ArgTypes of={ContextMenuSubStories} />
+
+### ContextMenuGroup
+<ArgTypes of={ContextMenuGroupStories} />
+
+### ContextMenuRadioGroup
+<ArgTypes of={ContextMenuRadioGroupStories} />
+
+### ContextMenuContent
+<ArgTypes of={ContextMenuContentStories} />
+
+### ContextMenuItem
+<ArgTypes of={ContextMenuItemStories} />
+
+### ContextMenuShortcut
+<ArgTypes of={ContextMenuShortcutStories} />
+
+### ContextMenuSeparator
+<ArgTypes of={ContextMenuSeparatorStories} />
+
+### ContextMenuSubTrigger
+<ArgTypes of={ContextMenuSubTriggerStories} />
+
+### ContextMenuSubContent
+<ArgTypes of={ContextMenuSubContentStories} />
+
+### ContextMenuCheckboxItem
+<ArgTypes of={ContextMenuCheckboxItemStories} />
+
+### ContextMenuGroupLabel
+<ArgTypes of={ContextMenuGroupLabelStories} />
+
+### ContextMenuRadioItem
+<ArgTypes of={ContextMenuRadioItemStories} />

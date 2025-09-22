@@ -1,3 +1,0 @@
-import{c as o,D as t}from"./Drawer-B7CPFmD1.js";import{c as a}from"./iframe-CQhh2Qu5.js";import"./GZJAOTUE-C8veUlZR.js";import"./size-BvIj0Gnb.js";import"./U42ECMND-BDjyePcW.js";import"./index-DNbZ_U_3.js";import"./index-DW9tDSAV.js";import"./Utils-CX15CBuI.js";import"./preload-helper-PPVm8Dsz.js";const f={args:{},argTypes:{},decorators:[e=>a(t,{get children(){return e()}})],tags:["!autodocs"],component:o},r={args:{}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...r.parameters?.docs?.source}}};const l=["Default"];export{r as Default,l as __namedExportsOrder,f as default};

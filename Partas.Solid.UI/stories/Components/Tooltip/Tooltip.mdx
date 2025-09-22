@@ -1,0 +1,20 @@
+﻿import { Meta, Controls, ArgTypes, Canvas, Title } from '@storybook/addon-docs/blocks';
+import * as TooltipStories from './Tooltip.stories';
+import * as TooltipTriggerStories from './TooltipTrigger.stories';
+import * as TooltipContentStories from './TooltipContent.stories';
+
+<Meta of={TooltipStories}/>
+<Title/>
+
+<Canvas of={TooltipStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### Tooltip
+<ArgTypes of={TooltipStories}/>
+
+### TooltipTrigger
+<ArgTypes of={TooltipTriggerStories}/>
+
+### TooltipContent
+<ArgTypes of={TooltipContentStories}/>

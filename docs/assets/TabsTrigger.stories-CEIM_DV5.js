@@ -1,0 +1,3 @@
+import{t as r}from"./iframe-Clet01EE.js";import{b as t}from"./Tabs-Da4VQdRm.js";var o=r("<div>");const a={args:{},argTypes:{value:{control:{type:"text"},table:{type:{summary:"string"}}},disabled_1:{control:{type:"boolean"},table:{type:{summary:"bool"}}},disabled:{control:{type:"boolean"},table:{type:{summary:"bool"}}}},render:l=>o(),tags:["!autodocs"],component:t},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const s=["Default"],p=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:a},Symbol.toStringTag,{value:"Module"}));export{p as T};

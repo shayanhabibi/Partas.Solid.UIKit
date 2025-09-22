@@ -1,0 +1,100 @@
+﻿import { Meta, Canvas, Title, Controls, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as SonnerStories from './Sonner.stories';
+
+<Meta of={SonnerStories}/>
+<Title/>
+
+<Canvas of={SonnerStories.Default} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### Sonner
+<ArgTypes of={SonnerStories}/>
+
+### ToastIcons
+
+This is an object which modifies the Icons for the different toast types.
+
+```fsharp
+type ToastIcons() =
+    val mutable success: HtmlElement option
+    val mutable info: HtmlElement option
+    val mutable warning: HtmlElement option
+    val mutable error: HtmlElement option
+    val mutable loading: HtmlElement option
+    val mutable close: HtmlElement option
+```
+
+### ToastClassnames
+
+This is an object which sets the classes for the different toast types.
+
+```fsharp
+type ToastClassnames() =
+    val mutable close : string option 
+    val mutable toast : string option
+    val mutable title : string option
+    val mutable description : string option 
+    val mutable loader : string option 
+    val mutable closeButton : string option 
+    val mutable cancelButton : string option 
+    val mutable actionButton : string option
+    val mutable success : string option 
+    val mutable error : string option 
+    val mutable info : string option 
+    val mutable warning : string option
+    val mutable loading : string option
+    val mutable ``default`` : string option
+    val mutable content : string option 
+    val mutable icon : string option 
+```
+
+### Action
+
+This is an object which sets the 'action' button of the toast.
+
+```fsharp
+type Action() =
+    val mutable label: HtmlElement
+    val mutable onClick: MouseEvent -> unit
+    val mutable actionButtonStyle: obj option
+```
+
+### Toast
+
+This is an object that is passed to create a toast.
+
+```fsharp
+type Toast() =
+    val mutable id : string option 
+    val mutable action : Action option 
+    val mutable cancel : Action option 
+    val mutable title : string option 
+    val mutable type': Toast.Type option
+    val mutable icon : HtmlElement option 
+    val mutable jsx : HtmlElement option 
+    val mutable description : HtmlElement option 
+    val mutable richColors : bool option 
+    val mutable invert : bool option 
+    val mutable closeButton : bool option 
+    val mutable dismissible : bool option 
+    val mutable delete : bool option 
+    val mutable unstyled : bool option 
+    val mutable duration : int option 
+    val mutable onDismiss : Option<Toast -> unit> 
+    val mutable onAutoClose : Option<Toast -> unit> 
+    val mutable cancelButtonStyle : obj option 
+    val mutable actionButtonStyle : obj option
+    val mutable style : obj option 
+    val mutable class': string option
+    val mutable descriptionClassName : string option 
+    val mutable position : Toast.Position option 
+    val mutable classes : ToastClassnames option
+```
+
+This can also be handled in the method call to 'Sonner' in 'Sonner.toast'
+
+There are also shortcuts to the different types of toasts via 'Sonner.toast.___'
+
+When creating a toast, a string ID is returned, which can be used to dismiss the toast via 'Sonner.toast.dismiss'.
+

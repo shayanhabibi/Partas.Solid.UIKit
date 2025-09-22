@@ -1,0 +1,12 @@
+﻿import { Meta, Controls, Canvas, Title, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as CategoryBarStories from './CategoryBar.stories';
+
+<Meta of={CategoryBarStories}/>
+<Title/>
+
+<Canvas of={CategoryBarStories.Default} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### CategoryBar
+<ArgTypes of={CategoryBarStories}/>

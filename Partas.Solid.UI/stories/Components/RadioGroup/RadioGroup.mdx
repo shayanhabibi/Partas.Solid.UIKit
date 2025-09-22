@@ -1,0 +1,19 @@
+﻿import { Meta, Canvas, Controls, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as RadioGroupStories from './RadioGroup.stories';
+import * as RadioGroupItemStories from './RadioGroupItem.stories';
+import * as RadioGroupItemLabelStories from './RadioGroupItemLabel.stories';
+
+<Meta of={RadioGroupStories} />
+<Title/>
+<Canvas of={RadioGroupStories.Default} layout={"centered"} withToolbar={true} sourceState={"none"}/>
+<Controls/>
+
+## Components
+### RadioGroup
+<ArgTypes of={RadioGroupStories}/>
+
+### RadioGroupItem
+<ArgTypes of={RadioGroupItemStories}/>
+
+### RadioGroupItemLabel
+<ArgTypes of={RadioGroupItemLabelStories}/>

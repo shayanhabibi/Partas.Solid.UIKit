@@ -1,0 +1,19 @@
+﻿import { Canvas, Meta, Title, ArgTypes, Controls } from '@storybook/addon-docs/blocks';
+import * as HoverCardStories from './HoverCard.stories';
+import * as HoverCardTriggerStories from './HoverCardTrigger.stories';
+import * as HoverCardContentStories from './HoverCardContent.stories';
+
+<Meta of={HoverCardStories} />
+<Title/>
+<Canvas of={HoverCardStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### HoverCard
+<ArgTypes/>
+
+### HoverCardTrigger
+<ArgTypes of={HoverCardTriggerStories} />
+
+### HoverCardContent
+<ArgTypes of={HoverCardContentStories} />

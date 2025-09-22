@@ -1,0 +1,16 @@
+﻿import { Meta, ArgTypes, Title, Controls, Canvas } from '@storybook/addon-docs/blocks';
+import * as ToggleGroupStories from './ToggleGroup.stories';
+import * as ToggleGroupItemStories from './ToggleGroupItem.stories';
+
+<Meta of={ToggleGroupStories}/>
+<Title/>
+
+<Canvas of={ToggleGroupStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### ToggleGroup
+<ArgTypes of={ToggleGroupStories}/>
+
+### ToggleGroupItem
+<ArgTypes of={ToggleGroupItemStories}/>

@@ -1,0 +1,16 @@
+﻿import { Meta, Controls, Canvas, ArgTypes, Title, Stories } from '@storybook/addon-docs/blocks';
+import * as SpinnerStories from './Spinner.stories';
+
+<Meta of={SpinnerStories}/>
+<Title/>
+
+<Canvas of={SpinnerStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### Spinner
+<ArgTypes of={SpinnerStories}/>
+
+## Stories
+<Stories of={SpinnerStories} includePrimary={false}/>
+

@@ -1,0 +1,31 @@
+﻿import { Meta, Canvas, Controls, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as PaginationStories from './Pagination.stories';
+import * as PaginationItemsStories from './PaginationItems.stories';
+import * as PaginationItemStories from './PaginationItem.stories';
+import * as PaginationEllipsisStories from './PaginationEllipsis.stories';
+import * as PaginationNextStories from './PaginationNext.stories';
+import * as PaginationPreviousStories from './PaginationPrevious.stories';
+
+<Meta of={PaginationStories}/>
+<Title/>
+<Canvas of={PaginationStories.Default} sourceState={"none"} layout={"centered"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### Pagination
+<ArgTypes of={PaginationStories}/>
+
+### PaginationItems
+<ArgTypes of={PaginationItemsStories}/>
+
+### PaginationItem
+<ArgTypes of={PaginationItemStories}/>
+
+### PaginationEllipsis
+<ArgTypes of={PaginationEllipsisStories}/>
+
+### PaginationNext
+<ArgTypes of={PaginationNextStories}/>
+
+### PaginationPrevious
+<ArgTypes of={PaginationPreviousStories}/>

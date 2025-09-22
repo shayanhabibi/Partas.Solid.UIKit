@@ -1,0 +1,19 @@
+﻿import { Meta, Controls, ArgTypes, Canvas, Title } from '@storybook/addon-docs/blocks';
+import * as ResizeableStories from './Resizeable.stories';
+import * as ResizeablePanelStories from './ResizeablePanel.stories';
+import * as ResizeableHandleStories from './ResizeableHandle.stories';
+
+<Meta of={ResizeableStories}/>
+<Title/>
+<Canvas of={ResizeableStories.Default} layout={"centered"} withToolbar={true} sourceState={"none"}/>
+<Controls/>
+
+## Components
+### Resizeable
+<ArgTypes of={ResizeableStories}/>
+
+### ResizeablePanel
+<ArgTypes of={ResizeablePanelStories}/>
+
+### ResizeableHandle
+<ArgTypes of={ResizeableHandleStories}/>

@@ -1,0 +1,1 @@
+import{d as c,a as f,t as o}from"./index-xPNqmJU7.js";import{e as E,l as m}from"./iframe-Clet01EE.js";function u(e,n,t,r){return e.addEventListener(n,t,r),o(e.removeEventListener.bind(e,n,t,r))}function d(e,n,t,r){const a=()=>{c(f(e)).forEach(s=>{s&&c(f(n)).forEach(i=>u(s,i,t,r))})};typeof e=="function"?E(a):m(a)}export{d as c,u as m};

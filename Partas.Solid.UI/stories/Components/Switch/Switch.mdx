@@ -1,0 +1,33 @@
+﻿import { Meta, Controls, Canvas, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as SwitchStories from './Switch.stories';
+import * as SwitchDescriptionStories from './SwitchDescription.stories';
+import * as SwitchErrorMessageStories from './SwitchErrorMessage.stories';
+import * as SwitchControlStories from './SwitchControl.stories';
+import * as SwitchThumbStories from './SwitchThumb.stories';
+import * as SwitchLabelStories from './SwitchLabel.stories';
+
+<Meta of={SwitchStories} />
+<Title />
+
+<Canvas of={SwitchStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+
+### Switch
+<ArgTypes of={SwitchStories} />
+
+### SwitchDescription
+<ArgTypes of={SwitchDescriptionStories} />
+
+### SwitchErrorMessage
+<ArgTypes of={SwitchErrorMessageStories} />
+
+### SwitchControl
+<ArgTypes of={SwitchControlStories} />
+
+### SwitchThumb
+<ArgTypes of={SwitchThumbStories} />
+
+### SwitchLabel
+<ArgTypes of={SwitchLabelStories} />

@@ -1,0 +1,26 @@
+﻿import { Meta, Canvas, Title, Stories } from '@storybook/addon-docs/blocks';
+import * as LabelStories from './Label.stories';
+
+<Meta of={LabelStories} />
+<Title />
+
+The label is a stylised implementation of the 'label' native tag.
+
+It mirrors the disabled state of peers; so, to enable this, the attached control
+must have the 'peer' class.
+
+```fsharp
+div() {
+    Button(disabled=true) { "Button" }
+    Label() { "Not correct" }
+}
+```
+
+```fsharp
+div() {
+    Button(class' = "peer", disabled=true) { "Button" }
+    Label() { "Correct" }
+}
+```
+
+<Stories of={LabelStories} />

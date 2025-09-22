@@ -1,0 +1,3 @@
+import{g as r,e as a,C as s}from"./Combobox-tmUIlYsa.js";import{c as e}from"./iframe-Clet01EE.js";const m={args:{},argTypes:{forceMount:{control:{type:"boolean"},table:{type:{summary:"bool"}}}},decorators:[t=>e(s,{options:["Item1"],itemComponent:c=>e(a,{get children(){return t()}})})],tags:["!autodocs"],component:r},o={args:{}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...o.parameters?.docs?.source}}};const n=["Default"],d=Object.freeze(Object.defineProperty({__proto__:null,Default:o,__namedExportsOrder:n,default:m},Symbol.toStringTag,{value:"Module"}));export{d as I};

@@ -1,0 +1,41 @@
+﻿import { Meta, Controls, Canvas, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as TableStories from './Table.stories';
+import * as TableHeaderStories from './TableHeader.stories';
+import * as TableBodyStories from './TableBody.stories';
+import * as TableFooterStories from './TableFooter.stories';
+import * as TableRowStories from './TableRow.stories';
+import * as TableHeadStories from './TableHead.stories';
+import * as TableCellStories from './TableCell.stories';
+import * as TableCaptionStories from './TableCaption.stories';
+
+<Meta of={TableStories}/>
+<Title/>
+
+<Canvas of={TableStories.Default} withToolbar={true} sourceState={"none"}/>
+<Controls/>
+
+## Components
+
+### Table
+<ArgTypes of={TableStories}/>
+
+### TableHeader
+<ArgTypes of={TableHeaderStories}/>
+
+### TableBody
+<ArgTypes of={TableBodyStories}/>
+
+### TableFooter
+<ArgTypes of={TableFooterStories}/>
+
+### TableRow
+<ArgTypes of={TableRowStories}/>
+
+### TableHead
+<ArgTypes of={TableHeadStories}/>
+
+### TableCell
+<ArgTypes of={TableCellStories}/>
+
+### TableCaption
+<ArgTypes of={TableCaptionStories}/>

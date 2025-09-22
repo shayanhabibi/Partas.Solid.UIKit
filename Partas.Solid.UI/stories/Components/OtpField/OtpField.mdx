@@ -1,0 +1,27 @@
+﻿import { Meta, Controls, Canvas, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as OtpFieldStories from './OtpField.stories';
+import * as OtpFieldInputStories from './OtpFieldInput.stories';
+import * as OtpFieldGroupStories from './OtpFieldGroup.stories';
+import * as OtpFieldSlotStories from './OtpFieldSlot.stories';
+import * as OtpFieldSeparatorStories from './OtpFieldSeparator.stories';
+
+<Meta of={OtpFieldStories}/>
+<Title/>
+<Canvas of={OtpFieldStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### OtpField
+<ArgTypes of={OtpFieldStories}/>
+
+### OtpFieldInput
+<ArgTypes of={OtpFieldInputStories}/>
+
+### OtpFieldGroup
+<ArgTypes of={OtpFieldGroupStories}/>
+
+### OtpFieldSlot
+<ArgTypes of={OtpFieldSlotStories}/>
+
+### OtpFieldSeparator
+<ArgTypes of={OtpFieldSeparatorStories}/>

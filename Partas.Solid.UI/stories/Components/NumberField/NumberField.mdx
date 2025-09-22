@@ -1,0 +1,39 @@
+﻿import { Meta, Controls, Canvas, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as NumberFieldStories from './NumberField.stories';
+import * as NumberFieldGroupStories from './NumberFieldGroup.stories';
+import * as NumberFieldLabelStories from './NumberFieldLabel.stories';
+import * as NumberFieldInputStories from './NumberFieldInput.stories';
+import * as NumberFieldIncrementTriggerStories from './NumberFieldIncrementTrigger.stories';
+import * as NumberFieldDecrementTriggerStories from './NumberFieldDecrementTrigger.stories';
+import * as NumberFieldDescriptionStories from './NumberFieldDescription.stories';
+import * as NumberFieldErrorMessageStories from './NumberFieldErrorMessage.stories';
+
+<Meta of={NumberFieldStories}/>
+<Title/>
+<Canvas of={NumberFieldStories.Default} sourceState={"none"} withToolbar={true} layout={"centered"}/>
+<Controls/>
+
+## Components
+### NumberField
+<ArgTypes of={NumberFieldStories} />
+
+### NumberFieldGroup
+<ArgTypes of={NumberFieldGroupStories} />
+
+### NumberFieldLabel
+<ArgTypes of={NumberFieldLabelStories} />
+
+### NumberFieldInput
+<ArgTypes of={NumberFieldInputStories} />
+
+### NumberFieldIncrementTrigger
+<ArgTypes of={NumberFieldIncrementTriggerStories} />
+
+### NumberFieldDecrementTrigger
+<ArgTypes of={NumberFieldDecrementTriggerStories} />
+
+### NumberFieldDescription
+<ArgTypes of={NumberFieldDescriptionStories} />
+
+### NumberFieldErrorMessage
+<ArgTypes of={NumberFieldErrorMessageStories} />

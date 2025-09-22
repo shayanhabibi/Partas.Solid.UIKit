@@ -1,0 +1,28 @@
+﻿import { Meta, Canvas, Stories, Controls, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as ProgressStories from './Progress.stories';
+import * as ProgressLabelStories from './ProgressLabel.stories';
+import * as ProgressValueLabelStories from './ProgressValueLabel.stories';
+import * as ProgressRingStories from'./ProgressRing.stories';
+
+<Meta of={ProgressStories}/>
+<Title/>
+
+<Canvas of={ProgressStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true} />
+<Controls/>
+
+<Canvas of={ProgressRingStories.Default} meta={ProgressRingStories} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls of={ProgressRingStories.Default} />
+
+## Components
+
+### Progress
+<ArgTypes of={ProgressStories}/>
+
+### ProgressLabel
+<ArgTypes of={ProgressLabelStories}/>
+
+### ProgressValueLabel
+<ArgTypes of={ProgressValueLabelStories}/>
+
+### ProgressRing
+<ArgTypes of={ProgressRingStories}/>

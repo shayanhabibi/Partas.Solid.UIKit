@@ -1,0 +1,17 @@
+﻿import { Meta, Canvas, Title, Controls, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as TimelineStories from './Timeline.stories';
+
+<Meta of={TimelineStories}/>
+<Title/>
+
+<Canvas of={TimelineStories.Default} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+
+### Timeline
+<ArgTypes of={TimelineStories}/>
+
+## Objects
+
+### Timeline Items

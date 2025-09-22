@@ -1,0 +1,1 @@
+import{t}from"./iframe-Clet01EE.js";import{h as e}from"./NavigationMenu-Ci_tie5t.js";var o=t("<div>");const a={args:{},argTypes:{},render:n=>o(),tags:["!autodocs"],component:e},r={args:{}},p=Object.freeze(Object.defineProperty({__proto__:null,Default:r,default:a},Symbol.toStringTag,{value:"Module"}));export{p as N};

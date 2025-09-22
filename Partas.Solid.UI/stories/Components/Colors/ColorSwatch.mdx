@@ -1,0 +1,12 @@
+﻿import { Meta, Controls, ArgTypes, Title, Canvas } from '@storybook/addon-docs/blocks';
+import * as ColorSwatchStories from './ColorSwatch.stories';
+
+<Meta of={ColorSwatchStories}/>
+<Title/>
+
+<Canvas of={ColorSwatchStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### ColorSwatch
+<ArgTypes of={ColorSwatchStories}/>

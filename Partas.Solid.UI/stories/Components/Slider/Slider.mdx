@@ -1,0 +1,33 @@
+﻿import { Meta, Canvas, Controls, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as SliderStories from './Slider.stories';
+import * as SliderTrackStories from './SliderTrack.stories';
+import * as SliderThumbStories from './SliderThumb.stories';
+import * as SliderFillStories from './SliderFill.stories';
+import * as SliderLabelStories from './SliderLabel.stories';
+import * as SliderValueLabelStories from './SliderValueLabel.stories';
+
+<Meta of={SliderStories}/>
+<Title/>
+
+<Canvas of={SliderStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+
+### Slider
+<ArgTypes of={SliderStories} />
+
+### SliderTrack
+<ArgTypes of={SliderTrackStories} />
+
+### SliderThumb
+<ArgTypes of={SliderThumbStories} />
+
+### SliderFill
+<ArgTypes of={SliderFillStories} />
+
+### SliderLabel
+<ArgTypes of={SliderLabelStories} />
+
+### SliderValueLabel
+<ArgTypes of={SliderValueLabelStories} />

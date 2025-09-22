@@ -1,0 +1,12 @@
+﻿import { Meta, Title, Controls, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+import * as StatusStories from './Status.stories';
+
+<Meta of={StatusStories}/>
+<Title/>
+
+<Canvas of={StatusStories.Default} layout={"centered"} withToolbar={true} sourceState={"none"}/>
+<Controls/>
+
+## Components
+### Status
+<ArgTypes of={StatusStories}/>

@@ -1,0 +1,29 @@
+﻿import { Meta, Canvas, Controls, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as TabsStories from './Tabs.stories';
+import * as TabsListStories from './TabsList.stories';
+import * as TabsTriggerStories from './TabsTrigger.stories';
+import * as TabsContentStories from './TabsContent.stories';
+import * as TabsIndicatorStories from './TabsIndicator.stories';
+
+<Meta of={TabsStories} />
+<Title/>
+
+<Canvas of={TabsStories.Default} sourceStatus={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+
+### Tabs
+<ArgTypes of={TabsStories}/>
+
+### TabsList
+<ArgTypes of={TabsListStories}/>
+
+### TabsTrigger
+<ArgTypes of={TabsTriggerStories}/>
+
+### TabsContent
+<ArgTypes of={TabsContentStories}/>
+
+### TabsIndicator
+<ArgTypes of={TabsIndicatorStories}/>

@@ -1,0 +1,12 @@
+﻿import { Meta, Controls, Canvas, Title, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as DeltaBarStories from './DeltaBar.stories';
+
+<Meta of={DeltaBarStories}/>
+<Title/>
+
+<Canvas of={DeltaBarStories.Default} sourceState={"none"} withToolbar={true}/>
+<Controls/>
+
+## Components
+### DeltaBar
+<ArgTypes of={DeltaBarStories}/>

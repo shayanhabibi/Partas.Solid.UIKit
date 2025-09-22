@@ -1,1 +1,0 @@
-import{a as c}from"./FN6EICGO-B6Cr9H-k.js";import{a as l}from"./index-DW9tDSAV.js";function f(e={}){const[o,n]=c({value:()=>l(e.open),defaultValue:()=>!!l(e.defaultOpen),onChange:s=>e.onOpenChange?.(s)}),t=()=>{n(!0)},a=()=>{n(!1)};return{isOpen:o,setIsOpen:n,open:t,close:a,toggle:()=>{o()?a():t()}}}export{f as c};

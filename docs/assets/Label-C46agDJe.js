@@ -1,1 +1,0 @@
-import{s as t,t as l,n as o,m as n}from"./iframe-CQhh2Qu5.js";import{L as p}from"./Utils-CX15CBuI.js";var m=l("<label>");function d(s){const[a,r]=t(s,["class"]);return(()=>{var e=m();return o(e,n({get class(){return p(["text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",a.class])}},r),!1,!1),e})()}export{d as L};
