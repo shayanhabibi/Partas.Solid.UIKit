@@ -1,7 +1,0 @@
-import{j as o}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as m}from"./index-BtM1hK2q.js";import{M as e,T as p,b as s,c as a,A as c}from"./blocks-CMsyRgwU.js";import{C as i,D as x}from"./ColorPicker.stories-C1_n7PHK.js";import"./iframe-rVoFtZu9.js";import"./preload-helper-PPVm8Dsz.js";import"./Util-E2-mHI_n.js";import"./ColorSwatch-6DEdNzVV.js";import"./Option-BhX2R0kg.js";import"./LR7LBJN3-Cn4krSpU.js";import"./index-Riw0p3ms.js";import"./index-kLgwDL5l.js";import"./FLVHQV4A-Gi-kDcar.js";import"./combineProps-CsPhi8Vl.js";import"./Utils-DvLkKxqJ.js";import"./Card-9G6mJ8lv.js";import"./65CAYJLE-ByuGIvjR.js";import"./SOM3K36D-CmiAbsf-.js";import"./FN6EICGO-g7b9VqP4.js";import"./NGHEENNE-CgvBP-lB.js";import"./ZZYKR3VO-NDDEU6Nn.js";import"./OYES4GOP-BdaYfyQY.js";import"./index-TjBUJP2H.js";import"./JNCCF6MP-4sxnBYeu.js";import"./5WXHJDCZ-DghNgBBa.js";import"./ColorField-Bfbc2BML.js";import"./Types-M7ke1IWY.js";import"./MKJEDDFV-Bn-fTio2.js";function n(t){const r={h2:"h2",h3:"h3",...m(),...t.components};return o.jsxs(o.Fragment,{children:[o.jsx(e,{of:i}),`
-`,o.jsx(p,{}),`
-`,o.jsx(s,{of:x,layout:"centered",sourceState:"none",withToolbar:!0}),`
-`,o.jsx(a,{}),`
-`,o.jsx(r.h2,{id:"components",children:"Components"}),`
-`,o.jsx(r.h3,{id:"colorpicker",children:"ColorPicker"}),`
-`,o.jsx(c,{of:i})]})}function G(t={}){const{wrapper:r}={...m(),...t.components};return r?o.jsx(r,{...t,children:o.jsx(n,{...t})}):n(t)}export{G as default};

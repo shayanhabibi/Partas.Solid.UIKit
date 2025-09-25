@@ -7,7 +7,13 @@ import * as SignatureFieldStories from './SignatureField.stories';
 A signature field with a clear button that lays above the signature to prevent
 it becoming obscured, and responsive light/dark color scheme.
 
-It can be styled using the 'slots' property object.
+To achieve this, the 'fill' field of the 'drawing' prop is set unless already
+existing.
+
+Therefore, to overwrite the fill colour, you would need to specifically set
+the 'fill' field on a 'DrawingOptions' object and pass it to the 'drawing' prop.
+
+The components of the field can be styled using the 'slots' property object.
 
 <Canvas of={SignatureFieldStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
@@ -15,3 +21,9 @@ It can be styled using the 'slots' property object.
 ## Components
 ### SignatureField
 <ArgTypes of={SignatureFieldStories}/>
+
+## Dev
+
+Todo:
+
+* Label positioning

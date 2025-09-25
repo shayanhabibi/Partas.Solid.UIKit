@@ -1,3 +1,0 @@
-import{t as r}from"./iframe-rVoFtZu9.js";import{c as t}from"./Sheet-Cr5YXm4T.js";var a=r("<div>");const o={args:{},argTypes:{},render:c=>a(),tags:["!autodocs"],component:t},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],p=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:o},Symbol.toStringTag,{value:"Module"}));export{p as S};

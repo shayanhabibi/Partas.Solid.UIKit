@@ -12,6 +12,8 @@ let private meta = storybook<SignatureField> {
     render (fun props ->
             SignatureField()
         )
-    args "Default" ignore
+    args "Default" (fun props ->
+        props.label <- "Label"
+        )
 }
 

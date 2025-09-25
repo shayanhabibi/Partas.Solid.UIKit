@@ -41,16 +41,22 @@ type SignatureField() =
     member val clearTrigger: HtmlElement = undefined with get,set
     [<SolidTypeComponent>]
     member props.__ =
-        props.clearTrigger <- RotateCw()
+        props.clearTrigger <- RotateCw(class' = "transition-all size-4 stroke-primary/80 hover:stroke-primary")
         props.slots <- SignatureField.SlotClasses()
-        let drawingOptions = jsOptions<DrawingOptions> (fun o -> o.fill <- Some "var(--color-primary)")
+        props.drawing <- createEmpty
+        let drawing,setDrawing = createSignal<DrawingOptions> createEmpty
+        createEffect(fun () ->
+            if props.drawing.fill.IsNone then
+                props.drawing.fill <- Some "var(--color-primary)"
+            setDrawing props.drawing
+            )
         SignaturePad.Root(
             class' = Lib.cn [|
                 "relative flex flex-col w-full max-w-[400px]"
                 props.slots.root
                 props.class'
             |],
-            drawing = drawingOptions
+            drawing = drawing()
             ).spread props {
             Show(when' = !!props.label) {
                 SignaturePad.Label(class' = Lib.cn [|
@@ -64,7 +70,12 @@ type SignatureField() =
             |]) {
                 SignaturePad.Segment(class' = props.slots.segment)
                 SignaturePad.ClearTrigger(class' = Lib.cn [|
-                    "absolute top-4 right-4 bg-sidebar rounded-full p-0.5"
+                    //tw
+                    "group absolute top-4 right-4 \
+                    bg-sidebar/95 hover:bg-background \
+                    hover:ring-1 ring-accent \
+                    transition-all \
+                    rounded-full p-1"
                     props.slots.clearTrigger
                 |]) {
                     props.clearTrigger
