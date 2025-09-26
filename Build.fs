@@ -114,6 +114,7 @@ Target.create GitPush <| fun _ ->
 Target.create Publish <| fun _ ->
     !!"bin/*.nupkg"
     |> Seq.toArray
+    |> Array.filter (_.Contains("Build") >> not)
     |> (if Args.parallelise
         then Array.Parallel.iter
         else Array.iter) (fun path ->
