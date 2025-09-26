@@ -1,5 +1,11 @@
 ﻿<Solution>
-  <Folder Name="/build/" />
+  <Folder Name="/.github/">
+    <File Path=".github/workflows/ci.yml" />
+  </Folder>
+
+  <Folder Name="/build/">
+    <Project Path="Build.fsproj" Type="Classic F#" />
+  </Folder>
   <Folder Name="/misc/">
     <File Path="README.md" />
   </Folder>

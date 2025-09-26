@@ -1,13 +1,44 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
+        <FablePackageType>library</FablePackageType>
         <TargetFramework>net9.0</TargetFramework>
         <DefineConstants>STORYBOOK</DefineConstants>
+        <PackageId>Partas.Solid.UI</PackageId>
+        <Title>Partas.Solid.UI</Title>
+        <Company>Partas</Company>
+        <Description>Collection of components in shadcn style. Note: requires tailwindcss file that is not included. See the docs.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/shayanhabibi/Partas.Solid.UIKit</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>Partas;F#;FSharp;Fable;fable-javascript;Web;Components;UI;solidjs;solid-js;ark-ui;kobalte;corvu;zagjs</PackageTags>
+        <Copyright>Copyright (c) Shayan Habibi 2025</Copyright>
+        <Version>0.1.0</Version>
+        <PackageVersion>0.1.0</PackageVersion>
+        <GitNetInitialVersion>0.1.0</GitNetInitialVersion>
+        <NpmDependencies>
+            <NpmPackage Name="solid-js" Version=">= 1.9.9" />
+            <NpmPackage Name="@ark-ui/solid" Version=">= 5.0.0" />
+            <NpmPackage Name="@corvu/calendar" Version=">= 0.1.2"/>
+            <NpmPackage Name="@corvu/drawer" Version=">= 0.2.4"/>
+            <NpmPackage Name="@corvu/otp-field" Version=">= 0.1.4"/>
+            <NpmPackage Name="@corvu/popover" Version=">= 0.2.0"/>
+            <NpmPackage Name="@corvu/resizable" Version=">= 0.2.5"/>
+            <NpmPackage Name="@kobalte/core" Version=">= 0.13.11"/>
+            <NpmPackage Name="@solid-primitives/mouse" Version=">= 2.1.4"/>
+            <NpmPackage Name="clsx" Version=">= 2.1.1"/>
+            <NpmPackage Name="cmdk-solid" Version=">= 1.1.2" />
+            <NpmPackage Name="lucide-solid" Version=">= 0.542.0"/>
+            <NpmPackage Name="solid-sonner" Version=">= 0.2.8" />
+            <NpmPackage Name="tailwind-merge" Version=">= 3.3.1"/>
+            <NpmPackage Name="tw-animate-css" Version=">= 1.3.8"/>
+            <NpmPackage Name="tailwindcss" Version=">= 4.1.13"/>
+            <NpmPackage Name="animejs" Version=">= 4.1.3" />
+            <NpmPackage Name="@tailwindcss/vite" Version=">= 4.1.12" />
+        </NpmDependencies>
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include=".storybook\tailwind.css" Link="tailwind.css"/>
         <Compile Include="Utils.fs" />
         <Compile Include="Program.fs" />
         <Compile Include="Components\Button.fs" />
@@ -78,326 +109,19 @@
     </ItemGroup>
 
     <ItemGroup>
-      <TypeScriptCompile Include=".storybook\CodeBlock.tsx" />
-      <TypeScriptCompile Include=".storybook\vitest.setup.ts" />
-      <TypeScriptCompile Include=".storybook\preview.ts" />
-      <TypeScriptCompile Include=".storybook\main.ts" />
-      <Content Include=".storybook\PartasTheme.js" />
-      <Content Include=".storybook\manager.js" />
-      <Content Include="stories\Introduction.mdx" />
-      <Content Include="stories\ColorPalette.mdx" />
-      <Content Include="stories\Utils.mdx" />
-      <Compile Include="stories\Components\Button\Button.stories.fs" />
-      <Content Include="stories\Components\Button\Button.mdx" />
-      <Compile Include="stories\Components\Accordion\Accordion.stories.fs" />
-      <Content Include="stories\Components\Accordion\Accordion.mdx" />
-        <Compile Include="stories\Components\Accordion\AccordionTrigger.stories.fs" />
-        <Compile Include="stories\Components\Accordion\AccordionItem.stories.fs" />
-        <Compile Include="stories\Components\Accordion\AccordionContent.stories.fs" />
-      <Compile Include="stories\Components\Alert\Alert.stories.fs" />
-      <Content Include="stories\Components\Alert\Alert.mdx" />
-      <Compile Include="stories\Components\AlertDialog\AlertDialogContent.stories.fs" />
-      <Compile Include="stories\Components\AlertDialog\AlertDialog.stories.fs" />
-      <Content Include="stories\Components\AlertDialog\AlertDialog.mdx" />
-      <Compile Include="stories\Components\Avatar\AvatarImage.stories.fs" />
-      <Compile Include="stories\Components\Avatar\AvatarFallback.stories.fs" />
-      <Compile Include="stories\Components\Avatar\Avatar.stories.fs" />
-      <Content Include="stories\Components\Avatar\Avatar.mdx" />
-      <Compile Include="stories\Components\Badge\Badge.stories.fs" />
-      <Content Include="stories\Components\Badge\Badge.mdx" />
-      <Compile Include="stories\Components\Badge\DeltaBadge.stories.fs" />
-      <Compile Include="stories\Components\Breadcrumb\Breadcrumb.stories.fs" />
-      <Compile Include="stories\Components\Card\Card.stories.fs" />
-      <Content Include="stories\Components\Card\Card.mdx" />
-      <Compile Include="stories\Components\Callout\Callout.stories.fs" />
-      <Content Include="stories\Components\Callout\Callout.mdx" />
-      <Compile Include="stories\Components\Checkbox\Checkbox.stories.fs" />
-      <Content Include="stories\Components\Checkbox\Checkbox.mdx" />
-      <Compile Include="stories\Components\Collapsible\CollapsibleTrigger.stories.fs" />
-      <Compile Include="stories\Components\Collapsible\CollapsibleContent.stories.fs" />
-      <Compile Include="stories\Components\Collapsible\Collapsible.stories.fs" />
-      <Content Include="stories\Components\Collapsible\Collapsible.mdx" />
-      <Compile Include="stories\Components\Combobox\ComboboxItem.stories.fs" />
-      <Compile Include="stories\Components\Combobox\ComboboxSection.stories.fs" />
-      <Compile Include="stories\Components\Combobox\ComboboxItemLabel.stories.fs" />
-      <Compile Include="stories\Components\Combobox\ComboboxItemIndicator.stories.fs" />
-      <Compile Include="stories\Components\Combobox\ComboboxControl.stories.fs" />
-      <Compile Include="stories\Components\Combobox\ComboboxInput.stories.fs" />
-      <Compile Include="stories\Components\Combobox\ComboboxTrigger.stories.fs" />
-      <Compile Include="stories\Components\Combobox\ComboboxContent.stories.fs" />
-      <Compile Include="stories\Components\Combobox\Combobox.stories.fs" />
-      <Content Include="stories\Components\Combobox\Combobox.mdx" />
-      <Compile Include="stories\Components\Dialog\DialogTrigger.stories.fs" />
-      <Compile Include="stories\Components\Dialog\DialogContent.stories.fs" />
-      <Compile Include="stories\Components\Dialog\DialogHeader.stories.fs" />
-      <Compile Include="stories\Components\Dialog\DialogTitle.stories.fs" />
-      <Compile Include="stories\Components\Dialog\DialogDescription.stories.fs" />
-      <Compile Include="stories\Components\Dialog\DialogFooter.stories.fs" />
-      <Compile Include="stories\Components\Dialog\Dialog.stories.fs" />
-      <Content Include="stories\Components\Dialog\Dialog.mdx" />
-      <Compile Include="stories\Components\Command\CommandDialog.stories.fs" />
-      <Compile Include="stories\Components\Command\CommandInputs.stories.fs" />
-      <Compile Include="stories\Components\Command\CommandLists.stories.fs" />
-      <Compile Include="stories\Components\Command\CommandEmptys.stories.fs" />
-      <Compile Include="stories\Components\Command\CommandGroups.stories.fs" />
-      <Compile Include="stories\Components\Command\CommandSeparators.stories.fs" />
-      <Compile Include="stories\Components\Command\CommandItems.stories.fs" />
-      <Compile Include="stories\Components\Command\CommandShortcuts.stories.fs" />
-      <Compile Include="stories\Components\Command\Command.stories.fs" />
-      <Content Include="stories\Components\Command\Command.mdx" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuTrigger.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuPortal.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuSub.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuGroup.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuRadioGroup.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuContent.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuItem.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuShortcut.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuSeparator.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuSubTrigger.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuSubContent.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuCheckboxItem.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuGroupLabel.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenuRadioItem.stories.fs" />
-      <Compile Include="stories\Components\ContextMenu\ContextMenu.stories.fs" />
-      <Content Include="stories\Components\ContextMenu\ContextMenu.mdx" />
-      <Compile Include="stories\Components\Drawer\DrawerTrigger.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerPortal.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerClose.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerOverlay.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerContent.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerHeader.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerFooter.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerTitle.stories.fs" />
-      <Compile Include="stories\Components\Drawer\DrawerDescription.stories.fs" />
-      <Compile Include="stories\Components\Drawer\Drawer.stories.fs" />
-      <Content Include="stories\Components\Drawer\Drawer.mdx" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuTrigger.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuPortal.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuSub.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuSubContent.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuGroup.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuRadioGroup.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuContent.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuItem.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuShortcut.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuLabel.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuSeparator.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuSubTrigger.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuCheckboxItem.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuGroupLabel.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenuRadioItem.stories.fs" />
-      <Compile Include="stories\Components\DropdownMenu\DropdownMenu.stories.fs" />
-      <Content Include="stories\Components\DropdownMenu\DropdownMenu.mdx" />
-      <Compile Include="stories\Components\HoverCard\HoverCardTrigger.stories.fs" />
-      <Compile Include="stories\Components\HoverCard\HoverCardContent.stories.fs" />
-      <Compile Include="stories\Components\HoverCard\HoverCard.stories.fs" />
-      <Content Include="stories\Components\HoverCard\HoverCard.mdx" />
-      <Compile Include="stories\Components\Label\Label.stories.fs" />
-      <Content Include="stories\Components\Label\Label.mdx" />
-      <Compile Include="stories\Components\Menubar\Menubar.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarGroup.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarPortal.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarSub.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarRadioGroup.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarMenu.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarTrigger.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarContent.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarSubTrigger.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarSubContent.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarItem.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarCheckboxItem.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarRadioItem.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarItemLabel.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarGroupLabel.stories.fs" />
-      <Compile Include="stories\Components\Menubar\MenubarSeparator.stories.fs" />
-      <Content Include="stories\Components\Menubar\Menubar.mdx" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenu.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuItem.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuViewport.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuTrigger.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuIcon.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuContent.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuLink.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuLabel.stories.fs" />
-      <Compile Include="stories\Components\NavigationMenu\NavigationMenuDescription.stories.fs" />
-      <Content Include="stories\Components\NavigationMenu\NavigationMenu.mdx" />
-      <Compile Include="stories\Components\NumberField\NumberField.stories.fs" />
-      <Compile Include="stories\Components\NumberField\NumberFieldGroup.stories.fs" />
-      <Compile Include="stories\Components\NumberField\NumberFieldLabel.stories.fs" />
-      <Compile Include="stories\Components\NumberField\NumberFieldInput.stories.fs" />
-      <Compile Include="stories\Components\NumberField\NumberFieldIncrementTrigger.stories.fs" />
-      <Compile Include="stories\Components\NumberField\NumberFieldDecrementTrigger.stories.fs" />
-      <Compile Include="stories\Components\NumberField\NumberFieldDescription.stories.fs" />
-      <Compile Include="stories\Components\NumberField\NumberFieldErrorMessage.stories.fs" />
-      <Content Include="stories\Components\NumberField\NumberField.mdx" />
-      <Compile Include="stories\Components\OtpField\OtpField.stories.fs" />
-      <Compile Include="stories\Components\OtpField\OtpFieldInput.stories.fs" />
-      <Compile Include="stories\Components\OtpField\OtpFieldGroup.stories.fs" />
-      <Compile Include="stories\Components\OtpField\OtpFieldSlot.stories.fs" />
-      <Compile Include="stories\Components\OtpField\OtpFieldSeparator.stories.fs" />
-      <Content Include="stories\Components\OtpField\OtpField.mdx" />
-      <Compile Include="stories\Components\Pagination\Pagination.stories.fs" />
-      <Compile Include="stories\Components\Pagination\PaginationItems.stories.fs" />
-      <Compile Include="stories\Components\Pagination\PaginationItem.stories.fs" />
-      <Compile Include="stories\Components\Pagination\PaginationEllipsis.stories.fs" />
-      <Compile Include="stories\Components\Pagination\PaginationPrevious.stories.fs" />
-      <Compile Include="stories\Components\Pagination\PaginationNext.stories.fs" />
-      <Content Include="stories\Components\Pagination\Pagination.mdx" />
-      <Compile Include="stories\Components\Popover\Popover.stories.fs" />
-      <Compile Include="stories\Components\Popover\PopoverTrigger.stories.fs" />
-      <Compile Include="stories\Components\Popover\PopoverContent.stories.fs" />
-      <Content Include="stories\Components\Popover\Popover.mdx" />
-      <Compile Include="stories\Components\RadioGroup\RadioGroup.stories.fs" />
-      <Compile Include="stories\Components\RadioGroup\RadioGroupItem.stories.fs" />
-      <Compile Include="stories\Components\RadioGroup\RadioGroupItemLabel.stories.fs" />
-      <Content Include="stories\Components\RadioGroup\RadioGroup.mdx" />
-      <Compile Include="stories\Components\Resizeable\Resizeable.stories.fs" />
-      <Compile Include="stories\Components\Resizeable\ResizeablePanel.stories.fs" />
-      <Compile Include="stories\Components\Resizeable\ResizeableHandle.stories.fs" />
-      <Content Include="stories\Components\Resizeable\Resizeable.mdx" />
-      <Compile Include="stories\Components\Select\Select.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectValue.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectHiddenSelect.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectTrigger.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectContent.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectItem.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectLabel.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectDescription.stories.fs" />
-      <Compile Include="stories\Components\Select\SelectErrorMessage.stories.fs" />
-      <Content Include="stories\Components\Select\Select.mdx" />
-      <Compile Include="stories\Components\Separator\Separator.stories.fs" />
-      <Content Include="stories\Components\Separator\Separator.mdx" />
-      <Compile Include="stories\Components\Sheet\Sheet.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetTrigger.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetClose.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetPortal.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetOverlay.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetContent.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetHeader.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetFooter.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetTitle.stories.fs" />
-      <Compile Include="stories\Components\Sheet\SheetDescription.stories.fs" />
-      <Content Include="stories\Components\Sheet\Sheet.mdx" />
-      <Compile Include="stories\Components\Skeleton\Skeleton.stories.fs" />
-      <Content Include="stories\Components\Skeleton\Skeleton.mdx" />
-      <Compile Include="stories\Components\Slider\Slider.stories.fs" />
-      <Compile Include="stories\Components\Slider\SliderTrack.stories.fs" />
-      <Compile Include="stories\Components\Slider\SliderThumb.stories.fs" />
-      <Compile Include="stories\Components\Slider\SliderFill.stories.fs" />
-      <Compile Include="stories\Components\Slider\SliderLabel.stories.fs" />
-      <Compile Include="stories\Components\Slider\SliderValueLabel.stories.fs" />
-      <Content Include="stories\Components\Slider\Slider.mdx" />
-      <Compile Include="stories\Components\Sonner\Sonner.stories.fs" />
-      <Content Include="stories\Components\Sonner\Sonner.mdx" />
-      <Compile Include="stories\Components\Switch\Switch.stories.fs" />
-      <Compile Include="stories\Components\Switch\SwitchDescription.stories.fs" />
-      <Compile Include="stories\Components\Switch\SwitchErrorMessage.stories.fs" />
-      <Compile Include="stories\Components\Switch\SwitchControl.stories.fs" />
-      <Compile Include="stories\Components\Switch\SwitchThumb.stories.fs" />
-      <Compile Include="stories\Components\Switch\SwitchLabel.stories.fs" />
-      <Content Include="stories\Components\Switch\Switch.mdx" />
-      <Compile Include="stories\Components\Table\Table.stories.fs" />
-      <Compile Include="stories\Components\Table\TableHeader.stories.fs" />
-      <Compile Include="stories\Components\Table\TableBody.stories.fs" />
-      <Compile Include="stories\Components\Table\TableFooter.stories.fs" />
-      <Compile Include="stories\Components\Table\TableRow.stories.fs" />
-      <Compile Include="stories\Components\Table\TableHead.stories.fs" />
-      <Compile Include="stories\Components\Table\TableCell.stories.fs" />
-      <Compile Include="stories\Components\Table\TableCaption.stories.fs" />
-      <Content Include="stories\Components\Table\Table.mdx" />
-      <Compile Include="stories\Components\Tabs\Tabs.stories.fs" />
-      <Compile Include="stories\Components\Tabs\TabsList.stories.fs" />
-      <Compile Include="stories\Components\Tabs\TabsTrigger.stories.fs" />
-      <Compile Include="stories\Components\Tabs\TabsContent.stories.fs" />
-      <Compile Include="stories\Components\Tabs\TabsIndicator.stories.fs" />
-      <Content Include="stories\Components\Tabs\Tabs.mdx" />
-      <Compile Include="stories\Components\Text\Text.stories.fs" />
-      <Compile Include="stories\Components\Text\TextFieldInput.stories.fs" />
-      <Compile Include="stories\Components\Text\TextFieldTextArea.stories.fs" />
-      <Compile Include="stories\Components\Text\TextFieldLabel.stories.fs" />
-      <Compile Include="stories\Components\Text\TextFieldDescription.stories.fs" />
-      <Compile Include="stories\Components\Text\TextFieldErrorMessage.stories.fs" />
-      <Content Include="stories\Components\Text\Text.mdx" />
-      <Compile Include="stories\Components\Timeline\Timeline.stories.fs" />
-      <Content Include="stories\Components\Timeline\Timeline.mdx" />
-      <Compile Include="stories\Components\Toggle\Toggle.stories.fs" />
-      <Content Include="stories\Components\Toggle\Toggle.mdx" />
-      <Compile Include="stories\Components\ToggleGroup\ToggleGroup.stories.fs" />
-      <Compile Include="stories\Components\ToggleGroup\ToggleGroupItem.stories.fs" />
-      <Content Include="stories\Components\ToggleGroup\ToggleGroup.mdx" />
-      <Compile Include="stories\Components\Tooltip\Tooltip.stories.fs" />
-      <Compile Include="stories\Components\Tooltip\TooltipTrigger.stories.fs" />
-      <Compile Include="stories\Components\Tooltip\TooltipContent.stories.fs" />
-      <Content Include="stories\Components\Tooltip\Tooltip.mdx" />
-      <Compile Include="stories\Components\DatePicker\DatePicker.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerLabel.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerContext.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTableHead.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTableBody.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerYearSelect.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerMonthSelect.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerPositioner.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerControl.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerInput.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTrigger.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerContent.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerView.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerViewControl.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerPrevTrigger.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerNextTrigger.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerViewTrigger.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerRangeText.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTable.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTableRow.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTableHeader.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTableCell.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerTableCellTrigger.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerDayView.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerMonthView.stories.fs" />
-      <Compile Include="stories\Components\DatePicker\DatePickerYearView.stories.fs" />
-      <Content Include="stories\Components\DatePicker\DatePicker.mdx" />
-      <Compile Include="stories\Components\Progress\Progress.stories.fs" />
-      <Compile Include="stories\Components\Progress\ProgressLabel.stories.fs" />
-      <Compile Include="stories\Components\Progress\ProgressValueLabel.stories.fs" />
-      <Compile Include="stories\Components\Progress\ProgressRing.stories.fs" />
-      <Content Include="stories\Components\Progress\Progress.mdx" />
-      <Compile Include="stories\Components\CardHover\CardHover.stories.fs" />
-      <Compile Include="stories\Components\CardHover\CardHoverBody.stories.fs" />
-      <Compile Include="stories\Components\CardHover\CardHoverItem.stories.fs" />
-      <Content Include="stories\Components\CardHover\CardHover.mdx" />
-      <Compile Include="stories\Components\BarList\BarList.stories.fs" />
-      <Content Include="stories\Components\BarList\BarList.mdx" />
-      <Compile Include="stories\Components\Bars\DeltaBar.stories.fs" />
-      <Compile Include="stories\Components\Bars\CategoryBar.stories.fs" />
-      <Content Include="stories\Components\Bars\DeltaBar.mdx" />
-      <Content Include="stories\Components\Bars\CategoryBar.mdx" />
-      <Compile Include="stories\Components\Segmented\Segmented.stories.fs" />
-      <Compile Include="stories\Components\Marquee\Marquee.stories.fs" />
-      <Content Include="stories\Components\Marquee\Marquee.mdx" />
-      <Compile Include="stories\Components\Colors\ColorSwatch.stories.fs" />
-      <Content Include="stories\Components\Colors\ColorSwatch.mdx" />
-      <Compile Include="stories\Components\Colors\ColorPicker.stories.fs" />
-      <Content Include="stories\Components\Colors\ColorPicker.mdx" />
-      <Compile Include="stories\Components\Colors\ColorFieldSwatch.stories.fs" />
-      <Content Include="stories\Components\Colors\ColorFieldSwatch.mdx" />
-      <Compile Include="stories\Components\Spinner\Spinner.stories.fs" />
-      <Content Include="stories\Components\Spinner\Spinner.mdx" />
-      <Compile Include="stories\Components\Status\Status.stories.fs" />
-      <Content Include="stories\Components\Status\Status.mdx" />
-      <Compile Include="stories\Components\Flairs\AuroraBanner.stories.fs" />
-      <Compile Include="stories\Components\Flairs\BorderBeam.stories.fs" />
-      <Content Include="stories\Components\Flairs\BorderBeam.mdx" />
-      <Compile Include="stories\Components\QrCode\QrCode.stories.fs" />
-      <Compile Include="stories\Components\TourWizard\TourWizard.stories.fs" />
-      <Content Include="stories\Dev\Tasks.mdx" />
-      <Compile Include="stories\Kit\AvatarStack.stories.fs" />
-      <Compile Include="stories\Kit\SignatureField\SignatureField.stories.fs" />
-      <Content Include="stories\Kit\SignatureField\SignatureField.mdx" />
-      <Content Include="tsconfig.json" />
-      <TypeScriptCompile Include="vitest.config.ts" />
-      <Content Include="package.json" />
-      <Content Include="package-lock.json" />
+        <Content Include=".storybook\tailwind.css" Link="tailwind.css"/>
+      <TypeScriptCompile Include=".storybook\CodeBlock.tsx" Pack="false"/>
+      <TypeScriptCompile Include=".storybook\vitest.setup.ts" Pack="false" />
+      <TypeScriptCompile Include=".storybook\preview.ts" Pack="false" />
+      <TypeScriptCompile Include=".storybook\main.ts" Pack="false" />
+      <Content Include=".storybook\PartasTheme.js" Pack="false" />
+      <Content Include=".storybook\manager.js" Pack="false" />
+        <Compile Include="stories\**\*.fs" Pack="false"/>
+        <Content Include="stories\**\*.mdx" Pack="false"/>
+      <Content Include="tsconfig.json" Pack="false"/>
+      <TypeScriptCompile Include="vitest.config.ts" Pack="false"/>
+      <Content Include="package.json" Pack="false"/>
+      <Content Include="package-lock.json" Pack="false"/>
     </ItemGroup>
 
     <ItemGroup>

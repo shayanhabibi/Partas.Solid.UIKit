@@ -1,4 +1,4 @@
-﻿namespace Partas.Solid.UIKit
+﻿namespace Partas.Solid.UI
 
 open Partas.Solid.Style
 open Partas.Solid
