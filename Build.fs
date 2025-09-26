@@ -1,5 +1,5 @@
-﻿open System.IO
-open Build
+﻿module Build.Build
+open System.IO
 open Build.Spec
 open Fake.Core
 open Partas.GitNet
