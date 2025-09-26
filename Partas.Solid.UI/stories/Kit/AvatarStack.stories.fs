@@ -1,5 +1,4 @@
 ﻿module Partas.Solid.UI.stories.Kit.AvatarStack_stories
-open Partas.Solid.UIKit
 open Partas.Solid.UI
 open Partas.Solid
 open Partas.Solid.Storybook

@@ -1,4 +1,4 @@
-﻿module Partas.Solid.UI.stories.Components.Select
+﻿module Partas.Solid.UI.stories.Components.Select.Selectstories
 open Partas.Solid
 open Partas.Solid.Kobalte
 open Partas.Solid.UI
