@@ -1,1 +1,0 @@
-function t(n){return typeof n!="string"||n.length===0}function i(...n){return n.map(r=>String(r)).join("")}function o(n,r){return Array.isArray(r)?r.join(n):Array.from(r).join(n)}export{i as c,t as i,o as j};

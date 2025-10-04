@@ -13,6 +13,7 @@ module Badge =
         | Success
         | Warning
         | Error
+        | Destructive
         
 open Badge
 
@@ -22,16 +23,23 @@ type Badge() =
     static member variants(?variant: Badge.Variant): string =
         let variant = defaultArg variant Badge.Variant.Default
         //tw
-        "inline-flex items-center rounded-md border px-2.5 py-0.5
-        text-xs font-semibold transition-colors focus:outline-none
-        focus:ring-2 focus:ring-ring focus:ring-offset-2 " +
+        
+        "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs \
+        font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 \
+        leading-tight \
+        [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 \
+        focus-visible:ring-[3px] aria-invalid:ring-destructive/20 \
+        dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive \
+        transition-[color,box-shadow] overflow-hidden"
+        + " " +
         match variant with
-        | Variant.Default -> "border-transparent bg-primary text-primary-foreground"
-        | Variant.Secondary -> "border-transparent bg-secondary text-secondary-foreground"
-        | Variant.Outline -> "text-foreground"
-        | Variant.Success -> "border-success-foreground bg-success text-success-foreground"
-        | Variant.Warning -> "border-warning-foreground bg-warning text-warning-foreground"
-        | Variant.Error -> "border-error-foreground bg-error text-error-foreground"
+        | Variant.Default -> "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90"
+        | Variant.Secondary -> "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90"
+        | Variant.Destructive -> "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60"
+        | Variant.Outline -> "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground"
+        | Variant.Success -> "border-success-foreground bg-success text-success-foreground [a&]:hover:bg-success/90"
+        | Variant.Warning -> "border-warning-foreground bg-warning text-warning-foreground [a&]:hover:bg-warning/90"
+        | Variant.Error -> "border-error-foreground bg-error text-error-foreground [a&]:hover:bg-error/90"
     /// <summary>
     /// Style the badge.
     /// </summary>
@@ -44,15 +52,12 @@ type Badge() =
 
     [<SolidTypeComponent>]
     member props.__ =
-        div(
-            class' =
-                Lib.cn
-                    [| Badge.variants(props.variant)
-                       if props.round then "rounded-full" else ""
-                       props.class' |]
-        )
-            .spread
-            props
+        span( class' = Lib.cn
+            [| Badge.variants(props.variant)
+               if props.round then "rounded-full" else ""
+               props.class' |] )
+            .dataSlot("badge")
+            .spread props
 
 [<Erase>]
 module BadgeDelta =

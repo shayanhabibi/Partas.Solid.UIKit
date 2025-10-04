@@ -16,5 +16,7 @@ type Separator() =
                 "h-full w-px"
             else "h-px w-full"
             props.class'
-        |], orientation = (props.orientation ??= Orientation.Horizontal)).spread(props)
+        |], orientation = (props.orientation ??= Orientation.Horizontal))
+            .dataSlot("separator")
+            .spread(props)
 

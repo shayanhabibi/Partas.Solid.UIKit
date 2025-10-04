@@ -38,7 +38,7 @@ type CommandDialog() =
             }
         }
 
-[<Erase>]
+[<Erase; CompiledName("CommandInputs")>]
 type CommandInputs() =
     inherit Command.Input()
     [<SolidTypeComponent>]

@@ -26,6 +26,8 @@ let private meta = storybook<Button> {
         | Size.Large -> failwith "todo"
         | Size.Small -> failwith "Todo"
         | Size.Default -> failwith "todo"
+        | Size.IconSmall -> failwith "todo"
+        | Size.IconLarge -> failwith "todo"
         | Size.Icon when btn.size = Size.Large -> failwith "todo"
         | _ -> ()
         )
@@ -42,10 +44,40 @@ let private meta = storybook<Button> {
             "Button"
         }
         )
+    render "IconOnlyAndWithIcon" (fun btn ->
+        div(class' = "flex flex-col space-y-2 place-items-center") {
+            Button().spread btn {
+                X(); "Discard"
+            }
+            Button().spread btn {
+                X()
+            }
+        })
+    render "WithKbd" (fun btn ->
+        div(class' = "flex flex-col space-y-2 place-items-center") {
+            Button().spread btn {
+                Kbd() { "Ctrl" ;"D" }
+                "Discard"
+            }
+            Button().spread btn {
+                "Save"
+                Kbd(class' = "bg-background/20 border-none text-background") { "S" }
+            }
+            Button(variant = Button.Variant.Secondary).spread btn {
+                Kbd() { "Ctrl" ;"D" }
+                "Discard"
+            }
+            Button(variant = Button.Variant.Destructive).spread btn {
+                "Save"
+                Kbd(class' = "bg-background/20 border-none text-background") { "S" }
+            }
+        })
     render "Variants" (fun btn ->
         div(class' = "flex justify-between gap-4") {
             For(each = [|
                 Size.Icon
+                Size.IconSmall
+                Size.IconLarge
                 Size.Small
                 Size.Default
                 Size.Large
@@ -65,6 +97,10 @@ let private meta = storybook<Button> {
                             Button(size = size, variant = variant) {
                                 if size = Size.Icon then
                                     Lucide.Aperture()
+                                elif size = Size.IconSmall then
+                                    X()
+                                elif size = Size.IconLarge then
+                                    Lamp()
                                 else
                                     !!variant
                             }

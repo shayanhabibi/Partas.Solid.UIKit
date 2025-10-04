@@ -9,21 +9,27 @@ type Dialog() =
     inherit Kobalte.Dialog()
     [<SolidTypeComponent>]
     member props.constructor =
-        Kobalte.Dialog().spread props
+        Kobalte.Dialog()
+            .dataSlot("dialog")
+            .spread props
 
 [<Erase>]
 type DialogTrigger() =
     inherit Dialog.Trigger()
     [<SolidTypeComponent>]
     member props.constructor =
-        Dialog.Trigger().spread props
+        Dialog.Trigger()
+            .dataSlot("dialog-trigger")
+            .spread props
 
 [<Erase>]
 type DialogPortal() =
     inherit Dialog.Portal()
     [<SolidTypeComponent>]
     member props.constructor =
-        Dialog.Portal().spread(props)
+        Dialog.Portal()
+            .dataSlot("dialog-portal")
+            .spread(props)
             {
                 div(class' = "fixed inset-0 z-50 flex items-start justify-center sm:items-center")
                     { props.children }
@@ -41,7 +47,8 @@ type DialogOverlay() =
                        data-[expanded]:animate-in data-[closed]:animate-out
                     data-[closed]:fade-out-0 data-[expanded]:fade-in-0"
                        props.class' |]
-        ).spread(props)
+        )   .dataSlot("dialog-overlay")
+            .spread(props)
     
 [<Erase>]
 type DialogContent() =
@@ -65,8 +72,8 @@ type DialogContent() =
                     data-[expanded]:slide-in-from-left-1/2
                     data-[expanded]:slide-in-from-top-[48%] sm:rounded-lg"
                     props.class'
-                |]
-            ).spread(props)
+                |]).dataSlot("dialog-content")
+                .spread(props)
                 {
                     props.children
                     Show(when' = props.dismissible) {
@@ -77,6 +84,18 @@ type DialogContent() =
         }
 
 [<Erase>]
+type DialogX() =
+    inherit Dialog.CloseButton()
+    [<SolidTypeComponent>]
+    member props.__ =
+        Dialog.CloseButton(class' = Lib.cn [|
+            "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[expanded]:bg-accent data-[expanded]:text-muted-foreground"
+            props.class'
+        |]) .dataSlot("dialog-close-button")
+            .spread props
+            { Lucide.Lucide.X(class' = "size-4"); SrSpan() {"Close"} }
+        
+[<Erase>]
 type DialogHeader() =
     inherit div()
     [<SolidTypeComponent>]
@@ -84,7 +103,7 @@ type DialogHeader() =
         div(class'= Lib.cn [|
             "flex flex-col space-y-1.5 text-center sm:text-left"
             props.class'
-        |]).spread(props)
+        |]).dataSlot("dialog-header").spread(props)
     
 [<Erase>]
 type DialogFooter() =
@@ -94,7 +113,7 @@ type DialogFooter() =
         div(class'= Lib.cn [|
             "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2"
             props.class'
-        |]).spread(props)
+        |]).dataSlot("dialog-footer").spread(props)
 
 [<Erase>]
 type DialogTitle() =
@@ -104,12 +123,14 @@ type DialogTitle() =
         Dialog.Title(class'= Lib.cn [|
             "text-lg font-semibold leading-none tracking-tight"
             props.class'
-        |]).spread(props)
+        |]).dataSlot("dialog-title").spread(props)
 
 [<Erase>]
 type DialogDescription() =
     inherit Dialog.Description()
     [<SolidTypeComponent>]
     member props.constructor =
-        Dialog.Description(class'= Lib.cn [| "text-sm text-muted-foreground"; props.class' |]).spread(props)
+        Dialog.Description(class'= Lib.cn [| "text-sm text-muted-foreground"; props.class' |])
+            .dataSlot("dialog-description")
+            .spread(props)
 

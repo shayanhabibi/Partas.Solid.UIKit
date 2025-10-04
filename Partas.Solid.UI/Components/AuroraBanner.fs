@@ -18,7 +18,7 @@ type AuroraBanner() =
         |]).style'([
             Style.height "3rem"
         ]) {
-            div(class' = "absolute inset-0 z-[-1] fd-moving-banner-reverse").style'([
+            div(class' = "absolute inset-0 z-[-1] animate-fd-moving-banner-reverse").style'([
                 Style.maskImage "linear-gradient(white, transparent), radial-gradient(circle at center top, white, transparent)"
                 Style.maskComposite MaskComposite.Intersect
                 "--start" ==> "rgba(0,87,255,0.5)"
@@ -33,7 +33,7 @@ type AuroraBanner() =
                 Style.backgroundSize "200% 100%"
                 Style.mixBlendMode MixBlendMode.Difference
             ])
-            div(class' = "absolute inset-0 z-[-1] fd-moving-banner-normal").style'([
+            div(class' = "absolute inset-0 z-[-1] animate-fd-moving-banner-normal").style'([
                 Style.maskImage "linear-gradient(white, transparent), radial-gradient(circle at center top, white, transparent)"
                 Style.maskComposite MaskComposite.Intersect
                 "--start" ==> "rgba(255,120,120,0.5)"

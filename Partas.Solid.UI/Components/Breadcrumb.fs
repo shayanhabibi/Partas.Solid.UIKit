@@ -10,7 +10,7 @@ type Breadcrumb() =
     inherit Kobalte.Breadcrumbs()
     [<SolidTypeComponent>]
     member props.constructor =
-        Kobalte.Breadcrumbs().spread props
+        Kobalte.Breadcrumbs().dataSlot("breadcrumb").spread props
 
 [<Erase>]
 type BreadcrumbList() =
@@ -23,14 +23,17 @@ type BreadcrumbList() =
                 text-sm text-muted-foreground sm:gap-2.5"
                 props.class'
             |]
-        ).spread props
+        )   .dataSlot("breadcrumb-list")
+            .spread props
 
 [<Erase>]
 type BreadcrumbItem() =
     inherit li()
     [<SolidTypeComponent>]
     member props.constructor =
-        li( class' = Lib.cn [| "inline-flex items-center gap-1.5" ; props.class' |]).spread props
+        li( class' = Lib.cn [| "inline-flex items-center gap-1.5" ; props.class' |])
+            .dataSlot("breadcrumb-item")
+            .spread props
 
 [<Erase>]
 type BreadcrumbLink() =
@@ -42,7 +45,8 @@ type BreadcrumbLink() =
                 "transition-colors hover:text-foreground
                 data-[current]:font-normal data-[current]:text-foreground"
                 props.class'
-            |]).spread props
+            |]) .dataSlot("breadcrumb-link")
+                .spread props
 
 [<Erase>]
 type BreadcrumbSeparator() =
@@ -50,21 +54,26 @@ type BreadcrumbSeparator() =
     [<SolidTypeComponent>]
     member props.constructor =
         let children,hasChildren = Lib.createChildrenResolver(props.children)
-        Breadcrumbs.Separator(class' = Lib.cn [|"[&>svg]:size-3.5"; props.class'|]).spread(props) {
+        Breadcrumbs.Separator(class' = Lib.cn [|"[&>svg]:size-3.5"; props.class'|])
+            .dataSlot("breadcrumb-separator")
+            .spread(props) {
             if hasChildren() then children() else Lucide.Slash(strokeWidth = 2)
         }
 
+open Partas.Solid.Aria
 [<Erase>]
 type BreadcrumbEllipsis() =
     inherit span()
     [<SolidTypeComponent>]
     member props.constructor =
-        span(
-            class' = Lib.cn [|
+        span(class' = Lib.cn [|
                 "flex size-9 items-center justify-center"
                 props.class'
-            |]
-        ).spread(props)
+            |],
+        role = "presentation",
+        ariaHidden = true
+        )   .dataSlot("breadcrumb-ellipsis")
+            .spread(props)
             {
                 Lucide.Ellipsis( strokeWidth = 2, class' = "size-4")
                 span(class' = "sr-only") { "More" }

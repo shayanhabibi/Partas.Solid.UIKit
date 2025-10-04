@@ -7,16 +7,24 @@ open Partas.Solid.UI
 [<PartasStorybook>]
 let private meta = storybook<AlertDialog> {
     render (fun alertDialog ->
-        AlertDialog().spread alertDialog {
-            AlertDialogTrigger() {
+        let isOpen,setOpen = createSignal false
+        AlertDialog(open' = isOpen(), onOpenChange = setOpen).spread alertDialog {
+            AlertDialogTrigger(onClick = fun _ -> setOpen true) {
                 "Click me"
             }
             AlertDialogContent() {
-                AlertDialogTitle() {
-                    "Alert dialog title"
+                AlertDialogX()
+                AlertDialogHeader() {
+                    AlertDialogTitle() {
+                        "Alert dialog title"
+                    }
                 }
                 AlertDialogDescription() {
                     "Alert dialog description"
+                }
+                AlertDialogFooter() {
+                    AlertDialogAction(onClick = fun _ -> setOpen false) { "Do something!" }
+                    AlertDialogCancel(onClick = fun _ -> setOpen false) { "Cancel" }
                 }
             }
         }
@@ -27,6 +35,7 @@ let private meta = storybook<AlertDialog> {
                 "Click me"
             }
             AlertDialogContent() {
+                AlertDialogX()
                 AlertDialogTitle() {
                     "Alert dialog title"
                 }

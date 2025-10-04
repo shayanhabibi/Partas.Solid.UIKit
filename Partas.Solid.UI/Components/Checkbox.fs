@@ -14,18 +14,24 @@ type Checkbox() =
     member props.checkbox =
         Kobalte.Checkbox(
             indeterminate = props.indeterminate,
-            class' = Lib.cn [| "items-top group relative flex space-x-2"; props.class' |]
-            ).spread(props) { yield fun _ -> Fragment() {
+            class' = "items-top group relative flex space-x-2 peer"
+            ).dataSlot("checkbox").spread(props) { yield fun _ -> Fragment() {
             Checkbox.Input(class'="peer")
             Checkbox.Control(
-                class' = "size-4 shrink-0 rounded-sm border border-primary
-                data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50
-                peer-focus-visible:focus-ring-offset data-[checked]:border-none
-                data-[indeterminate]:border-none data-[checked]:bg-primary
-                data-[indeterminate]:bg-primary data-[checked]:text-primary-foreground
+                class' = Lib.cn [|
+                    "size-4 shrink-0 rounded-[4px] border border-input dark:bg-input/30 \
+                transition-shadow shadow-xs outline-none data-[checked]:border-primary \
+                data-[invalid]:border-destructive data-[invalid]:ring-destructive/20 \
+                dark:data-[invalid]:ring-destructive/40 data-[disabled]:cursor-not-allowed \
+                data-[disabled]:opacity-50 peer-focus-visible:focus-ring-offset \
+                data-[checked]:border-none data-[checked]:bg-primary \
+                data-[checked]:text-primary-foreground \
+                data-[indeterminate]:border-none data-[indeterminate]:bg-primary \
                 data-[indeterminate]:text-primary-foreground"
-                ) {
-                Checkbox.Indicator() {
+                    props.class'
+                |]
+                ).dataSlot("checkbox-control") {
+                Checkbox.Indicator().dataSlot("checkbox-indicator") {
                     if props.indeterminate then
                         Minus(class' = "size-4", strokeWidth = 2)
                     else

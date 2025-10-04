@@ -42,7 +42,9 @@
     <ItemGroup>
         <Compile Include="Utils.fs" />
         <Compile Include="Program.fs" />
+        <Compile Include="Components\Separator.fs" />
         <Compile Include="Components\Button.fs" />
+        <Compile Include="Components\ButtonGroup.fs" />
         <Compile Include="Components\Card.fs" />
         <Compile Include="Components\Accordion.fs" />
         <Compile Include="Components\Alert.fs" />
@@ -70,7 +72,6 @@
         <Compile Include="Components\RadioGroup.fs" />
         <Compile Include="Components\Resizeable.fs" />
         <Compile Include="Components\Select.fs" />
-        <Compile Include="Components\Separator.fs" />
         <Compile Include="Components\Sheet.fs" />
         <Compile Include="Components\Skeleton.fs" />
         <Compile Include="Components\Slider.fs" />
@@ -105,8 +106,30 @@
         <Compile Include="Components\AuroraBanner.fs" />
         <Compile Include="Components\QrCodeImage.fs" />
         <Compile Include="Components\Tour.fs" />
+        <Compile Include="Components\FloatingPanel.fs" />
+        <Compile Include="Components\Particles.fs" />
+        <Compile Include="Components\AuroraText.fs" />
+        <Compile Include="Components\AnimatedText.fs" />
+        <Compile Include="Components\Logo.fs" />
+        <Compile Include="Components\AbstractShape.fs" />
+        <Compile Include="Components\AnimationTest.fs" />
+        <Compile Include="Components\Kbd.fs" />
+        <Compile Include="Components\Empty.fs" />
+        <Compile Include="Components\Field.fs" />
+        <Compile Include="Components\InputGroup.fs" />
+        <Compile Include="Components\Item.fs" />
         <Compile Include="Kit\AvatarStack.fs" />
         <Compile Include="Kit\SignatureField.fs" />
+        <Compile Include="Kit\FacetedFilter.fs" />
+        <Compile Include="Kit\CommandPicker.fs" />
+        <Compile Include="Kit\AdvButton.fs" />
+        <Compile Include="Kit\Tables\DataTable.fs" />
+        <Compile Include="Kit\Tables\ColumnHeader.fs" />
+        <Compile Include="Kit\Tables\Pagination.fs" />
+        <Compile Include="Kit\Tables\TableFacetedFilter.fs" />
+        <Compile Include="Kit\Tables\TableInputFilter.fs" />
+        <Compile Include="Kit\Tables\TableViewOptions.fs" />
+        <Compile Include="Kit\Tables\TableToolbar.fs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -126,7 +149,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Partas.AnimeJs" Version="0.0.5" />
+      <PackageReference Include="Partas.AnimeJs" Version="0.0.8" />
       <PackageReference Include="Partas.Solid" Version="2.1.2" />
       <PackageReference Include="Partas.Solid.ArkUI" Version="0.5.1" />
       <PackageReference Include="Partas.Solid.Cmdk" Version="0.2.3" />
@@ -135,6 +158,12 @@
       <PackageReference Include="Partas.Solid.Lucide" Version="0.513.1" />
       <PackageReference Include="Partas.Solid.Primitives" Version="0.3.2" />
       <PackageReference Include="Partas.Solid.Sonner" Version="0.2.2" />
+      <PackageReference Include="Partas.Solid.TanStack.Table" Version="0.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="stories\assets\LooperGroup.svg" />
+      <Content Include="stories\assets\LooperGroup2.svg" />
     </ItemGroup>
     
 </Project>

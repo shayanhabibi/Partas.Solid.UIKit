@@ -1,0 +1,3 @@
+import{t as e}from"./iframe-CSkHCzVC.js";import{a as r}from"./Sidebar-CT913HpY.js";var a=e("<div>");const o={args:{},argTypes:{collapsible:{control:{type:"text"},table:{type:{summary:"string"}}},side:{control:{type:"text"},table:{type:{summary:"string"}}},variant:{control:{type:"text"},table:{type:{summary:"string"}}}},render:n=>a(),tags:["!autodocs"],component:r},t={args:{}};t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...t.parameters?.docs?.source}}};const s=["Default"],m=Object.freeze(Object.defineProperty({__proto__:null,Default:t,__namedExportsOrder:s,default:o},Symbol.toStringTag,{value:"Module"}));export{t as D,m as S};

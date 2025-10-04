@@ -1,0 +1,3 @@
+import{K as r}from"./Kbd-C4a5qZpQ.js";import{c as t,m as o}from"./iframe-CSkHCzVC.js";import"./Utils-Bukfxs-o.js";import"./preload-helper-PPVm8Dsz.js";const n={args:{},argTypes:{ariaLabel:{control:{type:"text"},table:{type:{summary:"string"}}},separator:{control:{type:"object"},table:{type:{summary:"HtmlElement",detail:"C:/Users/shaya/RiderProjects/Partas.Solid.UIKit/Partas.Solid.UI/fable_modules/Partas.Solid.2.1.2/Builder.fs"}}}},render:a=>t(r,o(a,{"bool:n$":!1,children:"B C"})),component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const c=["Default"];export{e as Default,c as __namedExportsOrder,n as default};

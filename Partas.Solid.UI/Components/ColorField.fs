@@ -5,20 +5,23 @@ open Fable.Core.JsInterop
 open Fable.Core.JS
 open Fable.Core
 
-[<RequireQualifiedAccess>]
-type private T =
-    | Description
-    | Error
-    | Label
-    static member variants(?variant: T): string =
-        let variant = defaultArg variant T.Label
-        "text-sm font-medium leading-none peer-disabled:cursor-not-allowed\
-        peer-disabled:opacity-70 group-disabled:opacity-70\
-        group-disabled:cursor-not-allowed " +
-        match variant with
-        | T.Description -> "font-normal text-muted-foreground"
-        | T.Error -> "text-xs text-destructive"
-        | T.Label -> "data-[invalid]:text-destructive"
+[<Erase>]
+module private ColorFieldVariant =
+    [<RequireQualifiedAccess; StringEnum>]
+    type T =
+        | Description
+        | Error
+        | Label
+        static member variants(?variant: T): string =
+            let variant = defaultArg variant T.Label
+            "text-sm font-medium leading-none peer-disabled:cursor-not-allowed\
+            peer-disabled:opacity-70 group-disabled:opacity-70\
+            group-disabled:cursor-not-allowed " +
+            match variant with
+            | T.Description -> "font-normal text-muted-foreground"
+            | T.Error -> "text-xs text-destructive"
+            | T.Label -> "data-[invalid]:text-destructive"
+open ColorFieldVariant
 [<Erase>]
 type ColorField() =
     inherit Kobalte.ColorField()

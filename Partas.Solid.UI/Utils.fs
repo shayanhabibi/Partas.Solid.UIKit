@@ -1,9 +1,12 @@
 ﻿[<AutoOpen>]
 module Partas.Solid.UI.Utils
 
+open System.Runtime.CompilerServices
 open Partas.Solid
 open Fable.Core
 open Fable.Core.JsInterop
+open Partas.AnimeJs
+open System
 
 type [<Erase>] Lib =
     [<ImportMember("tailwind-merge")>]
@@ -33,6 +36,21 @@ module Extensions =
     let inline toHtmlElement (func: string -> JSX.Element) (value: string): HtmlElement =
         unbox(func value)
     let inline toElement (element: JSX.Element): HtmlElement = unbox element
+[<Erase>]
+type Extensions =
+    /// <summary>
+    /// An extension that acts as a shortcut to calling the <c>.data</c> extension
+    /// method with the key <c>"slot"</c>.
+    /// <example><code>
+    /// div().dataSlot("container")
+    ///  // Compiles:
+    /// &lt;div data-slot="container" />
+    /// </code></example>
+    /// </summary>
+    /// <param name="this">The tag to add the attribute to.</param>
+    /// <param name="slotName">The slot name.</param>
+    [<Extension>]
+    static member inline dataSlot(this: #HtmlTag, slotName: string): #HtmlTag = this.data("slot",slotName)
 [<Erase>]
 type SrSpan() =
     inherit span()
@@ -83,3 +101,15 @@ module Charts =
             "fill" ==> "fill-gray-500"
             "text" ==> "text-gray-500"
         ] |> unbox<ChartColor>
+type Lib with
+    static member inline createInViewPlayer = onScroll { sync "play reverse" }
+    static member inline createUniqueSelector = $"anim{createUniqueId()}" |> fun s -> s, Selector $".{s}"
+    static member inline createTextAnimation text (uniqueId: Selector) ([<InlineIfLambda>] animationOptions: unit -> AnimationOptions) =
+        let mutable animationInstance: Animation = !!null
+        createEffect(fun() ->
+            if !!animationInstance then
+                animationInstance.revert() |> ignore
+            if text |> String.IsNullOrEmpty |> not then
+                animationInstance <- animationOptions() { uniqueId }
+            onCleanup(fun () -> if !!animationInstance then animationInstance.revert() |> ignore)
+        )

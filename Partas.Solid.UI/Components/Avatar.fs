@@ -9,9 +9,10 @@ type Avatar() =
     [<SolidTypeComponent>]
     member props.constructor =
         Kobalte.Image(class' = Lib.cn [|
-            "relative flex size-10 shrink-0 overflow-hidden rounded-full"
+            "relative flex size-8 shrink-0 overflow-hidden rounded-full"
             props.class'
-        |]).spread props
+        |]) .dataSlot("avatar")
+            .spread props
 
 [<Erase>]
 type AvatarImage() =
@@ -21,7 +22,8 @@ type AvatarImage() =
         Image.Img(class' = Lib.cn [|
             "aspect-square size-full"
             props.class'
-        |]).spread props
+        |]) .dataSlot("avatar-image")
+            .spread props
         
 [<Erase>]
 type AvatarFallback() =
@@ -31,4 +33,5 @@ type AvatarFallback() =
         Image.Fallback(class' = Lib.cn [|
             "flex size-full items-center justify-center bg-muted"
             props.class'
-        |]).spread props
+        |]) .dataSlot("avatar-fallback")
+            .spread props

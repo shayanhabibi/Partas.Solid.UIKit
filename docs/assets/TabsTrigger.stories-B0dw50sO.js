@@ -1,3 +1,0 @@
-import{t}from"./iframe-CYoISbNW.js";import{b as r}from"./Tabs-BDaiFRMu.js";var o=t("<div>");const a={args:{},argTypes:{value:{control:{type:"text"},table:{type:{summary:"string"}}},disabled:{control:{type:"boolean"},table:{type:{summary:"bool"}}},disabled:{control:{type:"boolean"},description:"Whether the button is disabled.",table:{type:{summary:"bool"}}}},render:l=>o(),tags:["!autodocs"],component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],m=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:a},Symbol.toStringTag,{value:"Module"}));export{m as T};

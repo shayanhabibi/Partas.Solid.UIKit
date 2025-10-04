@@ -33,6 +33,29 @@ let private meta = storybook<Checkbox> {
             Label(for' = "checkbox2-input") { "Don't want to be checked!" }
         }
         )
+    render "CheckboxCard" (fun props ->
+        let value,setValue = createSignal(false)
+        Label(class' = "hover:bg-accent/50 flex items-start gap-3 rounded-lg \
+                border p-3 has-[[data-checked]]:border-blue-600 \
+                has-[[data-checked]]:bg-blue-50 \
+                dark:has-[[data-checked]]:border-blue-900 \
+                dark:has-[[data-checked]]:bg-blue-950") {
+            Checkbox(id = "toggle-2", defaultChecked = true,
+                     class' = "data-[checked]:border-blue-600 \
+                    data-[checked]:bg-blue-600 data-[checked]:text-white \
+                    dark:data-[checked]:border-blue-700 \
+                    dark:data-[checked]:bg-blue-700")
+            div(class' = "grid gap-1.5 font-normal") {
+                p(class' = "text-sm leading-none font-medium") {
+                    "Enable notifications"
+                }
+                p(class' = "text-muted-foreground text-sm") {
+                    "You can enable or disable notifications at any time."
+                }
+            }
+        }
+        )
+    args "Disabled" (fun props -> props.disabled <- true)
     args "Default" (fun checkbox ->
         ())
 }

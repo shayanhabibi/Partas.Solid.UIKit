@@ -12,14 +12,23 @@ AlertDialog() {
         "Click me"
     }
     AlertDialogContent() {
-        AlertDialogTitle() {
-            "Alert dialog title"
+        AlertDialogX()
+        AlertDialogHeader() {
+            AlertDialogTitle() {
+                "Alert dialog title"
+            }
         }
         AlertDialogDescription() {
             "Alert dialog description"
         }
+        AlertDialogFooter() {
+            AlertDialogAction() { "Do something!" }
+            AlertDialogCancel() { "Cancel" }
+        }
     }
 ```
+
+By default, the alert dialog has modal set to true, and disables interactions outside the content.
 
 <Canvas of={AlertDialogStories.Default} />
 
@@ -41,6 +50,7 @@ AlertDialog() {
         "Click me"
     }
     AlertDialogContent() {
+        AlertDialogX()
         AlertDialogTitle() {
             "Alert dialog title"
         }

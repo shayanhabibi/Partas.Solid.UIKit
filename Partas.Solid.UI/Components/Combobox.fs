@@ -10,13 +10,17 @@ type Combobox<'Value>() =
     // member val options: 'T[] = jsNative with get,set
     [<SolidTypeComponent>]
     member props.constructor =
-        Kobalte.Combobox().spread props
+        Kobalte.Combobox()
+            .dataSlot("combobox")
+            .spread props
 [<Erase>]
 type ComboboxItemLabel() =
     inherit Combobox.ItemLabel()
     [<SolidTypeComponent>]
     member props.constructor =
-        Combobox.ItemLabel().spread props
+        Combobox.ItemLabel()
+            .dataSlot("combobox-item-label")
+            .spread props
         
 [<Erase>]
 type ComboboxHiddenSelect() =
@@ -36,13 +40,18 @@ type ComboboxItem<'Value>() =
             data-[highlighted]:text-accent-foreground data-[disabled]:opacity-50"
             props.class'
         |]
-        Combobox.Item<'Value>().attr("class", class_()).spread props
+        Combobox.Item<'Value>()
+            .dataSlot("combobox-item")
+            .attr("class", class_())
+            .spread props
 [<Erase>]
 type ComboboxItemIndicator() =
     inherit Combobox.ItemIndicator()
     [<SolidTypeComponent>]
     member props.constructor =
-        Combobox.ItemIndicator().spread(props) {
+        Combobox.ItemIndicator()
+            .dataSlot("combobox-item-indicator")
+            .spread(props) {
              props.children &&= Lucide.Lucide.Check(class' = "size-4", strokeWidth = 2) 
         }
 [<Erase>]
@@ -53,7 +62,8 @@ type ComboboxSection() =
         Combobox.Section(class'= Lib.cn [|
             "overflow-hidden p-1 px-2 py-1.5 text-xs font-medium text-muted-foreground"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("combobox-section")
+            .spread(props)
 [<Erase>]
 type ComboboxControl<'Value>() =
     inherit Combobox.Control<'Value>()
@@ -63,7 +73,10 @@ type ComboboxControl<'Value>() =
             "flex h-10 items-center rounded-md border px-3"
             props.class'
         |]
-        Combobox.Control<'Value>().attr("class", class_()).spread(props)
+        Combobox.Control<'Value>()
+            .dataSlot("combobox-control")
+            .attr("class", class_())
+            .spread(props)
 type ComboboxControl = ComboboxControl<obj>
 [<Erase>]
 type ComboboxInput() =
@@ -75,14 +88,17 @@ type ComboboxInput() =
             text-sm outline-none placeholder:text-muted-foreground
             disabled:cursor-not-allowed disabled:opacity-50"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("combobox-control")
+            .spread(props)
     
 [<Erase>]
 type ComboboxTrigger() =
     inherit Combobox.Trigger()
     [<SolidTypeComponent>]
     member props.constructor =
-        Combobox.Trigger(class' = Lib.cn [| "size-4 opacity-50" ; props.class' |]).spread(props) {
+        Combobox.Trigger(class' = Lib.cn [| "size-4 opacity-50" ; props.class' |])
+            .dataSlot("combobox-trigger")
+            .spread(props) {
             Combobox.Icon() {
                 props.children ??= unbox (Lucide.Lucide.ArrowUpDown(class'="size-4"))
             }
@@ -99,7 +115,8 @@ type ComboboxContent() =
                 rounded-md border bg-popover
                 text-popover-foreground shadow-md animate-in fade-in-80"
                 props.class'
-            |]).spread(props) {
+            |]) .dataSlot("combobox-content")
+                .spread(props) {
                 Combobox.Listbox(class'="m-0 p-1")
             }
         }

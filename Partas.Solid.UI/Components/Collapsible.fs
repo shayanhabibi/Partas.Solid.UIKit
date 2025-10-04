@@ -10,18 +10,24 @@ type Collapsible() =
     inherit Kobalte.Collapsible()
     [<SolidTypeComponent>]
     member props.collapsible =
-        Kobalte.Collapsible().spread props
+        Kobalte.Collapsible()
+            .dataSlot("collapsible")
+            .spread props
 
 [<Erase>]
 type CollapsibleTrigger() =
     inherit Collapsible.Trigger()
     [<SolidTypeComponent>]
     member props.collapsible =
-        Collapsible.Trigger().spread props
+        Collapsible.Trigger()
+            .dataSlot("collapsible-trigger")
+            .spread props
     
 [<Erase>]
 type CollapsibleContent() =
     inherit Collapsible.Content()
     [<SolidTypeComponent>]
     member props.collapsible =
-        Collapsible.Content().spread props
+        Collapsible.Content()
+            .dataSlot("collapsible-content")
+            .spread props

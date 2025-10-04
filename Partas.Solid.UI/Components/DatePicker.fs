@@ -7,11 +7,6 @@ open Partas.Solid.ArkUI
 open Fable.Core
 open Fable.Core.JsInterop
 
-[<Erase; AutoOpen>]
-module private Imports =
-    [<Import("children", "solid-js")>]
-    let inline magicChildren (children: 'T): Accessor<'T> = jsNative
-    
 [<Erase>]
 type DatePickerRoot() =
     inherit DatePicker.Root()
@@ -87,7 +82,7 @@ type DatePickerTrigger() =
     inherit DatePicker.Trigger()
     [<SolidTypeComponent>]
     member props.constructor =
-        let resolvedChildren = magicChildren(props.children)
+        let resolvedChildren = children(fun () -> props.children)
         let hasChildren = fun _ -> resolvedChildren |> JS.Constructors.Array.from |> _.Length <> 0
         DatePicker.Trigger(
             class' = Lib.cn [|
@@ -143,7 +138,7 @@ type DatePickerPrevTrigger() =
     inherit DatePicker.PrevTrigger()
     [<SolidTypeComponent>]
     member props.constructor =
-        let resolvedChildren = magicChildren(props.children)
+        let resolvedChildren = children(fun () -> props.children)
         let hasChildren = fun _ -> resolvedChildren |> JS.Constructors.Array.from |> _.Length <> 0
         DatePicker.PrevTrigger(
             class' = Lib.cn [|
@@ -160,7 +155,7 @@ type DatePickerNextTrigger() =
     inherit DatePicker.NextTrigger()
     [<SolidTypeComponent>]
     member props.constructor =
-        let resolvedChildren = magicChildren(props.children)
+        let resolvedChildren = children(fun () -> props.children)
         let hasChildren = fun _ -> resolvedChildren |> JS.Constructors.Array.from |> _.Length <> 0
         DatePicker.NextTrigger(
             class' = Lib.cn [|
