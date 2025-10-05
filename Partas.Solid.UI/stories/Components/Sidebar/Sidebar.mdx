@@ -22,12 +22,15 @@ import * as SidebarMenuSkeletonStories from './SidebarMenuSkeleton.stories';
 import * as SidebarMenuSubStories from './SidebarMenuSub.stories';
 import * as SidebarMenuSubItemStories from './SidebarMenuSubItem.stories';
 import * as SidebarMenuSubButtonStories from './SidebarMenuSubButton.stories';
+import rawCode from '../../../Components/Sidebar.fs?raw';
 
 <Meta of={SidebarStories} />
 <Title/>
 
-<Canvas of={SidebarStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
+<Canvas of={SidebarStories.Default} layout={"full"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Sidebar

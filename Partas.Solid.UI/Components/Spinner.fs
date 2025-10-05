@@ -297,32 +297,32 @@ type Spinner() =
     member val strokeWidth: int = 0 with get,set
     [<SolidTypeComponent>]
     member props.__ =
-        props.variant <- Variant.Default
+        props.variant <- Variant.Circle
         // using a match statement here would work, but it would
         // not be reactive (might have worked if it was proxied?)
         Partas.Solid.Bindings.Switch() {
             Match(when' = props.variant.IsDefault) {
-                Default().spread props
+                Default().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsCircle) {
-                Circle().spread props
+                Circle().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsPinWheel) {
-                Pinwheel().spread props
+                Pinwheel().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsCircleFilled) {
-                CircleFilled().spread props
+                CircleFilled().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsEllipsis) {
-                Ellipsis().spread props
+                Ellipsis().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsRing) {
-                Ring().spread props
+                Ring().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsBars) {
-                Bars().spread props
+                Bars().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsInfinite) {
-                Infinite().spread props
+                Infinite().dataSlot("spinner").spread props
             }
         }

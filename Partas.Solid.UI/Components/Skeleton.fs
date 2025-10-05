@@ -10,7 +10,8 @@ type Skeleton() =
     [<SolidTypeComponent>]
     member props.constructor =
         props.animate <- true
-        Kobalte.Skeleton(
-            class' = Lib.cn [| "bg-primary/10 data-[animate=true]:animate-pulse"
-                               props.class' |] )
+        Kobalte.Skeleton(class' = Lib.cn [|
+           "bg-primary/10 data-[animate=true]:animate-pulse"
+           props.class'
+        |]) .dataSlot("skeleton")
             .spread props

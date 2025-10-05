@@ -8,7 +8,8 @@ type Table() =
     inherit table()
     [<SolidTypeComponent>]
     member props.constructor =
-        div(class' = "relative w-full overflow-auto") {
+        div(class' = "relative w-full overflow-auto")
+            .dataSlot("table") {
             table(class' = Lib.cn [| "w-full caption-bottom text-sm"; props.class' |])
                 .spread props
         }
@@ -18,8 +19,10 @@ type TableHeader() =
     inherit thead()
     [<SolidTypeComponent>]
     member props.constructor =
-        thead(class' = Lib.cn [| "[&_tr]:border-b"
-                                 props.class' |])
+        thead(class' = Lib.cn [|
+            "[&_tr]:border-b"
+            props.class'
+        |]) .dataSlot("table-header")
             .spread props
 
 [<Erase>]
@@ -30,7 +33,8 @@ type TableBody() =
         tbody(class' = Lib.cn [|
             "[&_tr:last-child]:border-0"
             props.class'
-        |]).spread props
+        |]) .dataSlot("table-body")
+            .spread props
 
 [<Erase>]
 type TableFooter() =
@@ -40,44 +44,49 @@ type TableFooter() =
         tfoot(class' = Lib.cn [|
             "bg-primary font-medium text-primary-foreground"
             props.class'
-        |]).spread props
+        |]) .dataSlot("table-footer")
+            .spread props
 
 [<Erase>]
 type TableRow() =
     inherit tr()
     [<SolidTypeComponent>]
     member props.constructor =
-        tr(
-            class' = Lib.cn [|
-                "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
-                props.class'
-            |]
-        ).spread props
+        tr(class' = Lib.cn [|
+            "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+            props.class'
+        |]) .dataSlot("table-row")
+            .spread props
 
 [<Erase>]
 type TableHead() =
     inherit th()
     [<SolidTypeComponent>]
     member props.constructor =
-        th(
-            class' = Lib.cn [|
-                "h-10 px-2 text-left align-middle font-medium
-                text-muted-foreground [&:has([role=checkbox])]:pr-0"
-                props.class'
-            |]
-        ).spread props
+        th(class' = Lib.cn [|
+            "h-10 px-2 text-left align-middle font-medium
+            text-muted-foreground [&:has([role=checkbox])]:pr-0"
+            props.class'
+        |]) .dataSlot("table-head")
+            .spread props
 
 [<Erase>]
 type TableCell() =
     inherit td()
     [<SolidTypeComponentAttribute>]
     member props.constructor =
-        td(class' = Lib.cn [| "p-2 align-middle [&:has([role=checkbox])]:pr-0"; props.class' |]).spread props
+        td(class' = Lib.cn [|
+            "p-2 align-middle [&:has([role=checkbox])]:pr-0"; props.class'
+        |]) .dataSlot("table-cell")
+            .spread props
         
 [<Erase>]
 type TableCaption() =
     inherit caption()
     [<SolidTypeComponentAttribute>]
     member props.constructor =
-        caption(class' = Lib.cn [| "mt-4 text-sm text-muted-foreground"; props.class' |]).spread props
+        caption(class' = Lib.cn [|
+            "mt-4 text-sm text-muted-foreground"; props.class'
+        |]) .dataSlot("table-caption")
+            .spread props
         

@@ -11,7 +11,10 @@ open Fable.Core
 type NavigationMenuItem() =
     inherit NavigationMenu.Menu()
     [<SolidTypeComponent>]
-    member props.constructor = NavigationMenu.Menu().spread props
+    member props.constructor =
+        NavigationMenu.Menu()
+            .dataSlot("navigation-menu-item")
+            .spread props
 
 [<Erase>]
 type NavigationMenuViewport() =
@@ -40,10 +43,13 @@ type NavigationMenu() =
     [<SolidTypeComponent>]
     member props.constructor =
         Kobalte.NavigationMenu(gutter=6, class'= Lib.cn [|
-            "group/menu flex w-max flex-1 list-none items-center
-            justify-center data-[orientation=vertical]:flex-col [&>li]:w-full"
+            "group/navigation-menu relative flex max-w-max flex-1 \
+            items-center justify-center"
+            // "group/menu flex w-max flex-1 list-none items-center
+            //  justify-center data-[orientation=vertical]:flex-col [&>li]:w-full"
             props.class'
-        |]).spread(props) {
+        |]) .dataSlot("navigation-menu")
+            .spread(props) {
             props.children
             NavigationMenuViewport()
         }
@@ -116,7 +122,8 @@ type NavigationMenuLink() =
             outline-none transition-colors  hover:text-accent-foreground
             focus:bg-accent focus:text-accent-foreground"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("navigation-menu-link")
+            .spread(props)
 
 [<Erase>]
 type NavigationMenuLabel() =
@@ -126,7 +133,8 @@ type NavigationMenuLabel() =
         Kobalte.NavigationMenu.ItemLabel( class' = Lib.cn [|
             "text-sm font-medium leading-none"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("navigation-menu-label")
+            .spread(props)
 
 [<Erase>]
 type NavigationMenuDescription() =
@@ -136,6 +144,7 @@ type NavigationMenuDescription() =
         Kobalte.NavigationMenu.ItemDescription(class'= Lib.cn [|
             "text-sm leading-snug text-muted-foreground"
             props.class'
-        |]).spread props
+        |]) .dataSlot("navigation-menu-description")
+            .spread props
 
 

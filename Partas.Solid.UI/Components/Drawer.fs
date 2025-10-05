@@ -16,27 +16,27 @@ module Drawer =
 type Drawer() =
     inherit Corvu.Drawer()
     [<SolidTypeComponent>]
-    member props.constructor = Corvu.Drawer().spread props
+    member props.constructor = Corvu.Drawer().dataSlot("drawer").spread props
     
 [<Erase>]
 type DrawerTrigger() =
     inherit Drawer.Trigger()
     interface Polymorph
     [<SolidTypeComponent>]
-    member props.constructor = Drawer.Trigger().spread props
+    member props.constructor = Drawer.Trigger().dataSlot("drawer-trigger").spread props
     
 [<Erase>]
 type DrawerPortal() =
     inherit Drawer.Portal()
     [<SolidTypeComponent>]
-    member props.constructor = Drawer.Portal().spread props
+    member props.constructor = Drawer.Portal().dataSlot("drawer-portal").spread props
     
 [<Erase>]
 type DrawerClose() =
     inherit Drawer.Close()
     interface Polymorph
     [<SolidTypeComponent>]
-    member props.constructor = Drawer.Close().spread props
+    member props.constructor = Drawer.Close().dataSlot("drawer-close").spread props
     
 [<Erase>]
 type DrawerOverlay() =
@@ -47,7 +47,7 @@ type DrawerOverlay() =
         Corvu.Drawer.Overlay(class'= Lib.cn [|
             "fixed inset-0 z-50 data-[transitioning]:transition-colors data-[transitioning]:duration-300"
             props.class'
-        |]).spread(props).style'([
+        |]).dataSlot("drawer-overlay").spread(props).style'([
             Style.backgroundColor $"rgb(0 0 0 / {0.8 * drawerContext?openPercentage()})"
         ])
 [<Erase>]
@@ -64,7 +64,7 @@ type DrawerContent() =
                 after:h-1/2 after:bg-inherit data-[transitioning]:transition-transform
                 data-[transitioning]:duration-300 md:select-none"
                 props.class'
-            |]).spread(props) {
+            |]).dataSlot("drawer-content").spread(props) {
                 div(class'="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted")
                 props.children
             }
@@ -77,7 +77,7 @@ type DrawerHeader() =
         div(class'= Lib.cn [|
             "grid gap-1.5 p-4 text-center sm:text-left"
             props.class'
-        |]).spread(props)   
+        |]).dataSlot("drawer-header").spread(props)   
 [<Erase>]
 type DrawerFooter() =
     inherit div()
@@ -86,7 +86,7 @@ type DrawerFooter() =
         div(class'= Lib.cn [|
             "t-auto flex flex-col gap-2 p-4"
             props.class'
-        |]).spread(props)
+        |]).dataSlot("drawer-footer").spread(props)
 [<Erase>]
 type DrawerTitle() =
     inherit Drawer.Label()
@@ -95,12 +95,14 @@ type DrawerTitle() =
         Corvu.Drawer.Label(class'= Lib.cn [|
             "text-lg font-semibold leading-none tracking-tight"
             props.class'
-        |]).spread(props)
+        |]).dataSlot("drawer-title").spread(props)
 [<Erase>]
 type DrawerDescription() =
     inherit Drawer.Description()
     [<SolidTypeComponent>]
     member props.constructor =
-        Corvu.Drawer.Description(class'=Lib.cn [|"text-sm text-muted-foreground"; props.class'|]).spread(props)
+        Corvu.Drawer.Description(class'=Lib.cn [|"text-sm text-muted-foreground"; props.class'|])
+            .dataSlot("drawer-description")
+            .spread(props)
 
 

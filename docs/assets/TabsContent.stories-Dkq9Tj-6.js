@@ -1,0 +1,3 @@
+import{t}from"./iframe-mHl6JQ-c.js";import{c as o}from"./Tabs-C-h7f3JJ.js";var r=t("<div>");const a={args:{},argTypes:{value:{control:{type:"text"},table:{type:{summary:"string"}}},forceMount:{control:{type:"boolean"},table:{type:{summary:"bool"}}}},render:n=>r(),tags:["!autodocs"],component:o},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const s=["Default"],m=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:a},Symbol.toStringTag,{value:"Module"}));export{m as T};

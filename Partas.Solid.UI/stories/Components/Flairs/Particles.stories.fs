@@ -7,7 +7,7 @@ open Partas.Solid.Storybook
 let private meta = storybook<Particles> {
     render (fun props ->
         Particles().spread props)
-    args "Default" ignore
+    args "Default" (fun props -> props.refresh <- true)
 }
 
 

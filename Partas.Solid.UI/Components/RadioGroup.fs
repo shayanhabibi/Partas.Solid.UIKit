@@ -9,7 +9,12 @@ open Fable.Core
 type RadioGroup() =
     inherit Kobalte.RadioGroup()
     [<SolidTypeComponent>]
-    member props.__ = Kobalte.RadioGroup(class' = Lib.cn [|"grid gap-2"; props.class'|]).spread(props)
+    member props.__ =
+        Kobalte.RadioGroup(class' = Lib.cn [|
+            "grid gap-3"; props.class'
+        |])
+            .dataSlot("radio-group")
+            .spread(props)
 
 [<Erase>]
 type private RadioGroupItemControl() =
@@ -26,7 +31,8 @@ type private RadioGroupItemControl() =
 type private RadioGroupItemIndicator() =
     inherit RadioGroup.ItemIndicator()
     [<SolidTypeComponent>]
-    member private props.__ = RadioGroup.ItemIndicator(class' = "flex h-full items-center justify-center").spread props
+    member private props.__ =
+        RadioGroup.ItemIndicator(class' = "flex h-full items-center justify-center").spread props
 
 [<Erase>]
 type private RadioGroupItem_() =
@@ -46,17 +52,22 @@ type RadioGroupItem() =
         RadioGroup.Item(class' = Lib.cn [|
             "flex items-center space-x-2"
             props.class'
-        |]).spread(props) {
+        |]) .dataSlot("radio-group-item")
+            .spread(props) {
             RadioGroup.ItemInput()
-            RadioGroup.ItemControl(
-                class' = "aspect-square size-4 rounded-full border border-primary
-                text-primary ring-offset-background focus:outline-none
-                focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
-                disabled:cursor-not-allowed disabled:opacity-50"
+            RadioGroup.ItemControl(class' =
+                "border-input text-primary focus-visible:border-ring focus-visible:ring-ring/50 \
+                aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 \
+                aria-invalid:border-destructive dark:bg-input/30 aspect-square \
+                data-[invalid]:ring-destructive/20 dark:data-[invalid]:ring-destructive/40 \
+                data-[invalid]:border-destructive \
+                size-4 shrink-0 rounded-full border shadow-xs transition-[color,box-shadow] \
+                outline-none focus-visible:ring-[3px] data-[disabled]:cursor-not-allowed \
+                data-[disabled]:opacity-50"
                 ) {
-                RadioGroup.ItemIndicator(class' = "flex h-full items-center justify-center") {
-                    Circle(class' = "size-2.5 fill-current text-current")
-                }
+                RadioGroup.ItemIndicator(class' = "flex h-full items-center justify-center")
+                    .dataSlot("radio-group-indicator")
+                    { Circle(class' = "size-2.5 fill-current text-current") }
             }
             props.children
         }
@@ -69,7 +80,7 @@ type RadioGroupItemLabel() =
             "text-sm font-medium leading-none
             peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             props.class'
-        |]).spread(props)
+        |]).dataSlot("radio-group-label").spread(props)
 
 
 [<Erase; AutoOpen>]

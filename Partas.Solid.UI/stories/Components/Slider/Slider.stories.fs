@@ -17,13 +17,14 @@ let private meta = storybook<Slider> {
         )
     render (fun props ->
         Slider(getValueLabel = fun props -> $"${props.values[0]} - ${props.values[1]}"
-               ,class' = "w-[300px] space-y-3").spread props {
+               ,class' = "data-[orientation=horizontal]:w-[300px] space-y-3 \
+                          data-[orientation=vertical]:h-[300px]").spread props {
             div(class' = "flex w-full justify-between") {
                 SliderLabel() { "Money" }
                 SliderValueLabel()
             }
-            SliderTrack() {
-                SliderFill()
+            SliderControl() {
+                SliderTrack()
                 SliderThumb()
                 SliderThumb()
             }

@@ -1,0 +1,10 @@
+﻿import { Meta, Canvas, Story, Title } from '@storybook/addon-docs/blocks';
+import * as AnimationTestStories from './AnimationTest.stories';
+import rawCode from '../../Components/AnimationTest.fs?raw';
+
+<Meta of={AnimationTestStories}/>
+<Title/>
+
+<Story of={AnimationTestStories.Default} layout={"centered"}/>
+
+<SourceCode code={rawCode}/>

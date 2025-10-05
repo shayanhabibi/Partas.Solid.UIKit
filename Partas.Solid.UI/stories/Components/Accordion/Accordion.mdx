@@ -1,9 +1,12 @@
-﻿import { Meta, Title, Controls, Story, Stories, ArgTypes, Canvas } from '@storybook/addon-docs/blocks';
+﻿import { Meta, Title, Controls, Story, Stories, ArgTypes, Canvas, Source } from '@storybook/addon-docs/blocks';
 import * as AccordionStories from './Accordion.stories';
 import * as AccordionItemStories from './AccordionItem.stories';
+import rawCode from '../../../Components/Accordion.fs?raw';
+import { CopyBlock } from "../../../.storybook/CodeBlock";
 
 <Meta of={AccordionStories}/>
 <Title/>
+
 
 You typically compose an accordion in the following manner:
 
@@ -37,6 +40,8 @@ Accordion().spread acc {
 <Canvas of={AccordionStories.Default} sourceState={"none"} withToolbar={true}/>
 
 <Controls />
+
+<CopyBlock code={rawCode}/>
 
 The accordion is composed of multiple subcomponents:
 

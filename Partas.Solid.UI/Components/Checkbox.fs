@@ -19,7 +19,7 @@ type Checkbox() =
             Checkbox.Input(class'="peer")
             Checkbox.Control(
                 class' = Lib.cn [|
-                    "size-4 shrink-0 rounded-[4px] border border-input dark:bg-input/30 \
+                "size-4 shrink-0 rounded-[4px] border border-input dark:bg-input/30 \
                 transition-shadow shadow-xs outline-none data-[checked]:border-primary \
                 data-[invalid]:border-destructive data-[invalid]:ring-destructive/20 \
                 dark:data-[invalid]:ring-destructive/40 data-[disabled]:cursor-not-allowed \
@@ -28,7 +28,7 @@ type Checkbox() =
                 data-[checked]:text-primary-foreground \
                 data-[indeterminate]:border-none data-[indeterminate]:bg-primary \
                 data-[indeterminate]:text-primary-foreground"
-                    props.class'
+                props.class'
                 |]
                 ).dataSlot("checkbox-control") {
                 Checkbox.Indicator().dataSlot("checkbox-indicator") {

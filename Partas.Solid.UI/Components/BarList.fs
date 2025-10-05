@@ -78,7 +78,9 @@ type BarList() =
         div(class' = Lib.cn [|
             "flex flex-col space-y-1.5"
             props.class'
-        |], ariaSort = !!props.sortOrder).spread(props) {
+        |], ariaSort = !!props.sortOrder)
+            .dataSlot("bar-list")
+            .spread(props) {
             For(each = sortedData()) {
                 yield fun item index ->
                     div(class' = "row flex w-full justify-between space-x-6") {

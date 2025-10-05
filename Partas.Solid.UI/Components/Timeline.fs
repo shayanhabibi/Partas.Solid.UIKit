@@ -19,26 +19,27 @@ type private TimelineItemBullet() =
     member props.constructor =
         let bulletSize () = props.bulletSize
         let lineSize () = props.lineSize
-        div(
-            class' = Lib.cn [|
-                "absolute top-0 flex items-center justify-center rounded-full border bg-background"
-                props.isActive &&= "border-primary"
-                props.class'
-            |],
-            ariaHidden = true
+        div(class' = Lib.cn [|
+            "absolute top-0 flex items-center justify-center rounded-full border bg-background"
+            props.isActive &&= "border-primary"
+            props.class'
+        |], ariaHidden = true
         )   .style'([
             Style.width $"{bulletSize()}px"
             Style.height $"{bulletSize()}px"
             Style.left $"{-bulletSize() / 2 - lineSize() / 2}px"
             "border-width", $"{lineSize()}px"
-        ])  .spread props
+        ])  .dataSlot("timeline-item-bullet")
+            .spread props
 
 [<Erase>]
 type private TimelineItemTitle() =
     interface RegularNode
     [<SolidTypeComponentAttribute>]
     member props.constructor =
-        div(class' = "mb-1 text-base font-semibold leading-none") { props.children }
+        div(class' = "mb-1 text-base font-semibold leading-none")
+            .dataSlot("timeline-item-title")
+            { props.children }
 
 [<Erase>]
 type private TimelineItemDescription() =
@@ -46,6 +47,7 @@ type private TimelineItemDescription() =
     [<SolidTypeComponentAttribute>]
     member props.constructor =
         p(class' = Lib.cn [| "text-sm text-muted-foreground" ; props.class' |])
+            .dataSlot("timeline-item-description")
             .spread props
             { props.children }
 
@@ -71,13 +73,13 @@ type private TimelineItem() =
     [<SolidTypeComponentAttribute>]
     member props.constructor =
         let lineSize = props.lineSize
-        li(
-            class' =
-                Lib.cn [| "relative border-l pb-8 pl-8"
-                          props.isLast &&= "border-l-transparent pb-0"
-                          props.isActive &&= not(props.isLast) &&= "border-l-primary"
-                          props.class' |]
-            ).style'([Style.borderLeftWidth $"{lineSize}px"]).spread props
+        li(class' = Lib.cn [|
+          "relative border-l pb-8 pl-8"
+          props.isLast &&= "border-l-transparent pb-0"
+          props.isActive &&= not(props.isLast) &&= "border-l-primary"
+          props.class' |]
+        )   .dataSlot("timeline-item")
+            .style'([Style.borderLeftWidth $"{lineSize}px"]).spread props
             {
                 TimelineItemBullet(
                         lineSize = props.lineSize,

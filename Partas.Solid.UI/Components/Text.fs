@@ -44,7 +44,9 @@ type TextField() =
         | _ -> "data-[invalid]:text-destructive"
     [<SolidTypeComponentAttribute>]
     member props.construc =
-        Kobalte.TextField(class' = Lib.cn [| "group flex flex-col gap-1"; props.class' |])
+        Kobalte.TextField(class' = Lib.cn [|
+            "group flex flex-col gap-1"; props.class'
+        |]) .dataSlot("text-field")
             .spread props
 
 [<Erase>]
@@ -55,15 +57,19 @@ type TextFieldInput() =
     member props.constructor =
         props.type' <- TextField.Text
         TextField.Input(class' = Lib.cn [|
-            "flex h-10 w-full rounded-md border border-input
-            bg-transparent px-3 py-2 text-sm ring-offset-background
-            file:border-0 file:bg-transparent file:text-sm file:font-medium
-            placeholder:text-muted-foreground focus-visible:outline-none
-            focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
-            disabled:cursor-not-allowed disabled:opacity-50
-            data-[invalid]:border-error-foreground data-[invalid]:text-error-foreground"
+            "file:text-foreground placeholder:text-muted-foreground selection:bg-primary \
+            selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full \
+            min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs \
+            transition-[color,box-shadow] outline-none file:inline-flex file:h-7 \
+            file:border-0 file:bg-transparent file:text-sm file:font-medium \
+            data-[disabled]:pointer-events-none data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50 \
+            md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 \
+            focus-visible:ring-[3px] data-[invalid]:ring-destructive/20
+            dark:data-[invalid]:ring-destructive/40 data-[invalid]:border-destructive"
             props.class'
-        |], type' = unbox<string> props.type').spread props
+        |], type' = unbox<string> props.type')
+            .dataSlot("text-field-input")
+            .spread props
 
 [<Erase>]
 type TextFieldTextArea() =
@@ -71,13 +77,14 @@ type TextFieldTextArea() =
     [<SolidTypeComponentAttribute>]
     member props.constructor =
         TextField.TextArea(class' = Lib.cn [|
-            "flex min-h-[80px] w-full rounded-md border border-input
-            bg-background px-3 py-2 text-sm ring-offset-background
-            placeholder:text-muted-foreground focus-visible:outline-none
-            focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
-            disabled:cursor-not-allowed disabled:opacity-50"
+            "flex min-h-[80px] input-border w-full rounded-md \
+            bg-transparent px-3 py-2 text-sm ring-offset-background \
+            data-[invalid]:input-invalid-border placeholder:text-muted-foreground \
+            focus-visible:input-focus-border \
+            data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50 transition-[color,box-shadow]"
             props.class'
-        |]).spread props
+        |]) .dataSlot("text-field-area")
+            .spread props
 
 [<Erase>]
 type TextFieldLabel() =
@@ -87,7 +94,8 @@ type TextFieldLabel() =
         TextField.Label(class' = Lib.cn [|
             TextField.variants("label")
             props.class'
-        |]).spread props
+        |]) .dataSlot("text-field-label")
+            .spread props
 
 [<Erase>]
 type TextFieldDescription() =
@@ -97,14 +105,17 @@ type TextFieldDescription() =
         TextField.Description(class' = Lib.cn [|
             TextField.variants("description")
             props.class'
-        |]).spread props
+        |]) .dataSlot("text-field-description")
+            .spread props
 
 [<Erase>]
 type TextFieldErrorMessage() =
     inherit TextField.ErrorMessage()
     [<SolidTypeComponentAttribute>]
     member props.constructor =
-        TextField.ErrorMessage(class' = Lib.cn [| TextField.variants("error"); props.class' |])
+        TextField.ErrorMessage(class' = Lib.cn [|
+            TextField.variants("error"); props.class'
+        |]) .dataSlot("text-field-error-message")
             .spread props
 
 [<AutoOpen; Erase>]

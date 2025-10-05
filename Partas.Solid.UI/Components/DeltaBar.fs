@@ -22,7 +22,8 @@ type DeltaBar() =
         div(class' = Lib.cn [|
             "relative flex h-2 w-full items-center rounded-full bg-secondary"
             props.class'
-        |]).spread(props) {
+        |]) .dataSlot("delta-bar")
+            .spread(props) {
             div(class' = "flex h-full w-1/2 justify-end") {
                 if props.value < 0 then div(class' = Lib.cn [| "rounded-l-full"; barColor() |]).style' {| width = $"{absValue()}%%" |}
                 div(class' = Lib.cn [|

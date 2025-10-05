@@ -1,6 +1,7 @@
 import { Meta, Canvas, Stories, Title, ArgTypes, Controls } from '@storybook/addon-docs/blocks';
 import * as BadgeStories from './Badge.stories';
 import * as DeltaStories from './DeltaBadge.stories';
+import rawCode from '../../../Components/Badge.fs?raw';
 
 <Meta of={BadgeStories}/>
 <Title/>
@@ -26,3 +27,5 @@ DeltaBadge() {
 <Controls of={DeltaStories.Default} />
 
 <Stories of={BadgeStories} includePrimary={false}/>
+
+<SourceCode code={rawCode}/>

@@ -9,8 +9,10 @@ type Label() =
     [<SolidTypeComponent>]
     member props.constructor =
         label(class'= Lib.cn [|
-            "text-sm font-medium leading-none peer-[data-disabled]:cursor-not-allowed \
-            peer-[data-disabled]:opacity-70 peer-disabled:cursor-not-allowed \
-            peer-disabled:opacity-70"
+            "flex items-center gap-2 text-sm leading-none font-medium select-none
+            group-data-[disabled=true]:pointer-events-none
+            group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed \
+            peer-disabled:opacity-50"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("label")
+            .spread(props)

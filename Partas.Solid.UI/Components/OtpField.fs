@@ -43,13 +43,14 @@ type OtpFieldSlot() =
         div(
             class' = Lib.cn [|
                 "group relative flex size-10 items-center justify-center
-                border-y border-r border-input text-sm first:rounded-l-md
+                border-y border-r border-input text-sm first:rounded-l-md transition-all
                 first:border-l last:rounded-r-md"
                 props.class'
             |]
         ).spread props {
             div(
                 class' = Lib.cn [|
+                    // "border-ring ring-ring/50 aria-invalid:ring-destructive/20 dark:data-[active=true]:aria-invalid:ring-destructive/40 aria-invalid:border-destructive data-[active=true]:aria-invalid:border-destructive dark:bg-input/30 border-input relative flex h-9 w-9 items-center justify-center border-y border-r text-sm shadow-xs transition-all outline-none first:rounded-l-md first:border-l last:rounded-r-md data-[active=true]:z-10 data-[active=true]:ring-[3px]"
                     "absolute inset-0 z-10 transition-all group-first:rounded-l-md group-last:rounded-r-md"
                     (context.activeSlots() |> Array.contains props.index) &&= "ring-2 ring-ring ring-offset-background"
                 |]

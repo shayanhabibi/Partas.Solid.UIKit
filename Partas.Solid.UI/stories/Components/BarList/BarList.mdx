@@ -1,11 +1,14 @@
 ﻿import { Meta, Controls, ArgTypes, Title, Canvas } from '@storybook/addon-docs/blocks';
 import * as BarListStories from './BarList.stories';
+import rawCode from '../../../Components/BarList.fs?raw';
 
 <Meta of={BarListStories}/>
 <Title/>
 
 <Canvas of={BarListStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+
+<SourceCode code={rawCode}/>
 
 ## Components
 ### BarList

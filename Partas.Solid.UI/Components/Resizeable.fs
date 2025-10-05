@@ -13,12 +13,16 @@ type Resizeable() =
         Corvu.Resizable(class' = Lib.cn [|
             "flex size-full data-[orientation=vertical]:flex-col"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("resizable")
+            .spread(props)
 [<Erase>]
 type ResizeablePanel() =
     inherit Resizable.Panel()
     [<SolidTypeComponentAttribute>]
-    member props.constructor = Resizable.Panel().spread props
+    member props.constructor =
+        Resizable.Panel()
+            .dataSlot("resizable-panel")
+            .spread props
 
 [<Erase>]
 type ResizeableHandle() =
@@ -28,6 +32,7 @@ type ResizeableHandle() =
     [<SolidTypeComponent>]
     member props.constructor =
         Corvu.Resizable.Handle(class' = Lib.cn [|
+            // todo - needs the focus ring to be updated
             "relative flex w-px shrink-0 items-center justify-center
             bg-border after:absolute after:inset-y-0 after:left-1/2 after:w-1
             after:-translate-x-1/2 focus-visible:outline-none
@@ -37,7 +42,8 @@ type ResizeableHandle() =
             data-[orientation=vertical]:after:w-full data-[orientation=vertical]:after:-translate-y-1/2
             data-[orientation=vertical]:after:translate-x-0 [&[data-orientation=vertical]>div]:rotate-90"
             props.class'
-        |]).spread(props) {
+        |]) .dataSlot("resizable-handle") 
+            .spread(props) {
             Show(when'= props.withHandle) {
                 div(class'= "z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border") {
                     GripVertical(class'="size-2.5", strokeWidth = 2)

@@ -6,39 +6,75 @@ open Partas.Solid.Lucide
 open Partas.Solid.Kobalte
 open Partas.Solid.Polymorphism
 open Fable.Core
+open Partas.Solid.Aria
+open Fable.Core.JS
+open Fable.Core.JsInterop
 
 [<Erase>]
 type Select<'T>() =
     inherit Kobalte.Select<'T>()
     [<SolidTypeComponent>]
-    member props.constructor = Kobalte.Select().spread props
+    member props.constructor =
+        Kobalte.Select()
+            .dataSlot("select")
+            .spread props
 type Select = Select<obj>
 
 [<Erase>]
 type SelectValue<'T>() =
     inherit Select.Value<'T>()
     [<SolidTypeComponent>]
-    member props.constructor = Select.Value().spread props
+    member props.constructor =
+        Select.Value()
+            .dataSlot("select-value")
+            .spread props
 type SelectValue = SelectValue<obj>
 [<Erase>]
 type SelectHiddenSelect() =
     inherit Select.HiddenSelect()
     [<SolidTypeComponent>]
-    member props.constructor = Select.HiddenSelect().spread props
+    member props.constructor =
+        Select.HiddenSelect()
+            .dataSlot("select-hidden")
+            .spread props
     
+[<Erase>]
+module SelectTrigger =
+    [<StringEnum>]
+    type Size =
+        | Small
+        | Default
 [<Erase>]
 type SelectTrigger() =
     inherit Select.Trigger()
+    [<Erase>]
+    member val size: SelectTrigger.Size = undefined with get,set
     [<SolidTypeComponent>]
     member props.constructor =
+        props.size <- SelectTrigger.Size.Default
         Select.Trigger(class'= Lib.cn [|
-            "flex h-10 w-full items-center justify-between rounded-md
-            border border-input bg-transparent px-3 py-2 text-sm
-            ring-offset-background placeholder:text-muted-foreground
-            focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
-            disabled:cursor-not-allowed disabled:opacity-50"
+            "border-input data-[placeholder]:text-muted-foreground \
+            [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring \
+            focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 \
+            dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive \
+            dark:bg-input/30 dark:hover:bg-input/50 flex w-fit items-center \
+            justify-between gap-2 rounded-md border bg-transparent px-3 py-2 \
+            text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] \
+            outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed \
+            disabled:opacity-50 data-[size=default]:h-9 data-[size=small]:h-8 \
+            *:data-[slot=select-value]:line-clamp-1 \
+            *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center \
+            *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none \
+            [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+            // "flex h-10 w-full items-center justify-between rounded-md
+            // border border-input bg-transparent px-3 py-2 text-sm
+            // ring-offset-background placeholder:text-muted-foreground
+            // focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+            // disabled:cursor-not-allowed disabled:opacity-50"
             props.class'
-        |]).spread(props) {
+        |]) .data("size", string props.size)
+            .dataSlot("select-trigger")
+            .spread(props) {
             props.children
             Select.Icon().as'(ChevronsUpDown(class' = "size-4 opacity-50"))
         }
@@ -47,12 +83,23 @@ type SelectContent() =
     inherit Select.Content()
     [<SolidTypeComponent>]
     member props.constructor =
-        Select.Portal() {
+        Select.Portal().dataSlot("select-portal") {
             Select.Content(class' = Lib.cn [|
-                "relative z-50 min-w-32 overflow-hidden rounded-md border
-                bg-popover text-popover-foreground shadow-md animate-in fade-in-80"
+                "bg-popover text-popover-foreground data-[expanded]:animate-in \
+                data-[closed]:animate-out data-[closed]:fade-out-0 \
+                data-[expanded]:fade-in-0 data-[closed]:zoom-out-95 \
+                data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 \
+                data-[side=left]:slide-in-from-right-2 \
+                data-[side=right]:slide-in-from-left-2 \
+                data-[side=top]:slide-in-from-bottom-2 relative z-50 \
+                max-h-(--kb-popper-content-available-height) min-w-[8rem] \
+                origin-(--kb-popper-content-transform-origin) overflow-x-hidden \
+                overflow-y-auto rounded-md border shadow-md"
+                // "relative z-50 min-w-32 overflow-hidden rounded-md border
+                // bg-popover text-popover-foreground shadow-md animate-in fade-in-80"
                 props.class'
-            |]).spread(props) {
+            |]) .dataSlot("select-content")
+                .spread(props) {
                 Select.Listbox(class' = "m-0 p-1")
             }
         }
@@ -62,16 +109,23 @@ type SelectItem() =
     [<SolidTypeComponent>]
     member props.constructor =
         Select.Item(class' = Lib.cn [|
-            "relative mt-0 flex w-full cursor-default select-none items-center
-            rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none focus:bg-accent
-            focus:text-accent-foreground data-[disabled]:pointer-events-none
-            data-[disabled]:opacity-50"
+            "focus:bg-accent focus:text-accent-foreground \
+            [&_svg:not([class*='text-'])]:text-muted-foreground relative flex \
+            w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 \
+            pl-2 text-sm outline-hidden select-none data-[disabled]:pointer-events-none \
+            data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 \
+            [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex \
+            *:[span]:last:items-center *:[span]:last:gap-2"
             props.class'
-        |]).spread(props) {
-            Select.ItemIndicator(class' = "absolute right-2 flex size-3.5 items-center justify-center") {
-                Check(class'="size-4", strokeWidth = 2)
+        |]) .dataSlot("select-item")
+            .spread(props) {
+            span(class' = "absolute right-2 flex size-3.5 items-center justify-center") {
+                Select.ItemIndicator()
+                    .dataSlot("select-indicator") {
+                    Check(class'="size-4", strokeWidth = 2)
+                }
             }
-            Select.ItemLabel() { props.children }
+            Select.ItemLabel().dataSlot("select-label") { props.children }
         }
 
 [<Erase>]
@@ -127,6 +181,7 @@ module SelectModularForms =
         type private DV = DefaultValueAttribute
         
         open Fable.Core.JsInterop
+        open System
         type Select<'T> = Kobalte.Select<'T>
 
         [<Erase>]

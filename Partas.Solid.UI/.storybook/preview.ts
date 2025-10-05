@@ -1,7 +1,7 @@
 import './tailwind.css'
 import type { Preview, SolidRenderer } from 'storybook-solidjs-vite';
 import { withThemeByClassName } from '@storybook/addon-themes';
-import CodeBlock from './CodeBlock.tsx';
+import {CodeBlock, CopyBlock} from './CodeBlock';
 
 const preview: Preview = {
     tags: ['autodocs'],
@@ -17,7 +17,8 @@ const preview: Preview = {
         docs: {
             codePanel: false,
             components: {
-                code: CodeBlock
+                code: CodeBlock,
+                SourceCode: CopyBlock
             }
         },
     },

@@ -41,7 +41,7 @@ type Kbd() =
             "inline-flex select-none items-center gap-1 \
             rounded border bg-muted px-1.5 align-middle \
             font-medium font-mono text-[10px] text-muted-foreground \
-            leading-tight \
+            leading-loose \
             [&_svg:not([class*='size-'])]:size-3 \
             [[data-slot=tooltip-content]_&]:bg-background/20 \
             [[data-slot=tooltip-content]_&]:text-background \

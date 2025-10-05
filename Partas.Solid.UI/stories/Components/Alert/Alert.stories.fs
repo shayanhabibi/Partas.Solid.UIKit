@@ -30,5 +30,17 @@ let private meta = storybook<Alert> {
     args "Default" (setVariant Variant.Default)
     args "Destructive" (setVariant Variant.Destructive)
     args "Success" (setVariant Variant.Success)
+    render "Loading" (fun props ->
+        Alert().spread props {
+            Spinner()
+            AlertTitle() {
+                "Loading"
+            }
+            AlertDescription() {
+                "Working on something good"
+                br()
+                "We'll let you know when it's done!"
+            }
+        })
     
 }

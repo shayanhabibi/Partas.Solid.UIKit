@@ -1,5 +1,6 @@
 ﻿import { Meta, Canvas, Title, ArgTypes, Controls, Stories } from '@storybook/addon-docs/blocks';
 import * as AlertStories from './Alert.stories';
+import rawCode from '../../../Components/Alert.fs?raw';
 
 <Meta of={AlertStories} />
 <Title/>
@@ -20,5 +21,7 @@ Alert() {
 ### Alert props
 
 <Controls />
+
+<SourceCode code={rawCode} />
 
 <Stories includePrimary={false}/>

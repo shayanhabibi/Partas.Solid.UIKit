@@ -37,17 +37,17 @@ type Callout() =
                 Callout.variants(props.variant)
                 props.class'
             |]
-            ).spread props
+            ).dataSlot("callout").spread props
 
 [<Erase>]
 type CalloutTitle() =
     inherit h3()
     [<SolidTypeComponent>]
     member props.callout =
-        h3(class' = Lib.cn [| "font-semibold"; props.class' |]).spread props
+        h3(class' = Lib.cn [| "font-semibold"; props.class' |]).dataSlot("callout-title").spread props
 [<Erase>]
 type CalloutContent() =
     inherit div()
     [<SolidTypeComponent>]
     member props.callout =
-        div(class' = Lib.cn [| "mt-2" ; props.class' |]).spread props
+        div(class' = Lib.cn [| "mt-2" ; props.class' |]).dataSlot("callout-content").spread props

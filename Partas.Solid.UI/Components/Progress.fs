@@ -63,7 +63,10 @@ type ProgressLabel() =
 type ProgressValueLabel() =
     inherit Progress.ValueLabel()
     [<SolidTypeComponentAttribute>]
-    member props.constructor = Progress.ValueLabel().as'(!@Label).spread props
+    member props.constructor =
+        Progress.ValueLabel()
+            .dataSlot("progress-value-label")
+            .as'(!@Label).spread props
 
 [<Erase>]
 module progressCircle =
@@ -127,12 +130,11 @@ type ProgressCircle() =
         let strokeDashoffset = fun () -> (value() / 100.) * circumference()
         let offset = fun () -> circumference() - strokeDashoffset()
         
-        div(
-            class' = Lib.cn [|
-                "flex flex-col items-center justify-center"
-                props.class'
-            |]
-        ).spread props {
+        div(class' = Lib.cn [|
+            "flex flex-col items-center justify-center"
+            props.class'
+        |]) .dataSlot("progress-circle")
+            .spread props {
             Svg.svg(
                 width = $"{radius() * 2.}",
                 height = $"{radius() * 2.}",

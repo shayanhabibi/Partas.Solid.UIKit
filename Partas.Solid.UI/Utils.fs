@@ -113,3 +113,25 @@ type Lib with
                 animationInstance <- animationOptions() { uniqueId }
             onCleanup(fun () -> if !!animationInstance then animationInstance.revert() |> ignore)
         )
+
+[<Erase>]
+module Singletons =
+    [<Literal>]
+    let mobileBreakpoint = 768
+open Singletons
+open Partas.Solid.Primitives
+[<Erase>]
+type Singletons =
+        static member useIsMobile (fallback: bool) =
+            createSingletonRoot(fun _ ->
+                let (isMobile, setIsMobile) = createSignal(fallback)
+                createEffect(
+                        fun () ->
+                            let mobileBreakpointListener =
+                                    makeMediaQueryListener
+                                        $"(max-width:{mobileBreakpoint - 1}px"
+                                        (fun event -> setIsMobile(event.matches))
+                            onCleanup(mobileBreakpointListener)
+                    )
+                isMobile
+            )

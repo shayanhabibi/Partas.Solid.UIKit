@@ -30,7 +30,7 @@ let private meta = storybook<ToggleGroup> {
     args "Default" (fun props ->
         props.selectionMode <- Kobalte.Enums.SelectionMode.Single )
     render (fun props ->
-        ToggleGroup().spread props {
+        Partas.Solid.UI.ToggleGroup().spread props {
             ToggleGroupItem(value = "a") { "A" }
             ToggleGroupItem(value = "b") { "B" }
             ToggleGroupItem(value = "c") { "C" }

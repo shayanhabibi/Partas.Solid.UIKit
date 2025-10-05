@@ -134,7 +134,7 @@
 
     <ItemGroup>
         <Content Include=".storybook\tailwind.css" Link="tailwind.css" />
-      <TypeScriptCompile Include=".storybook\CodeBlock.tsx" Pack="false" />
+      <Content Include=".storybook\CodeBlock.jsx" Pack="false" />
       <TypeScriptCompile Include=".storybook\vitest.setup.ts" Pack="false" />
       <TypeScriptCompile Include=".storybook\preview.ts" Pack="false" />
       <TypeScriptCompile Include=".storybook\main.ts" Pack="false" />
@@ -157,6 +157,7 @@
       <PackageReference Include="Partas.Solid.Kobalte" Version="0.4.3" />
       <PackageReference Include="Partas.Solid.Lucide" Version="0.513.1" />
       <PackageReference Include="Partas.Solid.Primitives" Version="0.3.2" />
+      <PackageReference Include="Partas.Solid.Primitives.Rootless" Version="0.2.0" />
       <PackageReference Include="Partas.Solid.Sonner" Version="0.2.2" />
       <PackageReference Include="Partas.Solid.TanStack.Table" Version="0.2.3" />
     </ItemGroup>

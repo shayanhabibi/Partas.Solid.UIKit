@@ -1,5 +1,6 @@
 ﻿import { Meta, Title, Canvas, ArgTypes, Controls } from '@storybook/addon-docs/blocks';
 import * as AvatarStories from './Avatar.stories';
+import rawCode from '../../../Components/Avatar.fs?raw';
 
 <Meta of={AvatarStories}/>
 
@@ -17,6 +18,8 @@ Avatar() {
 <Canvas of={AvatarStories.Default} withToolbar="true" />
 
 <Controls />
+
+<SourceCode code={rawCode}/>
 
 ### With Image Source
 

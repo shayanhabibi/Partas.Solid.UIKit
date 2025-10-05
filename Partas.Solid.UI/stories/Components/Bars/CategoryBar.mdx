@@ -1,11 +1,14 @@
 ﻿import { Meta, Controls, Canvas, Title, ArgTypes } from '@storybook/addon-docs/blocks';
 import * as CategoryBarStories from './CategoryBar.stories';
+import rawCode from '../../../Components/CategoryBar.fs?raw';
 
 <Meta of={CategoryBarStories}/>
 <Title/>
 
 <Canvas of={CategoryBarStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+
+<SourceCode code={rawCode}/>
 
 ## Components
 ### CategoryBar

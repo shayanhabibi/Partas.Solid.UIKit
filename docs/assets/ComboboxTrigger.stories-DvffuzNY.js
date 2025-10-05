@@ -1,0 +1,3 @@
+import{c as e,g as t}from"./iframe-mHl6JQ-c.js";import{c as a,a as s,C as n}from"./Combobox-CmmxN4Rg.js";const c={args:{},argTypes:{disabled:{control:{type:"boolean"},description:"Whether the button is disabled.",table:{type:{summary:"bool"}}}},decorators:[r=>e(n,{options:["Item1"],get children(){return e(s,{children:l=>t(r)})}})],tags:["!autodocs"],component:a},o={args:{}};o.parameters={...o.parameters,docs:{...o.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...o.parameters?.docs?.source}}};const m=["Default"],p=Object.freeze(Object.defineProperty({__proto__:null,Default:o,__namedExportsOrder:m,default:c},Symbol.toStringTag,{value:"Module"}));export{p as T};

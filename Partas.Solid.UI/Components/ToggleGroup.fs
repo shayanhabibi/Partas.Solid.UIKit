@@ -10,18 +10,30 @@ open Fable.Core
 module ToggleGroup =
     type Variant = Toggle.Variant
     type Size = Toggle.Size
-    type ToggleGroupsContext = {| Size: Size; Variant: Variant |}
+    [<Erase>]
+    type ToggleGroupsContext = {| Size: unit -> Size; Variant: unit -> Variant |}
     [<Erase>]
     module Context =
-        let ToggleGroupContext = createContext<ToggleGroupsContext>({| Size = Size.Default; Variant = Variant.Default |})
+        let ToggleGroupContext = createContext<ToggleGroupsContext>({| Size = (fun () -> Size.Default); Variant = (fun () -> Variant.Default) |})
+        let useToggleGroupContext = fun () ->
+            let context = useContext(ToggleGroupContext)
+            if unbox context then
+                context
+            else failwith "ToggleGroupContext must be used within a togglegroup"
 
 [<Erase>]
 type ToggleGroup() =
     inherit Kobalte.ToggleGroup()
+    [<Erase>]
     member val size: ToggleGroup.Size = unbox null with get,set
+    [<Erase>]
     member val variant: ToggleGroup.Variant = unbox null with get,set
     [<SolidTypeComponent>]
     member props.constructor =
+        let size,setSize = createSignal ToggleGroup.Size.Default
+        let variant,setVariant = createSignal ToggleGroup.Variant.Default
+        createEffect(fun () -> setSize props.size )
+        createEffect(fun () -> setVariant props.variant )
         Kobalte.ToggleGroup(
             class' = Lib.cn [|
                 //tw
@@ -30,7 +42,7 @@ type ToggleGroup() =
             |]
             ).spread props
             {
-                ToggleGroup.Context.ToggleGroupContext({| Size = props.size; Variant = props.variant |}) {
+                ToggleGroup.Context.ToggleGroupContext({| Size = size; Variant = variant |}) {
                     props.children
                 }
             }
@@ -42,12 +54,12 @@ type ToggleGroupItem() =
     member val variant: ToggleGroup.Variant = unbox null with get,set
     [<SolidTypeComponent>]
     member props.constructor =
-        let context = useContext(ToggleGroup.Context.ToggleGroupContext)
+        let context = ToggleGroup.Context.useToggleGroupContext()
         ToggleGroup.Item(
             class' = Lib.cn [|
                 Toggle.variants(
-                    variant = (props.variant &&= context.Variant),
-                    size = (props.size &&= context.Size)
+                    variant = (props.variant &&= context.Variant()),
+                    size = (props.size &&= context.Size())
                     )
                 "hover:bg-muted hover:text-muted-foreground
                 data-[pressed]:bg-accent data-[pressed]:text-accent-foreground"

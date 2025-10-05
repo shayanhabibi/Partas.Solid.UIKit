@@ -2,13 +2,19 @@
 open Partas.Solid
 open Partas.Solid.Kobalte
 open Fable.Core
+open Partas.Solid.Aria
+open Fable.Core.JS
+open Fable.Core.JsInterop
 
 
 [<Erase>]
 type PaginationItems() =
     inherit Pagination.Items()
     [<SolidTypeComponent>]
-    member props.constructor = Kobalte.Pagination.Items().spread props
+    member props.constructor =
+        Kobalte.Pagination.Items()
+            .dataSlot("pagination-items")
+            .spread props
     
 [<Erase>]
 type Pagination() =
@@ -18,7 +24,8 @@ type Pagination() =
         Kobalte.Pagination(class' = Lib.cn [|
             "[&>*]:flex [&>*]:flex-row [&>*]:items-center [&>*]:gap-1"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("pagination")
+            .spread(props)
 [<Erase>]
 type PaginationItem() =
     inherit Pagination.Item()
@@ -28,17 +35,18 @@ type PaginationItem() =
             Button.variants(Button.Variant.Ghost)
             "size-10 data-[current]:border"
             props.class'
-        |]).spread(props)
+        |]) .dataSlot("pagination-item")
+            .spread(props)
 [<Erase>]
 type PaginationEllipsis() =
     inherit Pagination.Ellipsis()
     [<SolidTypeComponent>]
     member props.constructor =
-        Kobalte.Pagination.Ellipsis(
-            class'= Lib.cn [|
-                "flex size-10 items-center justify-center"
-                props.class'
-            |]).spread(props) {
+        Kobalte.Pagination.Ellipsis(class'= Lib.cn [|
+            "flex size-10 items-center justify-center"
+            props.class'
+        |]) .dataSlot("pagination-ellipsis")
+            .spread(props) {
             Lucide.Lucide.Ellipsis(class'="size-4",strokeWidth = 2)
             span(class'="sr-only") {"More pages"}
         }
@@ -52,7 +60,8 @@ type PaginationPrevious() =
             Button.variants(Button.Variant.Ghost)
             "gap-1 pl-2.5"
             props.class'
-        |]).spread(props) {
+        |]) .dataSlot("pagination-previous")
+            .spread(props) {
             Show(when' = (hasChildren()),
                  fallback = Fragment() {
                      Lucide.Lucide.ChevronLeft(class'="size-4", strokeWidth = 2)
@@ -71,7 +80,8 @@ type PaginationNext() =
             Button.variants(Button.Variant.Ghost)
             "gap-1 pl-2.5"
             props.class'
-        |]).spread(props) {
+        |]) .dataSlot("pagination-next")
+            .spread(props) {
             if hasChildren() then
                 children()
             else 
