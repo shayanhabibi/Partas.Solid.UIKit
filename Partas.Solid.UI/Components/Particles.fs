@@ -12,7 +12,7 @@ open Partas.Solid.Primitives
 open System
 
 [<JS.Pojo>]
-type private CircleSpinner(
+type private Circle(
     ?x: float,
     ?y: float,
     ?translateX: float,
@@ -82,7 +82,7 @@ type Particles() =
         let mutable canvasRef: HTMLCanvasElement = null
         let mutable canvasContainerRef: HTMLDivElement = null
         let mutable context: CanvasRenderingContext2D = null
-        let mutable circles: CircleSpinner[] = [||]
+        let mutable circles: Circle[] = [||]
         let mousePosition = Position.MousePosition()
         let mutable mouse: Position = jsOptions<Position>(fun o -> o.x <- 0.; o.y <- 0.)
         let mutable canvasSize = jsOptions<Size>(fun o -> o.h <- 0.; o.w <- 0.)
@@ -95,7 +95,7 @@ type Particles() =
         let clearContext () =
             if !!context  then
                 context.clearRect(0.,0.,canvasSize.w, canvasSize.h)
-        let circleParams (): CircleSpinner =
+        let circleParams (): Circle=
             let floor = JS.Math.floor
             let random= JS.Math.random
             let inline toFixed (count: int) (value: float) = Math.Round(value, count)
@@ -110,9 +110,9 @@ type Particles() =
             let dx = random() |> (-) <| 0.5 |> (*) 0.1
             let dy = random() |> (-) <| 0.5 |> (*) 0.1
             let magnetism = random() |> (*) 4. |> (+) 0.1
-            CircleSpinner(x,y,translateX,translateY,pSize,alpha,targetAlpha,dx,dy,magnetism)
+            Circle(x,y,translateX,translateY,pSize,alpha,targetAlpha,dx,dy,magnetism)
             
-        let drawCircle (update: bool) (circle: CircleSpinner) =
+        let drawCircle (update: bool) (circle: Circle) =
             if !!context then
                 context
                 >=> _.translate(circle.translateX, circle.translateY)
@@ -122,7 +122,7 @@ type Particles() =
                 >=> _.fill()
                 |> _.setTransform(dpr, 0., 0., dpr, 0., 0.)
                 if not update then
-                    circles |> unbox<ResizeArray<CircleSpinner>> |> _.Add(circle)
+                    circles |> unbox<ResizeArray<Circle>> |> _.Add(circle)
         let resizeCanvas() =
             if canvasContainerRef &&= canvasRef &&= !!context then
                 canvasSize.w <- canvasContainerRef.offsetWidth
@@ -168,7 +168,7 @@ type Particles() =
                     circle.y < -circle.size ||
                     circle.y > canvasSize.h + circle.size)
                 then
-                    circles |> unbox<ResizeArray<CircleSpinner>> |> _.RemoveAt(i)
+                    circles |> unbox<ResizeArray<Circle>> |> _.RemoveAt(i)
                     circleParams()
                     |> drawCircle false
                 )

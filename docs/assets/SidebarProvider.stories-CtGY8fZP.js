@@ -1,3 +1,0 @@
-import{t as o}from"./iframe-Ss2HFUgg.js";import{S as r}from"./Sidebar-C9rZPcn2.js";var t=o("<div>");const{fn:a}=__STORYBOOK_MODULE_TEST__,n={args:{onOpenChange:a()},argTypes:{defaultOpen:{control:{type:"boolean"},table:{type:{summary:"bool"}}},open:{control:{type:"boolean"},table:{type:{summary:"bool"}}},onOpenChange:{control:{type:!1},table:{type:{summary:"function"}}}},render:p=>t(),tags:["!autodocs"],component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],c=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:n},Symbol.toStringTag,{value:"Module"}));export{c as S};

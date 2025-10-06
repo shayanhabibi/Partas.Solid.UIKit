@@ -1,1 +1,0 @@
-import{a as c}from"./FN6EICGO-DOeDID0N.js";import{a as t}from"./index-axew2xP3.js";function g(e={}){const[a,s]=c({value:()=>t(e.isSelected),defaultValue:()=>!!t(e.defaultIsSelected),onChange:l=>e.onSelectedChange?.(l)});return{isSelected:a,setIsSelected:l=>{!t(e.isReadOnly)&&!t(e.isDisabled)&&s(l)},toggle:()=>{!t(e.isReadOnly)&&!t(e.isDisabled)&&s(!a())}}}export{g as c};
