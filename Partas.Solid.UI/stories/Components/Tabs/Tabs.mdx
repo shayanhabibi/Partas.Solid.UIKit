@@ -4,12 +4,14 @@ import * as TabsListStories from './TabsList.stories';
 import * as TabsTriggerStories from './TabsTrigger.stories';
 import * as TabsContentStories from './TabsContent.stories';
 import * as TabsIndicatorStories from './TabsIndicator.stories';
+import rawCode from '../../../Components/Tabs.fs?raw';
 
 <Meta of={TabsStories} />
 <Title/>
 
 <Canvas of={TabsStories.Default} sourceStatus={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

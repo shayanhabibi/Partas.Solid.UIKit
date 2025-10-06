@@ -15,6 +15,7 @@ import * as DropdownMenuSubTriggerStories from './DropdownMenuSubTrigger.stories
 import * as DropdownMenuCheckboxItemStories from './DropdownMenuCheckboxItem.stories';
 import * as DropdownMenuGroupLabelStories from './DropdownMenuGroupLabel.stories';
 import * as DropdownMenuRadioItemStories from './DropdownMenuRadioItem.stories';
+import rawCode from '../../../Components/DropdownMenu.fs?raw';
 
 <Meta of={DropdownMenuStories} />
 <Title/>
@@ -41,6 +42,7 @@ DropdownMenu().spread props {
 
 <Canvas of={DropdownMenuStories.Default} sourceState="none" layout={"centered"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 > A more comprehensive example would look identical to the 'ContextMenu' examples.
 

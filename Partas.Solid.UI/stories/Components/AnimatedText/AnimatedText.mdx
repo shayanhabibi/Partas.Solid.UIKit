@@ -1,0 +1,17 @@
+﻿import { Meta, Canvas, Controls, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as AnimatedText from './AnimatedText.stories';
+import animatedTextCode from '../../../Components/AnimatedText.fs?raw';
+import * as AuroraText from './AuroraText.stories';
+import auroraTextCode from '../../../Components/AuroraText.fs?raw';
+
+<Meta of={AnimatedText}/>
+<Title />
+<Canvas of={AnimatedText.Default} layout={"centered"} withToolbar={true} source={{code: animatedTextCode}} />
+<Controls />
+<SourceCode code={animatedTextCode}/>
+
+# AuroraText
+
+<Canvas of={AuroraText.Default} meta={AuroraText} layout={"centered"} withToolbar={true} source={{code: auroraTextCode}}/>
+<Controls of={AuroraText.Default}/>
+<SourceCode code={auroraTextCode} />

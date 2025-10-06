@@ -6,6 +6,7 @@ import * as HeaderStories from './DialogHeader.stories';
 import * as TitleStories from './DialogTitle.stories';
 import * as DescriptionStories from './DialogDescription.stories';
 import * as FooterStories from './DialogFooter.stories';
+import rawCode from '../../../Components/Dialog.fs?raw';
 
 <Meta of={DialogStories} />
 <Title />
@@ -50,6 +51,7 @@ Typically, the footer would be used for buttons and actions.
 
 <Canvas of={DialogStories.Default} sourceState={"none"} layout={"centered"} withToolbar={true} />
 <Controls />
+<SourceCode code={rawCode}/>
 
 ### DialogTrigger
 

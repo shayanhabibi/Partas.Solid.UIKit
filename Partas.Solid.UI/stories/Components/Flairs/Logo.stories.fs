@@ -4,6 +4,7 @@ open Partas.Solid.UI
 open Partas.Solid.Storybook
 [<PartasStorybook>]
 let private meta = storybook<Logo> {
+    tags [| "!autodocs" |]
     render (fun props ->
         Logo(class' = "size-10").spread props)
     args "Default" ignore

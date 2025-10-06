@@ -8,6 +8,7 @@ import * as CommandGroups from './CommandGroups.stories';
 import * as CommandSeparators from './CommandSeparators.stories';
 import * as CommandItems from './CommandItems.stories';
 import * as CommandShortcuts from './CommandShortcuts.stories';
+import rawCode from '../../../Components/Command.fs?raw';
 
 <Meta of={CommandStories} />
 <Title />
@@ -93,6 +94,7 @@ Fragment() {
 ```
 
 <Canvas of={CommandStories.DialogExample} sourceState={"none"} layout={"centered"}/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

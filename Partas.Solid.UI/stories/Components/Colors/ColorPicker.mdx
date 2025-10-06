@@ -1,11 +1,13 @@
 ﻿import { Meta, Controls, ArgTypes, Title, Canvas } from '@storybook/addon-docs/blocks';
 import * as ColorPickerStories from './ColorPicker.stories';
+import rawCode from '../../../Components/ColorPicker.fs?raw';
 
 <Meta of={ColorPickerStories}/>
 <Title/>
 
 <Canvas of={ColorPickerStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### ColorPicker

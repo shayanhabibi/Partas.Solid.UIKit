@@ -27,7 +27,7 @@ type private Default() =
     member private props.__ =
         Loader(class' = Lib.cn [| "animate-spin"; props.class' |]).spread props
 [<Erase>]
-type private Circle() =
+type private CircleSpinner() =
     interface VoidNode
     [<SolidTypeComponent>]
     member private props.__ =
@@ -305,7 +305,7 @@ type Spinner() =
                 Default().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsCircle) {
-                Circle().dataSlot("spinner").spread props
+                CircleSpinner().dataSlot("spinner").spread props
             }
             Match(when' = props.variant.IsPinWheel) {
                 Pinwheel().dataSlot("spinner").spread props

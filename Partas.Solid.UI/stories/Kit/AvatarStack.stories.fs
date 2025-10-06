@@ -20,8 +20,8 @@ let private meta = storybook<AvatarStack<IAvatarStackItem>> {
         |]).spread props
         )
     
-    args "Animated" (fun props ->
+    args "Default" (fun props ->
         props.animate <- true
-        props.size <- 40)
+        props.size <- 32)
 }
 

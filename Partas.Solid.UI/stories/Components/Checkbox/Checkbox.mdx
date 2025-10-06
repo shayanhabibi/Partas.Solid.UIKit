@@ -1,5 +1,6 @@
 import { Meta, Controls, Title, Stories, Canvas } from '@storybook/addon-docs/blocks';
 import * as CheckboxStories from './Checkbox.stories';
+import rawCode from '../../../Components/Checkbox.fs?raw';
 
 <Meta of={CheckboxStories} />
 <Title />
@@ -13,6 +14,8 @@ Label() { "Checkbox Label" }
 
 <Canvas of={CheckboxStories.Default} withToolbar={true} sourceState={"none"} layout={"centered"} />
 <Controls/>
+
+<SourceCode code={rawCode}/>
 
 ### Checkbox Cards
 

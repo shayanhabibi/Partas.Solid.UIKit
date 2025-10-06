@@ -15,12 +15,14 @@ import * as MenubarRadioItemStories from './MenubarRadioItem.stories';
 import * as MenubarItemLabelStories from './MenubarItemLabel.stories';
 import * as MenubarGroupLabelStories from './MenubarGroupLabel.stories';
 import * as MenubarSeparatorStories from './MenubarSeparator.stories';
+import rawCode from '../../../Components/Menubar.fs?raw';
 
 <Meta of={MenubarStories} />
 <Title/>
 
 <Canvas of={MenubarStories.Default} sourceState="none" withToolbar={true} />
 <Controls />
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Menubar

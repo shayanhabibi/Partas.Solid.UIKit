@@ -1,0 +1,3 @@
+import{e as t,D as o}from"./Drawer-j7JpX7Bv.js";import{c as a}from"./iframe-Ss2HFUgg.js";const s={args:{},argTypes:{as:{control:{type:"object"},table:{type:{summary:"Element"}}},contextId:{control:{type:"text"},table:{type:{summary:"string"}}}},decorators:[r=>a(o,{get children(){return r()}})],tags:["!autodocs"],component:t},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const c=["Default"],m=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:c,default:s},Symbol.toStringTag,{value:"Module"}));export{m as D};

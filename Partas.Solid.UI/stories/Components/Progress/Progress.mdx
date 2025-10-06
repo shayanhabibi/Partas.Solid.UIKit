@@ -3,6 +3,7 @@ import * as ProgressStories from './Progress.stories';
 import * as ProgressLabelStories from './ProgressLabel.stories';
 import * as ProgressValueLabelStories from './ProgressValueLabel.stories';
 import * as ProgressRingStories from'./ProgressRing.stories';
+import rawCode from '../../../Components/Progress.fs?raw';
 
 <Meta of={ProgressStories}/>
 <Title/>
@@ -12,6 +13,7 @@ import * as ProgressRingStories from'./ProgressRing.stories';
 
 <Canvas of={ProgressRingStories.Default} meta={ProgressRingStories} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls of={ProgressRingStories.Default} />
+<SourceCode code={rawCode}/>
 
 ## Components
 

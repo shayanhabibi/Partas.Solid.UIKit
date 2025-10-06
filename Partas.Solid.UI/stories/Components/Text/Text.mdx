@@ -5,11 +5,13 @@ import * as TextFieldTextAreaStories from './TextFieldTextArea.stories';
 import * as TextFieldLabelStories from './TextFieldLabel.stories';
 import * as TextFieldDescriptionStories from './TextFieldDescription.stories';
 import * as TextFieldErrorMessageStories from './TextFieldErrorMessage.stories';
+import rawCode from '../../../Components/Text.fs?raw';
 
 <Meta of={TextFieldStories}/>
 <Title/>
 <Canvas of={TextFieldStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

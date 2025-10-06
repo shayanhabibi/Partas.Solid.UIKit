@@ -1,11 +1,14 @@
 ﻿import { Meta, Controls, ArgTypes, Title, Canvas } from '@storybook/addon-docs/blocks';
 import * as ColorFieldSwatch from './ColorFieldSwatch.stories';
+import rawCode from '../../../Components/ColorField.fs?raw';
 
 <Meta of={ColorFieldSwatch}/>
 <Title/>
 
 <Canvas of={ColorFieldSwatch.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+
+<SourceCode code={rawCode}/>
 
 ## Components
 ### ColorFieldSwatch

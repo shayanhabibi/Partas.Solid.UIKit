@@ -1,11 +1,13 @@
 ﻿import { Meta, Controls, Canvas, Title, ArgTypes } from '@storybook/addon-docs/blocks';
 import * as SeparatorStories from './Separator.stories';
+import rawCode from '../../../Components/Separator.fs?raw';
 
 <Meta of={SeparatorStories}/>
 <Title/>
 
 <Canvas of={SeparatorStories.Default}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Separator

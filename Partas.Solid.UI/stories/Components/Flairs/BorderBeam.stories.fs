@@ -4,6 +4,7 @@ open Partas.Solid.UI
 open Partas.Solid.Storybook
 [<PartasStorybook>]
 let private meta = storybook<BorderBeam> {
+    tags [| "!autodocs" |]
     args (fun props ->
         props.anchor <- 90
         props.borderWidth <- 1.5

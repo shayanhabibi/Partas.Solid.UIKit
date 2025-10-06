@@ -25,12 +25,14 @@ import * as DatePickerTableCellTriggerStories from './DatePickerTableCellTrigger
 import * as DatePickerDayViewStories from './DatePickerDayView.stories';
 import * as DatePickerMonthViewStories from './DatePickerMonthView.stories';
 import * as DatePickerYearViewStories from './DatePickerYearView.stories';
+import rawCode from '../../../Components/DatePicker.fs?raw';
 
 <Meta of={DatePickerStories} />
 <Title/>
 
 <Canvas of={DatePickerStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

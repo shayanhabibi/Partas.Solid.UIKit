@@ -1,11 +1,13 @@
 ﻿import { Meta, Canvas, Controls, Title, ArgTypes } from '@storybook/addon-docs/blocks';
 import * as ToggleStories from './Toggle.stories';
+import rawCode from '../../../Components/Toggle.fs?raw';
 
 <Meta of={ToggleStories}/>
 <Title/>
 
 <Canvas of={ToggleStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Toggle

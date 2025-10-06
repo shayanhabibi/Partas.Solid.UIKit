@@ -1,3 +1,0 @@
-import{t as e}from"./iframe-mHl6JQ-c.js";import{a as r}from"./OtpField-gLswkXj1.js";var a=e("<div>");const o={args:{},argTypes:{pattern:{control:{type:"text"},table:{type:{summary:"string"}}},noScriptCSSFallback:{control:{type:"text"},table:{type:{summary:"string"}}},contextId:{control:{type:"text"},table:{type:{summary:"string"}}},as:{control:{type:"text"},table:{type:{summary:"string"}}}},render:p=>a(),tags:["!autodocs"],component:r},t={args:{}};t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...t.parameters?.docs?.source}}};const s=["Default"],m=Object.freeze(Object.defineProperty({__proto__:null,Default:t,__namedExportsOrder:s,default:o},Symbol.toStringTag,{value:"Module"}));export{m as O};

@@ -5,6 +5,7 @@ open Partas.Solid.Storybook
 
 [<PartasStorybook>]
 let private meta = storybook<Particles> {
+    tags [| "!autodocs" |]
     render (fun props ->
         Particles().spread props)
     args "Default" (fun props -> props.refresh <- true)

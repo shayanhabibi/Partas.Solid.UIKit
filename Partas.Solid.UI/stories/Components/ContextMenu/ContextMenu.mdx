@@ -14,6 +14,7 @@ import * as ContextMenuSubContentStories from './ContextMenuSubContent.stories';
 import * as ContextMenuCheckboxItemStories from './ContextMenuCheckboxItem.stories';
 import * as ContextMenuGroupLabelStories from './ContextMenuGroupLabel.stories';
 import * as ContextMenuRadioItemStories from './ContextMenuRadioItem.stories';
+import rawCode from '../../../Components/ContextMenu.fs?raw';
 
 <Meta of={ContextMenuStories} />
 <Title />
@@ -21,6 +22,7 @@ import * as ContextMenuRadioItemStories from './ContextMenuRadioItem.stories';
 <Canvas of={ContextMenuStories.Example} sourceState={"none"} layout={"centered"}/>
 
 <Controls of={ContextMenuStories.Example}/>
+<SourceCode code={rawCode}/>
 
 ```fsharp
 let showGitLog,setShowGitLog = createSignal true

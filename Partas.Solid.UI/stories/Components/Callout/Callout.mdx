@@ -1,5 +1,6 @@
 import { Meta, Canvas, Stories, Title, Controls } from '@storybook/addon-docs/blocks';
 import * as CalloutStories from './Callout.stories';
+import rawCode from '../../../Components/Callout.fs?raw';
 
 <Meta of={CalloutStories} />
 <Title />
@@ -17,5 +18,7 @@ Callout() {
 
 <Canvas of={CalloutStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls />
+
+<SourceCode code={rawCode}/>
 
 <Stories includePrimary={false}/>

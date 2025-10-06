@@ -8,12 +8,14 @@ import * as NavigationMenuContentStories from './NavigationMenuContent.stories';
 import * as NavigationMenuLinkStories from './NavigationMenuLink.stories';
 import * as NavigationMenuLabelStories from './NavigationMenuLabel.stories';
 import * as NavigationMenuDescriptionStories from './NavigationMenuDescription.stories';
+import rawCode from '../../../Components/NavigationMenu.fs?raw';
 
 <Meta of={NavigationMenuStories}/>
 <Title/>
 
 <Canvas of={NavigationMenuStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### NavigationMenu

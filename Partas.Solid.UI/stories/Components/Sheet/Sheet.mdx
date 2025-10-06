@@ -9,11 +9,13 @@ import * as SheetHeaderStories from './SheetHeader.stories';
 import * as SheetFooterStories from './SheetFooter.stories';
 import * as SheetTitleStories from './SheetTitle.stories';
 import * as SheetDescriptionStories from './SheetDescription.stories';
+import rawCode from '../../../Components/Sheet.fs?raw';
 
 <Meta of={SheetStories} />
 <Title/>
 <Canvas of={SheetStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Sheet

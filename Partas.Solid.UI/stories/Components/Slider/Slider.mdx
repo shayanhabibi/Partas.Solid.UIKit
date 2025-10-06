@@ -5,12 +5,14 @@ import * as SliderThumbStories from './SliderThumb.stories';
 import * as SliderFillStories from './SliderFill.stories';
 import * as SliderLabelStories from './SliderLabel.stories';
 import * as SliderValueLabelStories from './SliderValueLabel.stories';
+import rawCode from '../../../Components/Slider.fs?raw';
 
 <Meta of={SliderStories}/>
 <Title/>
 
 <Canvas of={SliderStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

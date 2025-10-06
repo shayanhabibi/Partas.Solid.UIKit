@@ -2,12 +2,15 @@
 import * as CardHoverStories from './CardHover.stories';
 import * as CardHoverBodyStories from './CardHoverBody.stories';
 import * as CardHoverItemStories from './CardHoverItem.stories';
+import rawCode from '../../../Components/CardHoverEffect.fs?raw';
 
 <Meta of={CardHoverStories} />
 <Title/>
 
 <Canvas of={CardHoverStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+
+<SourceCode code={rawCode}/>
 
 ## Components
 

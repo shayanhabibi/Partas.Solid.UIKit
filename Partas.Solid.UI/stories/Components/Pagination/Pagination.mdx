@@ -5,11 +5,13 @@ import * as PaginationItemStories from './PaginationItem.stories';
 import * as PaginationEllipsisStories from './PaginationEllipsis.stories';
 import * as PaginationNextStories from './PaginationNext.stories';
 import * as PaginationPreviousStories from './PaginationPrevious.stories';
+import rawCode from '../../../Components/Pagination.fs?raw';
 
 <Meta of={PaginationStories}/>
 <Title/>
 <Canvas of={PaginationStories.Default} sourceState={"none"} layout={"centered"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Pagination

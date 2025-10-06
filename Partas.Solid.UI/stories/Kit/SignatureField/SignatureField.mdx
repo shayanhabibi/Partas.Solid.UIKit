@@ -1,5 +1,6 @@
 ﻿import { Meta, Title, ArgTypes, Controls, Canvas } from '@storybook/addon-docs/blocks';
 import * as SignatureFieldStories from './SignatureField.stories';
+import rawCode from '../../../Kit/SignatureField.fs?raw';
 
 <Meta of={SignatureFieldStories}/>
 <Title/>
@@ -17,6 +18,7 @@ The components of the field can be styled using the 'slots' property object.
 
 <Canvas of={SignatureFieldStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### SignatureField

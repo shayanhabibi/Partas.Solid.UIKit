@@ -1,11 +1,13 @@
 ﻿import { Meta, Canvas, Title, Controls, ArgTypes } from '@storybook/addon-docs/blocks';
 import * as SonnerStories from './Sonner.stories';
+import rawCode from '../../../Components/Sonner.fs?raw';
 
 <Meta of={SonnerStories}/>
 <Title/>
 
 <Canvas of={SonnerStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Sonner

@@ -7,12 +7,14 @@ import * as TableRowStories from './TableRow.stories';
 import * as TableHeadStories from './TableHead.stories';
 import * as TableCellStories from './TableCell.stories';
 import * as TableCaptionStories from './TableCaption.stories';
+import rawCode from '../../../Components/Table.fs?raw';
 
 <Meta of={TableStories}/>
 <Title/>
 
 <Canvas of={TableStories.Default} withToolbar={true} sourceState={"none"}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

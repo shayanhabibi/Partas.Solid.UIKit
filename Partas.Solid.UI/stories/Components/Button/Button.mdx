@@ -1,5 +1,6 @@
 ﻿import { Canvas, Meta, Controls, ArgTypes, Stories } from '@storybook/addon-docs/blocks';
 import * as ButtonStories from './Button.stories';
+import rawCode from '../../../Components/Button.fs?raw';
 
 <Meta of={ButtonStories} />
 
@@ -23,6 +24,8 @@ Button() {
 <Canvas of={ButtonStories.Default} sourceState={"none"} layout={"centered"} withToolbar={true}/>
 
 <Controls />
+
+<SourceCode code={rawCode}/>
 
 <Stories includePrimary={false} of={ButtonStories} />
 

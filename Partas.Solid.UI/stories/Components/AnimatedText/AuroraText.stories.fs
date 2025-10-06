@@ -9,5 +9,6 @@ let private meta = storybook<AuroraText> {
             "Aurora Text"
         })
     args "Default" ignore
+    tags [| "!autodocs" |]
 }
 

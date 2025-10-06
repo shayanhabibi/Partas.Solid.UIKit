@@ -1,11 +1,13 @@
 ﻿import { Meta, Canvas, Title, Controls, ArgTypes } from '@storybook/addon-docs/blocks';
 import * as TimelineStories from './Timeline.stories';
+import rawCode from '../../../Components/Timeline.fs?raw';
 
 <Meta of={TimelineStories}/>
 <Title/>
 
 <Canvas of={TimelineStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

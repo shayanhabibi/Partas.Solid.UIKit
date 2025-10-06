@@ -1,0 +1,3 @@
+import{K as r}from"./Kbd-QwLjxJbD.js";import{c as a,m as o}from"./iframe-Ss2HFUgg.js";const s={args:{},argTypes:{ariaLabel:{control:{type:"text"},table:{type:{summary:"string"}}},separator:{control:{type:"object"},table:{type:{summary:"HtmlElement",detail:"C:/Users/shaya/RiderProjects/Partas.Solid.UIKit/Partas.Solid.UI/fable_modules/Partas.Solid.2.1.2/Builder.fs"}}}},render:t=>a(r,o(t,{"bool:n$":!1,children:"B C"})),component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const l=["Default"],c=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:l,default:s},Symbol.toStringTag,{value:"Module"}));export{e as D,c as S};

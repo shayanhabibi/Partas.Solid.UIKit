@@ -1,10 +1,12 @@
 ﻿import { Meta, ArgTypes, Controls, Canvas, Title } from '@storybook/addon-docs/blocks';
 import * as SkeletonStories from './Skeleton.stories';
+import rawCode from '../../../Components/Skeleton.fs?raw';
 
 <Meta of={SkeletonStories}/>
 <Title/>
 <Canvas of={SkeletonStories.Default} sourceState={"none"} withToolbar={true} layout={"centered"}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Skeleton

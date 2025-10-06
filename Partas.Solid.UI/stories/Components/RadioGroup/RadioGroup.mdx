@@ -2,11 +2,13 @@
 import * as RadioGroupStories from './RadioGroup.stories';
 import * as RadioGroupItemStories from './RadioGroupItem.stories';
 import * as RadioGroupItemLabelStories from './RadioGroupItemLabel.stories';
+import rawCode from '../../../Components/RadioGroup.fs?raw';
 
 <Meta of={RadioGroupStories} />
 <Title/>
 <Canvas of={RadioGroupStories.Default} layout={"centered"} withToolbar={true} sourceState={"none"}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### RadioGroup

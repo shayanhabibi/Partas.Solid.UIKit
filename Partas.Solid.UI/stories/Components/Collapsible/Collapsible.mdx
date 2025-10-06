@@ -2,6 +2,7 @@ import { Meta, Stories, ArgTypes, Controls, Title, Canvas } from '@storybook/add
 import * as CollapsibleStories from './Collapsible.stories';
 import * as TriggerStories from './CollapsibleTrigger.stories';
 import * as ContentStories from './CollapsibleContent.stories';
+import rawCode from '../../../Components/Collapsible.fs?raw';
 
 <Meta of={CollapsibleStories} />
 <Title />
@@ -23,6 +24,8 @@ Collapsible() {
 
 <Canvas of={CollapsibleStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls />
+
+<SourceCode code={rawCode}/>
 
 ### CollapsibleTrigger
 <ArgTypes of={TriggerStories} meta={TriggerStories} />

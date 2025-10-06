@@ -5,12 +5,14 @@ import * as SwitchErrorMessageStories from './SwitchErrorMessage.stories';
 import * as SwitchControlStories from './SwitchControl.stories';
 import * as SwitchThumbStories from './SwitchThumb.stories';
 import * as SwitchLabelStories from './SwitchLabel.stories';
+import rawCode from '../../../Components/Switch.fs?raw';
 
 <Meta of={SwitchStories} />
 <Title />
 
 <Canvas of={SwitchStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

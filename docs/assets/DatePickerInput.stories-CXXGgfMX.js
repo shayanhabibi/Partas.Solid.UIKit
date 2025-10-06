@@ -1,0 +1,3 @@
+import{t}from"./iframe-Ss2HFUgg.js";import{m as r}from"./DatePicker-CisuEmL_.js";var a=t("<div>");const o={args:{},argTypes:{asChild:{control:{type:!1},table:{type:{summary:"function"}}},fixOnBlur:{control:{type:"boolean"},table:{type:{summary:"bool"}}},index:{control:{type:"number",max:2147483647,min:-2147483648,step:1},table:{type:{summary:"int32"}}}},render:n=>a(),tags:["!autodocs"],component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {}
+}`,...e.parameters?.docs?.source}}};const s=["Default"],l=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:o},Symbol.toStringTag,{value:"Module"}));export{l as D};

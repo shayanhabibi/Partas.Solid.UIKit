@@ -2,11 +2,13 @@
 import * as PopoverStories from './Popover.stories';
 import * as PopoverTriggerStories from './PopoverTrigger.stories';
 import * as PopoverContentStories from './PopoverContent.stories';
+import rawCode from '../../../Components/Popover.fs?raw';
 
 <Meta of={PopoverStories} />
 <Title/>
 <Canvas of={PopoverStories.Default} layout={"centered"} withToolbar={true} sourceState={"none"}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Popover

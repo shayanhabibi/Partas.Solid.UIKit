@@ -8,6 +8,7 @@ import * as ControlStories from './ComboboxControl.stories';
 import * as InputStories from './ComboboxInput.stories';
 import * as TriggerStories from './ComboboxTrigger.stories';
 import * as ContentStories from './ComboboxContent.stories';
+import rawCode from '../../../Components/Combobox.fs?raw';
 
 <Meta of={MainStories} />
 <Title />
@@ -38,6 +39,7 @@ Combobox<string>(
 
 <Canvas of={MainStories.Default} layout={"center"} sourceState={"none"} withToolbar={true} />
 <Controls />
+<SourceCode code={rawCode}/>
 
 ### ComboboxItem
 

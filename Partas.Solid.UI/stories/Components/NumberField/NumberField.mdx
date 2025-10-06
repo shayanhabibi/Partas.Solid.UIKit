@@ -7,11 +7,13 @@ import * as NumberFieldIncrementTriggerStories from './NumberFieldIncrementTrigg
 import * as NumberFieldDecrementTriggerStories from './NumberFieldDecrementTrigger.stories';
 import * as NumberFieldDescriptionStories from './NumberFieldDescription.stories';
 import * as NumberFieldErrorMessageStories from './NumberFieldErrorMessage.stories';
+import rawCode from '../../../Components/NumberField.fs?raw';
 
 <Meta of={NumberFieldStories}/>
 <Title/>
 <Canvas of={NumberFieldStories.Default} sourceState={"none"} withToolbar={true} layout={"centered"}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### NumberField

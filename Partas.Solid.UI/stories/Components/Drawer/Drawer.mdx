@@ -9,6 +9,7 @@ import * as DrawerHeaderStories from './DrawerHeader.stories';
 import * as DrawerFooterStories from './DrawerFooter.stories';
 import * as DrawerTitleStories from './DrawerTitle.stories';
 import * as DrawerDescriptionStories from './DrawerDescription.stories';
+import rawCode from '../../../Components/Drawer.fs?raw';
 
 <Meta of={DrawerStories} />
 <Title/>
@@ -48,6 +49,7 @@ Drawer().spread props {
 
 <Canvas of={DrawerStories.Default} layout="centered" withToolbar={true} sourceState={"none"}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 

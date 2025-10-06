@@ -1,5 +1,6 @@
 ﻿import { Meta, Canvas, Title, Stories } from '@storybook/addon-docs/blocks';
 import * as LabelStories from './Label.stories';
+import rawCode from '../../../Components/Label.fs?raw';
 
 <Meta of={LabelStories} />
 <Title />
@@ -24,3 +25,4 @@ div() {
 ```
 
 <Stories of={LabelStories} />
+<SourceCode code={rawCode}/>

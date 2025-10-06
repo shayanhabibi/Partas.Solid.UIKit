@@ -2,11 +2,13 @@
 import * as HoverCardStories from './HoverCard.stories';
 import * as HoverCardTriggerStories from './HoverCardTrigger.stories';
 import * as HoverCardContentStories from './HoverCardContent.stories';
+import rawCode from '../../../Components/HoverCard.fs?raw';
 
 <Meta of={HoverCardStories} />
 <Title/>
 <Canvas of={HoverCardStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### HoverCard

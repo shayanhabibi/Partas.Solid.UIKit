@@ -2,11 +2,13 @@
 import * as ResizeableStories from './Resizeable.stories';
 import * as ResizeablePanelStories from './ResizeablePanel.stories';
 import * as ResizeableHandleStories from './ResizeableHandle.stories';
+import rawCode from '../../../Components/Resizeable.fs?raw';
 
 <Meta of={ResizeableStories}/>
 <Title/>
 <Canvas of={ResizeableStories.Default} layout={"centered"} withToolbar={true} sourceState={"none"}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Resizeable

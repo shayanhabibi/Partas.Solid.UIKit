@@ -2,12 +2,14 @@
 import * as TooltipStories from './Tooltip.stories';
 import * as TooltipTriggerStories from './TooltipTrigger.stories';
 import * as TooltipContentStories from './TooltipContent.stories';
+import rawCode from '../../../Components/Tooltip.fs?raw';
 
 <Meta of={TooltipStories}/>
 <Title/>
 
 <Canvas of={TooltipStories.Default} layout={"centered"} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Tooltip

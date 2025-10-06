@@ -1,11 +1,13 @@
 ﻿import { Meta, Canvas, Controls, ArgTypes, Title } from '@storybook/addon-docs/blocks';
 import * as MarqueeStories from './Marquee.stories';
+import rawCode from '../../../Components/Marquee.fs?raw';
 
 <Meta of={MarqueeStories}/>
 <Title/>
 
 <Canvas of={MarqueeStories.Default} sourceState={"none"} withToolbar={true}/>
 <Controls/>
+<SourceCode code={rawCode}/>
 
 ## Components
 ### Marquee

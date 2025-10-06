@@ -1,3 +1,0 @@
-import{a as o,C as r}from"./ContextMenu-bPfiuGUj.js";import{c as a}from"./iframe-mHl6JQ-c.js";const s={args:{},argTypes:{disabled:{control:{type:"boolean"},table:{type:{summary:"bool"}}},disabled:{control:{type:"boolean"},description:"Whether the button is disabled.",table:{type:{summary:"bool"}}}},decorators:[t=>a(r,{get children(){return t()}})],tags:["!autodocs"],component:o},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const n=["Default"],d=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:n,default:s},Symbol.toStringTag,{value:"Module"}));export{d as C};
