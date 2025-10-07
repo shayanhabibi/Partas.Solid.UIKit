@@ -13,7 +13,16 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 # UI
 
-### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.UIKit/compare/_%28UI%29_0.1.0...HEAD)
+### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.UIKit/compare/_%28UI%29_0.1.1...HEAD)
+
+### [0.1.1](https://github.com/shayanhabibi/Partas.Solid.UIKit/compare/_%28UI%29_0.1.0..._%28UI%29_0.1.1) - (2025-10-07)
+
+#### <!-- 2 --> Fixed
+
+* Sidebar for mobile, InputFieldInput fixed by [@cabboose](https://github.com/cabboose) with [#1461f](https://github.com/shayanhabibi/Partas.Solid.UIKit/commit/1461f2feca1e691d47b29325bb150827d1a421af)
+  
+
+#### <!-- 6 --> Others
 
 * push docs by [@cabboose](https://github.com/cabboose) with [#1267f](https://github.com/shayanhabibi/Partas.Solid.UIKit/commit/1267fd5a5027ef7216e7d1588b686f8da5dbdffc)
   
