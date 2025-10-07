@@ -123,15 +123,4 @@ open Partas.Solid.Primitives
 [<Erase>]
 type Singletons =
         static member useIsMobile (fallback: bool) =
-            createSingletonRoot(fun _ ->
-                let (isMobile, setIsMobile) = createSignal(fallback)
-                createEffect(
-                        fun () ->
-                            let mobileBreakpointListener =
-                                    makeMediaQueryListener
-                                        $"(max-width:{mobileBreakpoint - 1}px"
-                                        (fun event -> setIsMobile(event.matches))
-                            onCleanup(mobileBreakpointListener)
-                    )
-                isMobile
-            )
+            createSingletonRoot(fun _ -> createMediaQuery($"max-width:{mobileBreakpoint - 1}", true))

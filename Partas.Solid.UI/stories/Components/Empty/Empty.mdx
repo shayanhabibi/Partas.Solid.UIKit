@@ -1,0 +1,35 @@
+﻿import { Meta, Canvas, Stories, Story, Title, ArgTypes, Controls } from '@storybook/addon-docs/blocks';
+import * as EmptyStories from './Empty.stories';
+import * as EmptyHeaderStories from './EmptyHeader.stories';
+import * as EmptyMediaStories from './EmptyMedia.stories';
+import * as EmptyTitleStories from './EmptyTitle.stories';
+import * as EmptyContentStories from './EmptyContent.stories';
+import rawCode from '../../../Components/Empty.fs?raw';
+import exampleCode from './Empty.stories.fs?raw';
+
+<Meta of={EmptyStories}/>
+<Title/>
+<SourceCode code={rawCode}/>
+
+## Examples
+### Outline
+<Canvas of={EmptyStories.Outline} withToolbar={true}  />
+
+### Background
+<Canvas of={EmptyStories.Background} withToolbar={true} layout={"full"}/>
+
+### Avatar
+<Canvas of={EmptyStories.AvatarExample} withToolbar={true} layout={"full"}/>
+
+### Avatar Stack
+<Canvas of={EmptyStories.AvatarStackExample} withToolbar={true} layout={"full"}/>
+
+### Input Group
+<Canvas of={EmptyStories.InputGroupExample} withToolbar={true} layout={"full"}/>
+
+See the example code:
+
+<SourceCode code={exampleCode}/>
+
+## Empty Media
+<ArgTypes of={EmptyMediaStories} />

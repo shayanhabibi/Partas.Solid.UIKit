@@ -1,0 +1,18 @@
+﻿import { Meta, Stories, Story, Canvas, Title, Controls, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as S1 from './Field.stories';
+import rawCode from '../../../Components/Field.fs?raw';
+import exampleCode from './Field.stories.fs?raw';
+
+<Meta of={S1}/>
+<Title />
+<SourceCode code={rawCode}/>
+
+## Examples
+<Stories layout={"centered"}/>
+
+See the examples code:
+
+<SourceCode code={exampleCode}/>
+
+<ArgTypes of={S1}/>
+

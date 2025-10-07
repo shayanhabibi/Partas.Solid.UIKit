@@ -1,3 +1,0 @@
-import{t as o}from"./iframe-BLvaHOrW.js";import{b as r}from"./Tooltip-B4c0hFup.js";var a=o("<div>");const{fn:t}=__STORYBOOK_MODULE_TEST__,n={args:{onEscapeKeyDown:t(),onPointerDownOutside:t()},argTypes:{onEscapeKeyDown:{control:{type:!1},table:{type:{summary:"function"}}},onPointerDownOutside:{control:{type:!1},table:{type:{summary:"function"}}},sideOffset:{control:{type:"number"},table:{type:{summary:"float64"}}}},render:p=>a(),tags:["!autodocs"],component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],m=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:n},Symbol.toStringTag,{value:"Module"}));export{m as T};

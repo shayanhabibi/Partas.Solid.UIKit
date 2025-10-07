@@ -140,7 +140,7 @@ type Sidebar() =
         props.collapsible <- OffCanvas
         let ctx = Context.useSidebar()
         let isMobile, state, openMobile, setOpenMobile =
-            (ctx.isMobile, ctx.state, ctx.openMobile, ctx.openMobile)
+            (ctx.isMobile, ctx.state, ctx.openMobile, ctx.setOpenMobile)
         Switch() {
             Match(when' = (props.collapsible = Sidebar.None)) {
                 div(class' = Lib.cn [|

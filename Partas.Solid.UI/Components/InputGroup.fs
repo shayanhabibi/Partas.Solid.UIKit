@@ -145,7 +145,7 @@ type InputGroupInput() =
     inherit input()
     [<SolidTypeComponent>]
     member props.__ =
-        TextField(
+        TextFieldInput(
             class' = Lib.cn [|
                 "flex-1 rounded-none border-0 bg-transparent shadow-none focus-visible:ring-0 dark:bg-transparent"
                 props.class'

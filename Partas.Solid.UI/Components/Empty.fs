@@ -4,8 +4,23 @@ open Fable.Core.JS
 open Fable.Core
 open Fable.Core.JsInterop
 
+/// <summary>
+/// The main component of the empty state. Wraps the <c>EmptyHeader</c>
+/// and <c>EmptyContent</c> components.
+/// </summary>
+/// <code>
+/// Empty() {
+///     EmptyHeader()
+///     EmptyContent()
+/// }
+/// </code>
 [<Erase>]
-type Empty() =
+type Empty
+    /// <summary>
+    /// The main component of the empty state. Wraps the <c>EmptyHeader</c>
+    /// and <c>EmptyContent</c> components.
+    /// </summary>
+    () =
     inherit div()
     [<SolidTypeComponent>]
     member props.__ =
@@ -16,8 +31,22 @@ type Empty() =
         |]) .dataSlot("empty")
             .spread props
     
+/// <summary>
+/// The <c>EmptyHeader</c> component wraps the empty media, title, and description.
+/// <code>
+/// EmptyHeader() {
+///     EmptyMedia()
+///     EmptyTitle()
+///     EmptyDescription()
+/// }
+/// </code>
+/// </summary>
 [<Erase>]
-type EmptyHeader() =
+type EmptyHeader
+    /// <summary>
+    /// The <c>EmptyHeader</c> component wraps the empty media, title, and description.
+    /// </summary>
+    () =
     inherit div()
     [<SolidTypeComponent>]
     member props.__ =
@@ -35,8 +64,19 @@ module EmptyMedia =
         | Icon
 
 open EmptyMedia
+/// <summary>
+/// Use the <c>EmptyMedia</c> component to display the media
+/// of the empty state such as an icon or an image. You can also
+/// use it to display other components such as an avatar.
+/// </summary>
 [<Erase>]
-type EmptyMedia() =
+type EmptyMedia
+    /// <summary>
+    /// Use the <c>EmptyMedia</c> component to display the media
+    /// of the empty state such as an icon or an image. You can also
+    /// use it to display other components such as an avatar.
+    /// </summary>
+    () =
     inherit div()
     [<Erase>]
     member val variant: Variant = undefined with get,set
@@ -60,8 +100,17 @@ type EmptyMedia() =
         |]) .dataSlot("empty-icon")
             .spread props
 
+/// <summary>
+/// Use the <c>EmptyTitle</c> component to display the title of
+/// the empty state.
+/// </summary>
 [<Erase>]
-type EmptyTitle() =
+type EmptyTitle
+    /// <summary>
+    /// Use the <c>EmptyTitle</c> component to display the title of
+    /// the empty state.
+    /// </summary>
+    () =
     inherit div()
     [<SolidTypeComponent>]
     member props.__ =
@@ -71,8 +120,17 @@ type EmptyTitle() =
         |]) .dataSlot("empty-title")
             .spread props
 
+/// <summary>
+/// Use the <c>EmptyDescription</c> component to display the
+/// description of the empty state.
+/// </summary>
 [<Erase>]
-type EmptyDescription() =
+type EmptyDescription
+    /// <summary>
+    /// Use the <c>EmptyDescription</c> component to display the
+    /// description of the empty state.
+    /// </summary>
+    () =
     inherit p()
     [<SolidTypeComponent>]
     member props.__ =
@@ -83,8 +141,17 @@ type EmptyDescription() =
         |]) .dataSlot("empty-description")
             .spread props
 
+/// <summary>
+/// Use the <c>EmptyContent</c> component to display the content
+/// of the empty state, such as a button, input or a link.
+/// </summary>
 [<Erase>]
-type EmptyContent() =
+type EmptyContent
+    /// <summary>
+    /// Use the <c>EmptyContent</c> component to display the content
+    /// of the empty state, such as a button, input or a link.
+    /// </summary>
+    () =
     inherit div()
     [<SolidTypeComponent>]
     member props.__ =

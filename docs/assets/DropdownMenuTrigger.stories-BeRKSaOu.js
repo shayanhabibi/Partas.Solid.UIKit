@@ -1,3 +1,0 @@
-import{a as o,D as r}from"./DropdownMenu-Cx5IsT2i.js";import{c as t}from"./iframe-BLvaHOrW.js";const a={args:{},argTypes:{disabled:{control:{type:"boolean"},description:"Whether the button is disabled.",table:{type:{summary:"bool"}}}},decorators:[n=>t(r,{})],tags:["!autodocs"],component:o},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],d=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:a},Symbol.toStringTag,{value:"Module"}));export{d as D};

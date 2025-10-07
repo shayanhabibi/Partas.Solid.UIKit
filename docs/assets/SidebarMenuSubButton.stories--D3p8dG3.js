@@ -1,3 +1,0 @@
-import{t}from"./iframe-BLvaHOrW.js";import{u as r}from"./Sidebar-C_-Tu82O.js";var o=t("<div>");const a={args:{},argTypes:{size:{control:{type:"object"},table:{type:{summary:"Size",detail:"C:/Users/shaya/RiderProjects/Partas.Solid.UIKit/Partas.Solid.UI/Components/Sidebar.fs"}}},isActive:{control:{type:"boolean"},table:{type:{summary:"bool"}}}},render:n=>o(),tags:["!autodocs"],component:r},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],c=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:a},Symbol.toStringTag,{value:"Module"}));export{c as S};
