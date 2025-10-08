@@ -122,5 +122,5 @@ open Singletons
 open Partas.Solid.Primitives
 [<Erase>]
 type Singletons =
-        static member useIsMobile (fallback: bool) =
+        static member useIsMobile =
             createSingletonRoot(fun _ -> createMediaQuery($"max-width:{mobileBreakpoint - 1}", true))

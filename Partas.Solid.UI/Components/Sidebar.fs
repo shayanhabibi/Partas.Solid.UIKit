@@ -76,7 +76,7 @@ type SidebarProvider() =
     [<DefaultValue>] val mutable onOpenChange: bool -> unit
     [<SolidTypeComponent>]
     member props.constructor =
-        let isMobile = Singletons.useIsMobile(false)
+        let isMobile = Singletons.useIsMobile()
         let (openMobile, setOpenMobile) = createSignal(false)
         let (_open, _setOpen) = createSignal(props.defaultOpen)
         let open': Accessor<bool> = fun () -> props.open' ??= _open()
@@ -86,7 +86,7 @@ type SidebarProvider() =
             _setOpen (value)
             document.cookie <- $"{sidebarCookieName}={open'()}; path=/; max-age=${sidebarCookieMaxAge}"
         let toggleSidebar = fun () ->
-            if isMobile()() then
+            if isMobile() then
                 setOpenMobile(not (open'()))
             else setOpen(open'() |> not)
         createEffect (fun () ->
