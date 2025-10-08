@@ -54,7 +54,7 @@ type FacetedFilter<'Data when 'Data: equality>() =
         
         Popover(placement = !!"bottom-start") {
             PopoverTrigger().as'(Button(variant = props.buttonVariant, size = props.buttonSize, class' = Lib.cn [| "h-8 border-dashed"; props.buttonClass |])) {
-                CirclePlus()
+                Lucide.CirclePlus()
                 props.label
                 Show(when' = !!selectedValue()) {
                     Separator(orientation = Orientation.Vertical, class' = "mx-2 h-4")
@@ -87,7 +87,7 @@ type FacetedFilter<'Data when 'Data: equality>() =
                                             if selectedValue() = (opt |> Option.ofObj) then "bg-primary text-primary-foreground"
                                             else "opacity-50 [&_svg]:invisible"
                                         |]) {
-                                            Check()
+                                            Lucide.Check()
                                         }
                                         Show(when' = !!opt.icon, keyed = true) {
                                             opt.icon <| {| ``class`` = "mr-2 size-4 text-muted-foreground" |}

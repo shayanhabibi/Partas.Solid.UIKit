@@ -46,7 +46,7 @@ type ResizeableHandle() =
             .spread(props) {
             Show(when'= props.withHandle) {
                 div(class'= "z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border") {
-                    GripVertical(class'="size-2.5", strokeWidth = 2)
+                    Lucide.GripVertical(class'="size-2.5", strokeWidth = 2)
                 }
             }
         } 

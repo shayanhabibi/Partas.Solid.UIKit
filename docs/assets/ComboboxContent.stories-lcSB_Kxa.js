@@ -1,7 +1,0 @@
-import{d as n,C as o}from"./Combobox-UfthAumW.js";import{c as r}from"./iframe-BHVPMPJn.js";const a={args:{},argTypes:{onCloseAutoFocus:{control:{type:!1},description:`Event handler called when focus moves to the trigger after closing.
- It can be prevented by calling event.preventDefault.`,table:{type:{summary:"function"}}},onFocusOutside:{control:{type:!1},description:`Event handler called when the focus moves outside the bounds of the component.
- It can be prevented by calling event.preventDefault.`,table:{type:{summary:"function"}}},onInteractOutside:{control:{type:!1},description:`Event handler called when an interaction (pointer or focus event) happens outside the bounds of the component.
- It can be prevented by calling event.preventDefault.`,table:{type:{summary:"function"}}},onPointerDownOutside:{control:{type:!1},description:`Event handler called when a pointer event occurs outside the bounds of the component.
- It can be prevented by calling event.preventDefault.`,table:{type:{summary:"function"}}}},decorators:[t=>r(o,{options:["Item1"],get children(){return t()}})],tags:["!autodocs"],component:n},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const s=["Default"],p=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:s,default:a},Symbol.toStringTag,{value:"Module"}));export{p as C};

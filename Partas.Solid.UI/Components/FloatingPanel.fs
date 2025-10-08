@@ -60,7 +60,7 @@ type FloatPanel() =
                                 "flex items-center gap-2"
                                 props.slots.gripContainer
                             |]) {
-                                GripVertical(class' = Lib.cn [|
+                                Lucide.GripVertical(class' = Lib.cn [|
                                     //tw
                                     "w-4 h-4 text-accent"
                                     props.slots.grip
@@ -84,7 +84,7 @@ type FloatPanel() =
                                         props.slots.minimizeTrigger
                                     |],
                                     stage = Stage.Minimized) {
-                                    Minus(class' = Lib.cn [| "size-3"; props.slots.minus |])
+                                    Lucide.Minus(class' = Lib.cn [| "size-3"; props.slots.minus |])
                                 }
                                 FloatingPanel.StageTrigger(
                                     class' = Lib.cn [|
@@ -93,7 +93,7 @@ type FloatPanel() =
                                     |],
                                     stage = Stage.Maximized
                                     ) {
-                                    Maximize2(class' = Lib.cn [| "size-3"; props.slots.minus |])
+                                    Lucide.Maximize2(class' = Lib.cn [| "size-3"; props.slots.minus |])
                                 }
                                 FloatingPanel.StageTrigger(
                                     stage = Stage.Default,
@@ -101,13 +101,13 @@ type FloatPanel() =
                                         stageClass()
                                         props.slots.minimizeTrigger
                                     |]) {
-                                    ArrowDownLeft(class' = Lib.cn [| "size-3"; props.slots.minus |])
+                                    Lucide.ArrowDownLeft(class' = Lib.cn [| "size-3"; props.slots.minus |])
                                 }
                                 FloatingPanel.CloseTrigger(class' = Lib.cn [|
                                     stageClass()
                                     props.slots.closeTrigger
                                 |] ) {
-                                    X(class' = Lib.cn [| "size-3"; props.slots.x |])
+                                    Lucide.X(class' = Lib.cn [| "size-3"; props.slots.x |])
                                 }
                             }
                         }

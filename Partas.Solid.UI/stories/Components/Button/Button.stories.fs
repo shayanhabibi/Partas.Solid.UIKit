@@ -47,10 +47,10 @@ let private meta = storybook<Button> {
     render "IconOnlyAndWithIcon" (fun btn ->
         div(class' = "flex flex-col space-y-2 place-items-center") {
             Button().spread btn {
-                X(); "Discard"
+                Lucide.X(); "Discard"
             }
             Button().spread btn {
-                X()
+                Lucide.X()
             }
         })
     render "WithKbd" (fun btn ->
@@ -98,9 +98,9 @@ let private meta = storybook<Button> {
                                 if size = Size.Icon then
                                     Lucide.Aperture()
                                 elif size = Size.IconSmall then
-                                    X()
+                                    Lucide.X()
                                 elif size = Size.IconLarge then
-                                    Lamp()
+                                    Lucide.Lamp()
                                 else
                                     !!variant
                             }

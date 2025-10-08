@@ -23,7 +23,7 @@ let private meta = storybook<QrCodeImage> {
     args "Default" ignore
     render "Children" (fun props ->
         QrCodeImage().spread props {
-            Baby()
+            Lucide.Baby()
         }
         )
     

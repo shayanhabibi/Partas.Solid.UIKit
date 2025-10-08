@@ -1,0 +1,13 @@
+import { Meta, Controls, Title, Stories, Canvas, ArgTypes } from '@storybook/addon-docs/blocks';
+import * as S1 from './Input.stories';
+import rawCode from '../../../Components/Input.fs?raw';
+
+<Meta of={S1}/>
+<Title/>
+
+A simple implementation of a styled input for use with Field, Input etc without the baggage of requiring
+the context provider for the TextField component.
+
+<SourceCode code={rawCode}/>
+<Canvas of={S1.Default} />
+<Controls />

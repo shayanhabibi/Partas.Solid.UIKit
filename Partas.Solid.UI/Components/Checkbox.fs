@@ -33,9 +33,9 @@ type Checkbox() =
                 ).dataSlot("checkbox-control") {
                 Checkbox.Indicator().dataSlot("checkbox-indicator") {
                     if props.indeterminate then
-                        Minus(class' = "size-4", strokeWidth = 2)
+                        Lucide.Minus(class' = "size-4", strokeWidth = 2)
                     else
-                        Check(class' = "size-4", strokeWidth = 2)
+                        Lucide.Check(class' = "size-4", strokeWidth = 2)
                 }
             }
         }
@@ -85,9 +85,9 @@ module CheckboxModularForms =
                         data-[indeterminate]:text-primary-foreground") {
                         Checkbox.Indicator() {
                             if props.indeterminate then
-                                Minus(class' = "size-4", strokeWidth = 2)
+                                Lucide.Minus(class' = "size-4", strokeWidth = 2)
                             else
-                                Check(class' = "size-4", strokeWidth = 2)
+                                Lucide.Check(class' = "size-4", strokeWidth = 2)
                         }
                     }
                 }

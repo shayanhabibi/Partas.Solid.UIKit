@@ -1,6 +1,6 @@
 ﻿module Partas.Solid.UI.stories.Components.Card.Card_stories
 open Partas.Solid
-open Partas.Solid.Lucide
+open Partas.Solid.Lucide.Lucide
 open Partas.Solid.UI
 open Partas.Solid.Storybook
 [<PartasStorybook>]

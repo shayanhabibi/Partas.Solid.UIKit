@@ -37,6 +37,7 @@
     "@solid-primitives/raf": "^2.3.2",
     "@tabler/icons-solidjs": "^3.35.0",
     "@tailwindcss/vite": "^4.1.12",
+    "@tanstack/solid-virtual": "^3.13.12",
     "animejs": "^4.2.0",
     "clsx": "^2.1.1",
     "cmdk-solid": "^1.1.2",

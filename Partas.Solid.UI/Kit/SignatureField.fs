@@ -41,7 +41,7 @@ type SignatureField() =
     member val clearTrigger: HtmlElement = undefined with get,set
     [<SolidTypeComponent>]
     member props.__ =
-        props.clearTrigger <- RotateCw(class' = "transition-all size-4 stroke-primary/80 hover:stroke-primary")
+        props.clearTrigger <- Lucide.RotateCw(class' = "transition-all size-4 stroke-primary/80 hover:stroke-primary")
         props.slots <- SignatureField.SlotClasses()
         props.drawing <- createEmpty
         let drawing,setDrawing = createSignal<DrawingOptions> createEmpty

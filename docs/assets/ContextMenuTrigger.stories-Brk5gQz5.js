@@ -1,3 +1,0 @@
-import{a as t,C as r}from"./ContextMenu-CYdXM-OF.js";import{c as a}from"./iframe-BHVPMPJn.js";const s={args:{},argTypes:{"disabled@_1":{control:{type:"boolean"},table:{type:{summary:"bool"}}},disabled:{control:{type:"boolean"},table:{type:{summary:"bool"}}},disabled:{control:{type:"boolean"},description:"Whether the button is disabled.",table:{type:{summary:"bool"}}}},decorators:[o=>a(r,{get children(){return o()}})],tags:["!autodocs"],component:t},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const n=["Default"],d=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:n,default:s},Symbol.toStringTag,{value:"Module"}));export{d as C};

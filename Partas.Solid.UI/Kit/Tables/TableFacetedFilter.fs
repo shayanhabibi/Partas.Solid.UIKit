@@ -35,7 +35,7 @@ type TableFacetedFilter<'Data, 'Value>() =
         
         Popover(placement = !!"bottom-start") {
             PopoverTrigger().as'(Button(variant = Button.Variant.Outline, size = Button.Size.Small, class' = "h-8 border-dashed")) {
-                CirclePlus()
+                Lucide.CirclePlus()
                 props.title
                 Show(when' = (selectedValues().Length > 0)) {
                     Separator(orientation = Orientation.Vertical, class' = "mx-2 h-4")
@@ -82,7 +82,7 @@ type TableFacetedFilter<'Data, 'Value>() =
                                             if selectedValues() |> Array.contains opt.value then "bg-primary text-primary-foreground"
                                             else "opacity-50 [&_svg]:invisible"
                                         |]) {
-                                            Check()
+                                            Lucide.Check()
                                         }
                                         Show(when' = !!opt.icon, keyed = true) {
                                             opt.icon <| {| ``class`` = "mr-2 size-4 text-muted-foreground" |}

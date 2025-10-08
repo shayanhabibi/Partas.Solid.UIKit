@@ -1,3 +1,0 @@
-import{a as o,D as t}from"./Dialog-DEUllH5c.js";import{c as a}from"./iframe-BHVPMPJn.js";const s={args:{},argTypes:{disabled:{control:{type:"boolean"},description:"Whether the button is disabled.",table:{type:{summary:"bool"}}}},decorators:[r=>a(t,{get children(){return r()}})],tags:["!autodocs"],component:o},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const n=["Default"],i=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:n,default:s},Symbol.toStringTag,{value:"Module"}));export{i as T};

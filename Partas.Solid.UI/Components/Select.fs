@@ -76,7 +76,7 @@ type SelectTrigger() =
             .dataSlot("select-trigger")
             .spread(props) {
             props.children
-            Select.Icon().as'(ChevronsUpDown(class' = "size-4 opacity-50"))
+            Select.Icon().as'(Lucide.ChevronsUpDown(class' = "size-4 opacity-50"))
         }
 [<Erase>]
 type SelectContent() =
@@ -100,7 +100,10 @@ type SelectContent() =
                 props.class'
             |]) .dataSlot("select-content")
                 .spread(props) {
-                Select.Listbox(class' = "m-0 p-1")
+                if unbox props.children then
+                    props.children
+                else
+                    Select.Listbox(class' = "m-0 p-1")
             }
         }
 [<Erase>]
@@ -108,7 +111,8 @@ type SelectItem() =
     inherit Select.Item()
     [<SolidTypeComponent>]
     member props.constructor =
-        Select.Item(class' = Lib.cn [|
+        Select.Item(
+            class' = Lib.cn [|
             "focus:bg-accent focus:text-accent-foreground \
             [&_svg:not([class*='text-'])]:text-muted-foreground relative flex \
             w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 \
@@ -122,7 +126,7 @@ type SelectItem() =
             span(class' = "absolute right-2 flex size-3.5 items-center justify-center") {
                 Select.ItemIndicator()
                     .dataSlot("select-indicator") {
-                    Check(class'="size-4", strokeWidth = 2)
+                    Lucide.Check(class'="size-4", strokeWidth = 2)
                 }
             }
             Select.ItemLabel().dataSlot("select-label") { props.children }

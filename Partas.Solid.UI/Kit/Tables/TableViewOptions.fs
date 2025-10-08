@@ -22,7 +22,7 @@ type TableViewOptions<'Data>() =
         let table () = props.table
         DropdownMenu(placement = !!"bottom-end") {
             DropdownMenuTrigger().as'(Button(variant = Button.Variant.Outline, size = Button.Size.Small, class' = "ml-auto hidden h-8 lg:flex")) {
-                Settings()
+                Lucide.Settings()
                 "View"
             }
             DropdownMenuContent(class' = "w-[150px]") {

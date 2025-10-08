@@ -9,13 +9,25 @@ import * as SelectLabelStories from './SelectLabel.stories';
 import * as SelectDescriptionStories from './SelectDescription.stories';
 import * as SelectErrorMessageStories from './SelectErrorMessage.stories';
 import rawCode from '../../../Components/Select.fs?raw';
+import exampleCode from './Select.stories.fs?raw';
 
 <Meta of={SelectStories}/>
 <Title/>
 
 <Canvas of={SelectStories.Default} />
 <Controls/>
+
+### Virtualisation
+
+An example using **TanStack.Virtual** to virtualise 100_000 items:
+
+<Canvas of={SelectStories.VirtualisationExample} />
+
 <SourceCode code={rawCode}/>
+
+### Example Code
+
+<SourceCode code={exampleCode}/>
 
 ## Components
 ### Select

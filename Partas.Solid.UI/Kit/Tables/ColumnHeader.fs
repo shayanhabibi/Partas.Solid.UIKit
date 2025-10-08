@@ -39,24 +39,24 @@ type DataTableColumnHeader<'Data>() =
                             span() { props.title }
                             Show(
                                 when' = canSort()
-                                ,fallback = (EllipsisVertical(size = 4))
+                                ,fallback = (Lucide.EllipsisVertical(size = 4))
                                 ) {
                                 if props.column.getIsSorted() = !^SortDirection.Desc then
-                                    ArrowDown()
+                                    Lucide.ArrowDown()
                                 elif props.column.getIsSorted() = !^SortDirection.Asc then
-                                    ArrowUp()
+                                    Lucide.ArrowUp()
                                 else
-                                    ChevronsUpDown()
+                                    Lucide.ChevronsUpDown()
                             }
                         }
                         DropdownMenuContent() {
                             Show(when' = canSort()) {
                                 DropdownMenuItem(onClick = fun _ -> props.column.toggleSorting(!!false)) {
-                                    ArrowUp(class' = iconClass)
+                                    Lucide.ArrowUp(class' = iconClass)
                                     "Asc"
                                 }
                                 DropdownMenuItem(onClick = fun _ -> props.column.toggleSorting(!!true)) {
-                                    ArrowDown(class' = iconClass)
+                                    Lucide.ArrowDown(class' = iconClass)
                                     "Desc"
                                 }
                             }
@@ -65,7 +65,7 @@ type DataTableColumnHeader<'Data>() =
                             }
                             Show(when' = canHide()) {
                                 DropdownMenuItem(onClick = fun _ -> props.column.toggleVisibility(false)) {
-                                    EyeOff(class' = iconClass)
+                                    Lucide.EyeOff(class' = iconClass)
                                     "Hide"
                                 }
                             }

@@ -1,0 +1,1 @@
+import{I as c}from"./Icon-By-Qgdq5.js";import{c as r,m as i}from"./iframe-DHSEN8D7.js";var l=[["circle",{cx:"12",cy:"12",r:"1",key:"41hilf"}],["circle",{cx:"19",cy:"12",r:"1",key:"1wjl8i"}],["circle",{cx:"5",cy:"12",r:"1",key:"1pcz8c"}]],a=e=>r(c,i(e,{iconNode:l,name:"ellipsis"})),p=a;export{p as e};

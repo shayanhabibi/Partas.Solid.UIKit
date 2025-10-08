@@ -1,3 +1,0 @@
-import{a,b as o}from"./Command-DdRFFtCj.js";import{c as r}from"./iframe-BHVPMPJn.js";const{fn:n}=__STORYBOOK_MODULE_TEST__,s={args:{onValueChange:n()},argTypes:{value:{control:{type:"text"},table:{type:{summary:"string"}}},onValueChange:{control:{type:!1},table:{type:{summary:"function"}}}},decorators:[t=>r(o,{get children(){return t()}})],tags:["!autodocs"],component:a},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const m=["Default"],u=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:m,default:s},Symbol.toStringTag,{value:"Module"}));export{u as C};

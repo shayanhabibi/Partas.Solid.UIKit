@@ -79,7 +79,7 @@ type DataTablePagination<'Data>() =
                            ,disabled = (props.table.getCanPreviousPage() |> not)
                            ) {
                         SrSpan() { "Go to first page" }
-                        ChevronsLeft()
+                        Lucide.ChevronsLeft()
                     }
                     Button(
                         variant = Button.Variant.Outline
@@ -88,7 +88,7 @@ type DataTablePagination<'Data>() =
                         ,disabled = (props.table.getCanPreviousPage() |> not)
                         ) {
                         SrSpan() { "Go to previous page" }
-                        ChevronLeft()
+                        Lucide.ChevronLeft()
                     }
                     Button (
                         variant = Button.Variant.Outline
@@ -97,7 +97,7 @@ type DataTablePagination<'Data>() =
                         ,disabled = (props.table.getCanNextPage() |> not)
                         ) {
                         SrSpan() { "Go to next page" }
-                        ChevronRight()
+                        Lucide.ChevronRight()
                     }
                     Button(
                         variant = Button.Variant.Outline
@@ -106,7 +106,7 @@ type DataTablePagination<'Data>() =
                         ,disabled = (props.table.getCanNextPage() |> not)
                         ) {
                         SrSpan() { "Go to last page" }
-                        ChevronsRight()
+                        Lucide.ChevronsRight()
                     }
                 }
             }

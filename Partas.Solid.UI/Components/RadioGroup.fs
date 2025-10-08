@@ -67,7 +67,7 @@ type RadioGroupItem() =
                 ) {
                 RadioGroup.ItemIndicator(class' = "flex h-full items-center justify-center")
                     .dataSlot("radio-group-indicator")
-                    { Circle(class' = "size-2.5 fill-current text-current") }
+                    { Lucide.Circle(class' = "size-2.5 fill-current text-current") }
             }
             props.children
         }
@@ -128,7 +128,7 @@ module RadioGroupModularForms =
                                         ,onBlur = props.onBlur
                                     ).ref(props.ref)
                                     RadioGroupItemControl() {
-                                        RadioGroupItemIndicator() { Circle(class' = "size-2.5 fill-current text-current") }
+                                        RadioGroupItemIndicator() { Lucide.Circle(class' = "size-2.5 fill-current text-current") }
                                     }
                                     RadioGroupItemLabel() { item.label }
                                 }

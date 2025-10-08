@@ -1,3 +1,0 @@
-import{e as t,C as r}from"./Combobox-UfthAumW.js";import{c as a}from"./iframe-BHVPMPJn.js";const s={args:{},argTypes:{item:{control:{type:"object"},table:{type:{summary:"CollectionNode",detail:"C:/Users/shaya/RiderProjects/Partas.Solid.UIKit/Partas.Solid.UI/fable_modules/Partas.Solid.Kobalte.0.4.7/Program.fs"}}}},decorators:[o=>a(r,{options:["Item1"],itemComponent:c=>o()})],tags:["!autodocs"],component:t},e={args:{}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...e.parameters?.docs?.source}}};const m=["Default"],i=Object.freeze(Object.defineProperty({__proto__:null,Default:e,__namedExportsOrder:m,default:s},Symbol.toStringTag,{value:"Module"}));export{i as I};

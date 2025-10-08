@@ -20,7 +20,7 @@ let private meta = storybook<Combobox<string>> {
         match combobox.triggerMode with
         | TriggerMode.Input -> failwith "todo"
         | TriggerMode.Focus -> failwith "todo"
-        | TriggerMode.Manual when combobox.triggerMode = Input -> failwith "todo"
+        | TriggerMode.Manual when combobox.triggerMode = TriggerMode.Input -> failwith "todo"
         | _ -> ()
         match combobox.validationState with
         | ValidationState.Valid -> failwith "todo"

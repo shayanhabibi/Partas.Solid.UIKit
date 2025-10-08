@@ -78,7 +78,7 @@ type CommandPicker<'Data when 'Data: equality and 'Data: not struct and 'Data: n
             else setValue undefined
         let inline popoverTriggerRender () =
             Fragment() {
-                CirclePlus(class' = Lib.cn [|
+                Lucide.CirclePlus(class' = Lib.cn [|
                     "transition-transform duration-400"
                     if !!value() then "rotate-45" else ""
                 |] )
@@ -107,7 +107,7 @@ type CommandPicker<'Data when 'Data: equality and 'Data: not struct and 'Data: n
                             if value() = opt then "bg-primary text-primary-foreground"
                             else "opacity-50 [&_svg]:invisible"
                         |]) {
-                            Check()
+                            Lucide.Check()
                         }
                         Show(when' = !!props.mapOptionsIcon, keyed = true) {
                             props.mapOptionsIcon "mr-2 size-4 text-muted-foreground"
@@ -161,7 +161,7 @@ type CommandPicker<'Data when 'Data: equality and 'Data: not struct and 'Data: n
                                     h-8 w-14 border-0 my-[1px]"
                     ) {
                         if props.loading then
-                            LoaderCircle(class' = "animate-spin")
+                            Lucide.LoaderCircle(class' = "animate-spin")
                         else "Save"
                     }
                 }

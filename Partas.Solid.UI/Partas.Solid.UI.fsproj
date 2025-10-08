@@ -113,6 +113,7 @@
         <Compile Include="Components\Logo.fs" />
         <Compile Include="Components\AbstractShape.fs" />
         <Compile Include="Components\AnimationTest.fs" />
+        <Compile Include="Components\Input.fs" />
         <Compile Include="Components\Kbd.fs" />
         <Compile Include="Components\Empty.fs" />
         <Compile Include="Components\Field.fs" />
@@ -154,14 +155,14 @@
       <PackageReference Include="Partas.Solid.ArkUI" Version="0.5.3" />
       <PackageReference Include="Partas.Solid.Cmdk" Version="0.2.5" />
       <PackageReference Include="Partas.Solid.Corvu" Version="0.2.5" />
-      <PackageReference Include="Partas.Solid.Kobalte" Version="0.4.7" />
-      <PackageReference Include="Partas.Solid.Lucide" Version="0.515.0" />
+      <PackageReference Include="Partas.Solid.Kobalte" Version="0.4.8" />
+      <PackageReference Include="Partas.Solid.Lucide" Version="0.518.0" />
       <PackageReference Include="Partas.Solid.Primitives" Version="0.3.2" />
       <PackageReference Include="Partas.Solid.Primitives.Rootless" Version="0.2.0" />
       <PackageReference Include="Partas.Solid.Sonner" Version="0.2.4" />
-      <PackageReference Include="Partas.Solid.Tabler" Version="0.2.0" />
+      <PackageReference Include="Partas.Solid.Tabler" Version="0.4.0" />
       <PackageReference Include="Partas.Solid.TanStack.Table" Version="0.2.3" />
-      <PackageReference Include="Partas.Solid.TanStack.Virtual" Version="0.1.0" />
+      <PackageReference Include="Partas.Solid.TanStack.Virtual" Version="0.2.3" />
     </ItemGroup>
 
     <ItemGroup>

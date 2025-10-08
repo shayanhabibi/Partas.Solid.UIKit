@@ -1,0 +1,27 @@
+import { Meta, ArgTypes, Title, Stories, Canvas } from '@storybook/addon-docs/blocks';
+import * as S1 from './InputGroup.stories';
+import * as S2 from './InputGroupAddon.stories';
+import * as S3 from './InputGroupButton.stories';
+import * as S4 from './InputGroupInput.stories';
+import rawCode from '../../../Components/InputGroup.fs?raw';
+import exampleCode from './InputGroup.stories.fs?raw';
+
+<Meta of={S1} />
+<Title/>
+<SourceCode code={rawCode}/>
+<Stories of={S1}/>
+
+See the example code:
+
+<SourceCode code={exampleCode}/>
+
+## Properties
+
+### InputGroupAddon
+<ArgTypes of={S2}/>
+
+### InputGroupButton
+<ArgTypes of={S3}/>
+
+### InputGroupInput
+<ArgTypes of={S4}/>

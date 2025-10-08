@@ -1,5 +1,6 @@
 ﻿module Partas.Solid.UI.stories.Components.Sidebar.Sidebar_stories
 open Partas.Solid.Lucide
+open Partas.Solid.Lucide.Lucide
 open Partas.Solid
 open Partas.Solid.UI
 open Partas.Solid.Storybook
@@ -15,7 +16,7 @@ let private data =
         MainItems = [|
             {| title = "Dashboard"
                url = "#"
-               icon = !@LayoutDashboard |}
+               icon = !@Lucide.LayoutDashboard |}
             {| title = "Lifecycle"
                url = "#"
                icon = !@Lucide.ListTodo |}

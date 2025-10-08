@@ -25,20 +25,20 @@ type private Default() =
     interface VoidNode
     [<SolidTypeComponent>]
     member private props.__ =
-        Loader(class' = Lib.cn [| "animate-spin"; props.class' |]).spread props
+        Lucide.Loader(class' = Lib.cn [| "animate-spin"; props.class' |]).spread props
 [<Erase>]
 type private CircleSpinner() =
     interface VoidNode
     [<SolidTypeComponent>]
     member private props.__ =
-        LoaderCircle(class' = Lib.cn [| "animate-spin"; props.class' |]).spread props
+        Lucide.LoaderCircle(class' = Lib.cn [| "animate-spin"; props.class' |]).spread props
 
 [<Erase>]
 type private Pinwheel() =
     interface VoidNode
     [<SolidTypeComponent>]
     member private props.__ =
-        LoaderPinwheel(class' = Lib.cn [| "animate-spin"; props.class' |]).spread props
+        Lucide.LoaderPinwheel(class' = Lib.cn [| "animate-spin"; props.class' |]).spread props
 
 [<Erase>]
 type private CircleFilled() =
@@ -52,7 +52,7 @@ type private CircleFilled() =
             Style.height $"{props.size}px"
         ]) {
             div(class' = "absolute inset-0 rotate-180") {
-                LoaderCircle(
+                Lucide.LoaderCircle(
                 size = props.size,
                 class' = Lib.cn [|
                     "animate-spin"
@@ -60,7 +60,7 @@ type private CircleFilled() =
                     "text-foreground opacity-20"
                 |]).spread props
             }
-            LoaderCircle(class' = Lib.cn [|
+            Lucide.LoaderCircle(class' = Lib.cn [|
                 "relative animate-spin"
                 props.class'
             |], size = props.size)

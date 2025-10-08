@@ -1,5 +1,5 @@
 ﻿module Partas.Solid.UI.stories.Components.NavigationMenu_stories
-open Partas.Solid.Lucide
+open Partas.Solid.Lucide.Lucide
 open Partas.Solid
 open Partas.Solid.UI
 open Partas.Solid.Storybook

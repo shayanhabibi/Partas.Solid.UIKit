@@ -1,0 +1,12 @@
+import { Meta, Stories, ArgTypes, Title } from '@storybook/addon-docs/blocks';
+import * as S1 from './Item.stories';
+import rawCode from '../../../Components/Item.fs?raw';
+import exampleCode from './Item.stories.fs?raw';
+
+<Meta of={S1}/>
+<Title/>
+<SourceCode code={rawCode}/>
+<Stories/>
+See the example code:
+<SourceCode code={exampleCode}/>
+<ArgTypes of={S1}/>

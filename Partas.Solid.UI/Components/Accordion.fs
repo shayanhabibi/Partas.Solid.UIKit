@@ -33,7 +33,7 @@ type AccordionTrigger() =
             |]) .dataSlot("accordion-trigger")
                 .spread props {
                 props.children
-                ChevronDown(
+                Lucide.ChevronDown(
                     strokeWidth = 2,
                     class' = "text-muted-foreground pointer-events-none size-4 \
                             shrink-0 transition-transform duration-200"

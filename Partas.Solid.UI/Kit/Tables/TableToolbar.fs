@@ -48,7 +48,7 @@ type TableToolbar<'Data>() =
                 isFiltered() &&= (
                     Button(class' = "h-8 px-2 lg:px-3", variant = Button.Variant.Ghost, onClick = fun _ -> (props.table.resetColumnFilters(true))) {
                         "Reset"
-                        X()
+                        Lucide.X()
                     }
                     )
             }
