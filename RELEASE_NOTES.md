@@ -13,7 +13,14 @@ which includes [Scopes and Epochs](#epoch-scoped-semver).
 
 # UI
 
-### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.UIKit/compare/_%28UI%29_0.1.1...HEAD)
+### [UNRELEASED](https://github.com/shayanhabibi/Partas.Solid.UIKit/compare/_%28UI%29_0.2.0...HEAD)
+
+### [0.2.0](https://github.com/shayanhabibi/Partas.Solid.UIKit/compare/_%28UI%29_0.1.1..._%28UI%29_0.2.0) - (2025-10-08)
+
+#### <!-- 1 --> Added
+
+* fix sidebar for mobile, document empty, inputgroup, field etc by [@cabboose](https://github.com/cabboose) with [#7d000](https://github.com/shayanhabibi/Partas.Solid.UIKit/commit/7d0000f7d664aeabcb87f482ff4162caabcd5114)
+  
 
 ### [0.1.1](https://github.com/shayanhabibi/Partas.Solid.UIKit/compare/_%28UI%29_0.1.0..._%28UI%29_0.1.1) - (2025-10-07)
 
